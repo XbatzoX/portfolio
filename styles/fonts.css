@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'MyAnta';
+    src: url('../assets/fonts/Anta/Anta-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MyJosefin';
+    src: url('../assets/fonts/Josefin_Sans/JosefinSans-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

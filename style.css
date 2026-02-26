@@ -18,6 +18,11 @@ body{
     justify-content: end;
 }
 
+.hero-content{
+    display: flex;
+    justify-content: center;
+}
+
 .portrait-frame{
     position: relative;
     height: 800px;
@@ -30,6 +35,7 @@ body{
     width: 90%;
     height: 80%;
     transform: rotate(-10deg);
+    opacity: 1;
     z-index: 1;
 }
 
@@ -45,6 +51,44 @@ body{
 
 .person-image:hover + .portrait-bg-image{
     transform: rotate(0deg);
+    opacity: 0.9;
+}
+
+.logo-main-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-logo{
+    width: 52px;
+    height: 32px;
+}
+
+.main-name{
+    font-family: 'MyAnta';
+    font-size: 16px;
+    color: #F8F5EC;
+    font-weight: 400;
+}
+
+.job-name{
+    font-family: 'MyJosefin';
+    font-size: 16px;
+    font-weight: 300;
+    color: #89BCD9;
+}
+
+.main-link-container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.link-icons{
+    width: 30px;
+    height: 30px;
 }
 
 nav{

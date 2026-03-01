@@ -8,6 +8,7 @@
     <link rel="shortcut icon" href="./assets/icons/Logo icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </head>
 <body>
     <main>
@@ -20,23 +21,34 @@
                     </div>
                     <div class="main-indication-container">
                         <div class="logo-container">
-                            <div class="logo-main-box">
-                                <img class="main-logo" src="./assets/icons/Logo icon.svg" alt="logo icon">
-                                <span class="main-name">B.Mahalbasic</span>
-                                <span class="job-name">developer</span>
+                            <div class="logo-main-frame">
+                                <div class="logo-main-box" onmouseover="changeLogoBig()" onmouseout="changeLogoSmall()">
+                                    <img id="main_logo" class="main-logo" src="./assets/icons/Logo icon.svg" alt="logo icon">
+                                    <span class="main-name">B.Mahalbasic</span>
+                                    <span class="job-name">developer</span>
+                                </div>
                             </div>
-                            <div class="main-link-container">
-                                <img class="link-icons" src="./assets/icons/Email button.svg" alt="e-mail button with letter icon">
-                                <img class="link-icons" src="./assets/icons/Github button.svg" alt="github button with github icon">
-                                <img class="link-icons" src="./assets/icons/Linkedin button.svg" alt="linkedIn button with letter icon">
+                            <div class="main-link-frame">
+                                <div class="main-link-container">
+                                    <img class="link-icons" src="./assets/icons/Email button.svg" alt="e-mail button with letter icon">
+                                    <img class="link-icons" src="./assets/icons/Github button.svg" alt="github button with github icon">
+                                    <img class="link-icons" src="./assets/icons/Linkedin button.svg" alt="linkedIn button with letter icon">
+                                </div>
                             </div>
+                        </div>
+                        <div class="person-description-container">
+                            <span class="name-text">Benjamin Mahalbasic</span>
+                            <span class="job-text">FRONTEND DEVELOPER</span>
+                        </div>
+                        <div class="arrow-down-btn">
+                            <img src="./assets/icons/Arrow down.svg" alt="arrow down button with border">
                         </div>
                     </div>
                 </div>
-                <nav></nav>
+                
             </div>
         </section>
-        
+        <nav></nav>
     </main>
     <footer></footer>
 </body>

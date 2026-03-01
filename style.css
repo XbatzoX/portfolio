@@ -5,7 +5,7 @@ body{
 }
 
 .hero-section{
-    height: 100vh;
+    height: calc(100vh - 100px);
     /* padding-top: 16px;
     padding-left: 32px;
     padding-right: 32px; */
@@ -21,12 +21,14 @@ body{
 .hero-content{
     display: flex;
     justify-content: center;
+    align-items: end;
 }
 
 .portrait-frame{
     position: relative;
-    height: 800px;
-    width: 600px;
+    height: 750px;
+    width: 550px;
+    padding-left: 16px;
 }
 
 .portrait-bg-image{
@@ -52,6 +54,13 @@ body{
 .person-image:hover + .portrait-bg-image{
     transform: rotate(0deg);
     opacity: 0.9;
+}
+
+.main-indication-container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-right: 16px;
 }
 
 .logo-main-box{
@@ -91,7 +100,61 @@ body{
     height: 30px;
 }
 
+.logo-container{
+    position: relative;
+}
+
+.logo-main-frame{
+    display: flex;
+    justify-content: center;
+}
+
+.main-link-frame{
+    position: absolute;
+    right: 0px;
+    bottom: 0;
+}
+
+.person-description-container{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.name-text{
+    font-family: 'MyAnta';
+    font-size: 80px;
+    color: #F8F5EC;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.job-text{
+    font-family: 'MyJosefin';
+    font-size: 40px;
+    color: #F8F5EC;
+    font-weight: 400;
+}
+
+.arrow-down-btn{
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 32px;
+}
+
 nav{
     height: 100px;
     background-color: #89BCD9;
+}
+
+@media(max-width:1300px){
+    .name-text{
+        font-size: 50px;
+    }
+
+    .job-text{
+        font-size: 24px;
+    }
 }

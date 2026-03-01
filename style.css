@@ -47,7 +47,7 @@ body{
    left: 50%;
    transform: translateX(-55%);
    filter: drop-shadow(0 10px 25px rgba(0,0,0,0.25));
-   width: 85%;
+   width: 100%;
    z-index: 2;
 }
 
@@ -100,6 +100,10 @@ body{
     height: 30px;
 }
 
+.link-icons:hover{
+    cursor: pointer;
+}
+
 .logo-container{
     position: relative;
 }
@@ -138,10 +142,18 @@ body{
     font-weight: 400;
 }
 
+.arrow-down-frame{
+    display: flex;
+    justify-content: center;
+}
+
 .arrow-down-btn{
-    text-align: center;
     padding-top: 100px;
     padding-bottom: 32px;
+}
+
+#arrow_down_btn{
+    cursor: pointer;
 }
 
 nav{

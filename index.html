@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benjamin-Mahalbasic</title>
+    <title>Benjamin Mahalbasic</title>
 
     <link rel="shortcut icon" href="./assets/icons/Logo icon.svg" type="image/x-icon">
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/nav.css">
     <script src="./script.js"></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
             <div class="hero-container">
                 <div class="hero-content">
                     <div class="portrait-frame">
-                        <img class="person-image" src="./assets/img/ich.png" alt="picture of me">
+                        <img class="person-image" src="./assets/img/me_21.png" alt="picture of me">
                         <img class="portrait-bg-image" src="./assets/img/shape.svg">
                     </div>
                     <div class="main-indication-container">
@@ -30,9 +31,12 @@
                             </div>
                             <div class="main-link-frame">
                                 <div class="main-link-container">
-                                    <img class="link-icons" src="./assets/icons/Email button.svg" alt="e-mail button with letter icon">
-                                    <img class="link-icons" src="./assets/icons/Github button.svg" alt="github button with github icon">
-                                    <img class="link-icons" src="./assets/icons/Linkedin button.svg" alt="linkedIn button with letter icon">
+                                    <img id="mail_icon" class="link-icons" src="./assets/icons/Email button.svg" alt="e-mail button with letter icon"
+                                     onmouseover="changeIcon('mail_icon', './assets/icons/mail hover.svg')" onmouseout="changeIcon('mail_icon', './assets/icons/Email button.svg')">
+                                    <img id="gitub_icon" class="link-icons" src="./assets/icons/Github button.svg" alt="github button with github icon"
+                                     onmouseover="changeIcon('gitub_icon', './assets/icons/github hover.svg')" onmouseout="changeIcon('gitub_icon', './assets/icons/Github button.svg')">
+                                    <img id="linkedin_icon" class="link-icons" src="./assets/icons/Linkedin button.svg" alt="linkedIn button with letter icon"
+                                     onmouseover="changeIcon('linkedin_icon', './assets/icons/linkedin hover.svg')" onmouseout="changeIcon('linkedin_icon', './assets/icons/Linkedin button.svg')">
                                 </div>
                             </div>
                         </div>
@@ -40,15 +44,31 @@
                             <span class="name-text">Benjamin Mahalbasic</span>
                             <span class="job-text">FRONTEND DEVELOPER</span>
                         </div>
-                        <div class="arrow-down-btn">
-                            <img src="./assets/icons/Arrow down.svg" alt="arrow down button with border">
+                        <div class="arrow-down-frame">
+                            <div class="arrow-down-btn">
+                                <img id="arrow_down_btn" src="./assets/icons/Arrow down.svg" alt="arrow down button with border"
+                                 onmouseover="changeIcon('arrow_down_btn', './assets/icons/arrow down hover.svg')" onmouseout="changeIcon('arrow_down_btn', './assets/icons/Arrow down.svg')">
+                            </div>
                         </div>
                     </div>
                 </div>
                 
             </div>
         </section>
-        <nav></nav>
+        <nav>
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="./assets/icons/Logo icon nav.svg" alt="main logo icon">
+                    <span class="logo-nav-name">B.Mahalbasic</span>
+                    <span class="logo-nav-text">developer</span>
+                </div>
+                <div class="nav-link-container">
+                    <div id="why_me">
+                        <a id="link_why_me" class="nav-links" href="#">Why me</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </main>
     <footer></footer>
 </body>

@@ -1,0 +1,19 @@
+.nav-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-nav-name{
+    font-family: 'MyAnta';
+    font-weight: 400;
+    font-size: 14px;
+    color: #F8F5EC;
+}
+
+.logo-nav-text{
+    font-family: 'MyJosefin';
+    font-size: 14px;
+    font-weight: 300;
+    color: #262E34;
+}

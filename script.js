@@ -7,3 +7,8 @@ function changeLogoSmall(){
     const contentLogoRef = document.getElementById('main_logo');
     contentLogoRef.src = './assets/icons/Logo icon.svg';
 }
+
+function changeIcon(id, path){
+    const contentIconRef = document.getElementById(id);
+    contentIconRef.src = path;
+}

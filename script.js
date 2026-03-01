@@ -12,3 +12,24 @@ function changeIcon(id, path){
     const contentIconRef = document.getElementById(id);
     contentIconRef.src = path;
 }
+
+function onFocusDesign(id, link_id){
+    removeFocusFromLink();
+    removeFocusColor();
+    document.getElementById(id).classList.add('ellipse');
+    document.getElementById(link_id).style.color = '#F8F5EC';
+}
+
+function removeFocusFromLink(){
+    document.getElementById('why_me').classList.remove('ellipse');
+    document.getElementById('skills').classList.remove('ellipse');
+    document.getElementById('projects').classList.remove('ellipse');
+    document.getElementById('contact').classList.remove('ellipse');
+}
+
+function removeFocusColor(){
+    document.getElementById('link_why_me').style.color = '#262E34';
+    document.getElementById('link_skills').style.color = '#262E34';
+    document.getElementById('link_projects').style.color = '#262E34';
+    document.getElementById('link_contact').style.color = '#262E34';
+}

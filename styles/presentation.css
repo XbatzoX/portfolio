@@ -1,7 +1,21 @@
 .why-me-section{
     font-family: 'MyJosefin';
     padding-top: 100px;
-    width: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.why-me-frame{
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.why-me-container{
+    display: flex;
+    justify-content: center;
 }
 
 .main-line{
@@ -9,6 +23,11 @@
     font-size: 60px;
     font-weight: 400;
     color: #89BCD9;
+}
+
+.description-container{
+    display: flex;
+    gap: 48px;
 }
 
 .city-location-container{
@@ -21,10 +40,12 @@
 .color-blue{
     padding-left: 4px;
     color: #89BCD9;
+    white-space: nowrap;
 }
 
 .color-cream{
     color: #F8F5EC;
+    white-space: nowrap;
 }
 
 .left-border{
@@ -32,4 +53,26 @@
     height: 30px;
     background-color: #F8F5EC;
     margin-left: 2px;
+}
+
+.description-box{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.description-text{
+    font-size: 18px;
+    font-weight: 400;
+    color: #F8F5EC;
+}
+
+.lets-talk-ctrl-box{
+    display: flex;
+    justify-content: end;
+    padding-right: 8px;
+}
+
+#lets_talk_btn:hover{
+    cursor: pointer;
 }

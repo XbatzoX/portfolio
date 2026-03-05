@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./styles/nav.css">
+    <link rel="stylesheet" href="./styles/presentation.css">
     <script src="./script.js"></script>
 </head>
-<body>
+<body onload="init()">
     <main>
         <section class="hero-section">
             <div class="hero-container">
@@ -78,14 +79,33 @@
                 </div>
                 <div class="language-container">
                     <div id="german" class="language-bg">
-                        <span id="german_span" class="language-box" onclick="onFocusLanguageDesign('german', 'german_span')">DE</span>
+                        <span id="german_span" class="language-box" onclick="onFocusLanguageDesign('german', 'german_span')"
+                         onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
                     </div>
                     <div id="english" class="language-bg">
-                        <span id="english_span" class="language-box" onclick="onFocusLanguageDesign('english', 'english_span')">EN</span>
+                        <span id="english_span" class="language-box" onclick="onFocusLanguageDesign('english', 'english_span')"
+                         onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
                     </div>
                 </div>
             </div>
         </nav>
+        <section class="why-me-section">
+            <div class="why-me-frame">
+                <div class="why-me-container">
+                    <span class="main-line">Why me</span>
+                </div>
+                <div class="description-container">
+                    <div class="city-location-frame">
+                        <div class="city-location-container">
+                            <img src="./assets/icons/located_icon.svg">
+                            <span class="color-blue">Ich bin&nbsp;</span>
+                            <span class="color-cream">in Lübeck ansässig..</span>
+                            <div class="left-border"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     <footer></footer>
 </body>

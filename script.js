@@ -33,3 +33,13 @@ function removeFocusColor(){
     document.getElementById('link_projects').style.color = '#262E34';
     document.getElementById('link_contact').style.color = '#262E34';
 }
+
+function onFocusLanguageDesign(id, span_id){
+    document.getElementById(id).classList.add('ellipse-language');
+    document.getElementById(span_id).style.color ='#F8F5EC';
+}
+
+function removeFocusFromLanguage(){
+    document.getElementById('german').classList.remove('ellipse-language');
+    document.getElementById('english').classList.remove('ellipse-language');
+}

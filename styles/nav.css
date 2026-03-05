@@ -59,6 +59,7 @@ nav{
 }
 
 .link-bg{
+    width: 84px;
     display: flex;
     justify-content: center;
     align-items: center;   
@@ -78,9 +79,28 @@ nav{
     gap: 8px;
 }
 
+.language-bg{
+    width: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ellipse-language{
+    background-image: url('../assets/icons/Ellipse\ language.svg');
+    width: 37px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .language-box{
     font-family: 'MyJosefin';
     font-size: 18px;
     font-weight: 400;
     color: #262E34;
+}
+
+.language-box:hover{
+    cursor: pointer;
 }

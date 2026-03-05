@@ -1,4 +1,4 @@
-.why-me-section{
+.why-me-section, .my-skills-section{
     font-family: 'MyJosefin';
     padding-top: 100px;
     width: 100%;
@@ -75,4 +75,21 @@
 
 #lets_talk_btn:hover{
     cursor: pointer;
+}
+
+.skill-icon-box{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.icon-center{
+    width: 85px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-row{
+    display: flex;
+    gap: 32px;
 }

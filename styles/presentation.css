@@ -7,7 +7,7 @@
 }
 
 .why-me-frame{
-    width: 1100px;
+    width: 900px;
     display: flex;
     flex-direction: column;
     gap: 64px;
@@ -77,6 +77,20 @@
     cursor: pointer;
 }
 
+.my-skills-frame{
+    width: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+}
+
+.my-skills-content-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .skill-icon-box{
     display: flex;
     flex-direction: column;
@@ -92,4 +106,45 @@
 .icon-row{
     display: flex;
     gap: 32px;
+}
+
+.actual-learning-box{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.actual-learning-icon-box{
+    display: flex;
+    gap: 24px;
+}
+
+.learning-bg{
+    position: absolute;
+    background-image: url('../assets/img/shape_learning.svg');
+    width: 391px;
+    height: 391px;
+    background-repeat: no-repeat;  
+    background-size: cover;  
+}
+
+.learning-bg-hover{
+    position: absolute;
+    background-image: url('../assets/img/shape_learning_hover.svg');
+    width: 500px;
+    height: 500px;
+    background-repeat: no-repeat;  
+    background-size: cover;  
+}
+
+.learning-text{
+    color: #F8F5EC;
+    display: block;
+    max-width: 300px;
+    line-height: 1.6;
+    text-align: center;
+
 }

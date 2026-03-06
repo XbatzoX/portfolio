@@ -86,3 +86,8 @@ function hoverOverLanguageDesign(){
         onFocusLanguageDesign('english', 'english_span');
     }
 }
+
+function changeBackgroundImage(id, classRemove, classAdd){
+    document.getElementById(id).classList.remove(classRemove);
+    document.getElementById(id).classList.add(classAdd);
+}

@@ -12,6 +12,8 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
+    max-width: 1990px;
+    margin: 0 auto;
 }
 
 .nav-link-container{

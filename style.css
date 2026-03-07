@@ -38,7 +38,7 @@ body{
 .portrait-bg-image{
     position: absolute;
     /* top: 25%; */
-    bottom: -11%;
+    bottom: -8%;
     width: 90%;
     /* height: 80%; */
     transform: rotate(-10deg);
@@ -166,7 +166,13 @@ nav{
     background-color: #89BCD9;
 }
 
-@media(max-width:1300px){
+@media(max-width:1550px){
+    .hero-content{
+        align-items: end;
+    }
+}
+
+@media(max-width:1400px){
     .name-text{
         font-size: 50px;
     }

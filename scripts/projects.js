@@ -35,3 +35,8 @@ function setBackgroundFromActiveTab(id){
     contentSpanRef.style.color = '#F8F5EC';
     contentSpanRef.parentElement.classList.add('tab-bg');
 }
+
+function renderProjectInfos(id){
+    let contentRef = document.getElementById(id);
+    contentRef.innerHTML = '';
+}

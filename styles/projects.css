@@ -1,0 +1,59 @@
+.my-projects-section{
+    font-family: 'MyJosefin';
+    padding-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.my-projects-frame{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.my-projects-container{
+    display: flex;
+    justify-content: center;
+}
+
+ .projects-content-frame{
+    /* background-color: #2d383f; */
+} 
+
+.projects-content-container{
+    max-width: 1990px;
+    margin: 0 auto;
+}
+
+.tab-navigation-box{
+    padding: 24px 16px;
+    display: flex;
+    gap: 16px;
+}
+
+.tab-bg{
+    height: 100%;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    background-color: #2d383f;
+}
+
+.tab-span{
+    color: #89BCD9;
+    font-size: 30px;
+    font-weight: 500;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.tab-span:hover{
+    cursor: pointer;
+    color: #F8F5EC;
+}
+
+.project-content-box{
+    background-color: #2d383f;
+    height: 548px;
+}

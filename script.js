@@ -2,6 +2,7 @@ let languageID = 0;
 
 function init(){
     onFocusLanguageDesign('german', 'german_span');
+    calculateAmountOfProjects();
 }
 
 function changeLogoBig(){

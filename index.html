@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="./styles/nav.css">
     <link rel="stylesheet" href="./styles/presentation.css">
     <link rel="stylesheet" href="./styles/projects.css">
-    <script src="./script.js"></script>
     <script src="./scripts/projects.js"></script>
+    <script src="./script.js"></script>
 </head>
 <body onload="init()">
     <main>
@@ -189,12 +189,20 @@
                 <div class="projects-content-frame">
                     <div class="projects-content-container">
                         <div class="tab-navigation-box">
-                            <span class="tab-span tab-bg">1. Join</span>
-                            <span class="tab-span">2. El pollo loco</span>
-                            <span class="tab-span">3. Laufendes Project</span>
+                            <div class="tab-span-container tab-bg">
+                                <span id="project_0" class="tab-span">1. Join</span>
+                            </div>
+                            <div class="tab-span-container">
+                                <span id="project_1" class="tab-span">2. El pollo loco</span>
+                            </div>
+                            <div id="project_2" class="tab-span-container">
+                                <span class="tab-span">3. Laufendes Project</span>
+                            </div>
                         </div>
-                        <div class="project-content-box">
+                        <div class="project-content-frame">
+                            <div class="project-content-box">
 
+                            </div>
                         </div>
                     </div>
                 </div>

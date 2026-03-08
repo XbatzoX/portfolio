@@ -38,7 +38,7 @@ body{
 .portrait-bg-image{
     position: absolute;
     /* top: 25%; */
-    bottom: -8%;
+    bottom: -6%;
     width: 90%;
     /* height: 80%; */
     transform: rotate(-10deg);

@@ -13,6 +13,12 @@ const projects = [
         {
             "description" : "Praxis der Teamarbeit",
             "content" : "In unserem dreiköpfigen Projektteam war die Arbeit klar strukturiert. Mein Schwerpunkt lag auf dem Design sowie der Datenverwaltung für die Registrierung und die Verwaltung der Kontakte."
-        }]
+        }],
+        "tecIcons" : [
+            'assets/icons/html_projects.svg',
+            'assets/icons/css_projects.svg',
+            'assets/icons/javascript_projects.svg'
+        ],
+        "imagePath" : "assets/img/join_screen.svg"
     }
 ];

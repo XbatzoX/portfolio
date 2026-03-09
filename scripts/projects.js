@@ -2,10 +2,12 @@ let projectId = 0;
 let amountProjects = 0;
 let maxAmountOfProjects = 10;
 
-function activateNavigationTab(id){
+function activateNavigationTab(id, divId){
     calculateAmountOfProjects();
     removeBackgroundsFromTabs();
     setBackgroundFromActiveTab(id);
+    setProjectId(id);
+    renderProjectInfos(projectId, divId);
 }
 
 function calculateAmountOfProjects(){
@@ -36,7 +38,19 @@ function setBackgroundFromActiveTab(id){
     contentSpanRef.parentElement.classList.add('tab-bg');
 }
 
-function renderProjectInfos(id){
-    let contentRef = document.getElementById(id);
+function setProjectId(id){
+    for (let index = 0; index < amountProjects; index++) {
+        if(id == 'project_' + index){
+            projectId = index;
+            break;
+        }else{
+            projectId = 0;
+        }
+    }
+}
+
+function renderProjectInfos(projectId, divId){
+    let contentRef = document.getElementById(divId);
     contentRef.innerHTML = '';
+    contentRef.innerHTML = getProjectTemplate(projectId);
 }

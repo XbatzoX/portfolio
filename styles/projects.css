@@ -73,3 +73,62 @@
     max-width: 1990px;
     margin: 0 auto;
 }
+
+.left-side{
+    padding-top: 32px;
+    padding-left: 32px;
+    color: #F8F5EC;
+}
+
+.description-list{
+    list-style: none;
+    padding-left: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.description-list li{
+    position: relative;
+    padding-left: 50px;
+}
+
+.description-list li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 29px;
+    height: 26px;
+    background-image: url("../assets/img/dot_projects.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.li-content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.caption-box{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.caption{
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.project-duration{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.li-text{
+    font-size: 18px;
+    font-weight: 400;
+}

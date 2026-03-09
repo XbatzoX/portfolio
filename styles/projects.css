@@ -72,6 +72,14 @@
 .project-content-box{
     max-width: 1990px;
     margin: 0 auto;
+    height: 100%;
+}
+
+.content-box{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 32px;
 }
 
 .left-side{
@@ -135,4 +143,65 @@
 
 .tec-box{
     color: #F8F5EC;
+    height: calc(100% - 64px);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tec-icon-box{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.tec-ctrl-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.live-test-btn{
+    width: 130px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: #89BCD9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.live-test-btn span{
+    font-size: 18px;
+    font-weight: 400;
+    color: #262E34;
+}
+
+.live-test-btn:hover{
+    cursor: pointer;
+    background-color: #F8F5EC;
+}
+
+.github-btn{
+    width: 130px;
+    height: 45px;
+    border: 1px solid #89BCD9;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.github-btn span{
+    font-size: 18px;
+    font-weight: 400;
+    color: #89BCD9;
+}
+
+.github-btn:hover{
+    cursor: pointer;
+    background-color: rgba(250, 250, 250, 0.1);
 }

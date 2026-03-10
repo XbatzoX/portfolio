@@ -55,8 +55,8 @@ function getOngoingProjectTemplate(projectId){
                     <ul class="description-list">
                         <li>
                             <div class="li-content">
-                                <span class="caption">hahahahaha</span>
-                                <span class="li-text">dies wird die beschreibung</span>
+                                <span class="caption">${projects[projectId].list.description}</span>
+                                <span class="li-text">${projects[projectId].list.content}</span>
                             </div>
                         </li>
                     </ul>

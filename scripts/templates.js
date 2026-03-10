@@ -25,5 +25,24 @@ function getProjectTemplate(projectId){
                         </li>
                     </ul>
                 </div>
+                <div class="right-side">
+                    <div class="tec-box">
+                        <span class="project-duration">Technologien</span>
+                        <div class="tec-icon-box">
+                            <img src="${projects[projectId].tecIcons[0]}">
+                            <img src="${projects[projectId].tecIcons[1]}">
+                            <img src="${projects[projectId].tecIcons[2]}">
+                        </div>
+                        <img src="${projects[projectId].imagePath}">
+                        <div class="tec-ctrl-box">
+                            <div id="live_test_0" class="live-test-btn">
+                                <span>Live Test</span>
+                            </div>
+                            <div id="github_0" class="github-btn">
+                                <span>GitHub</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>`
 }

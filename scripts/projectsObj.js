@@ -20,5 +20,27 @@ const projects = [
             'assets/icons/javascript_projects.svg'
         ],
         "imagePath" : "assets/img/join_screen.svg"
+    },
+    {
+        "title" : "El pollo loco",
+        "duration" : "5 Wochen",
+        "list" : [{
+            "description" : "Jump and run game",
+            "content" : "Ein Jump-, Run- und Throw-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf Pepe, Münzen und Tabasco-Flaschen zu finden, um gegen die verrückte Henne zu kämpfen."
+        },
+        {
+            "description" : "Organisation meiner Tätigkeiten im Projekt",
+            "content" : "Ich habe mein Spiel objektorientiert aufgebaut, indem ich Klassen, Instanzen und Vererbung verwendet habe, um den Code übersichtlich und modular zu halten. Dadurch lassen sich einzelne Komponenten leichter warten, erweitern und wiederverwenden."
+        },
+        {
+            "description" : "Skillerweiterung durch das Projekt",
+            "content" : "Durch das Projekt konnte ich meine Kenntnisse in der Arbeit mit dem Canvas-Element und der Spielelogik vertiefen. Außerdem habe ich gelernt, wie man durch objektorientierte Programmierung in JavaScript komplexere Anwendungen strukturierter und wartbarer entwickelt."
+        }],
+        "tecIcons" : [
+            'assets/icons/html_projects.svg',
+            'assets/icons/css_projects.svg',
+            'assets/icons/javascript_projects.svg'
+        ],
+        "imagePath" : "assets/img/el_pollo_loco_screen.svg"
     }
 ];

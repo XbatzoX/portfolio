@@ -42,5 +42,21 @@ const projects = [
             'assets/icons/javascript_projects.svg'
         ],
         "imagePath" : "assets/img/el_pollo_loco_screen.svg"
+    },
+    {
+        "title" : "Ongoing project",
+        "list" : {
+            "description" : "Über das Projekt",
+            "content" : "Das Projekt wird ein HMI mittels Panel-PC und Schnittstelle zu einer Siemens S7-1500er SPS, um industrielle Anlagen zu visualisieren und bedienen. Den Vorteil gegenüber eines Siemens HMI sehe ich im Design und in der Unabhängigkeit der Datenverwaltung."
+        },
+        "tecIcons" : [
+            'assets/icons/angular_projects.svg',
+            'assets/icons/typescript_projects.svg',
+            'assets/icons/html_projects.svg',
+            'assets/icons/css_projects.svg',
+            'assets/icons/vue_js_projects.svg',
+            'assets/icons/react_projects.svg'
+        ],
+        "imagePath" : "assets/img/ongoing_img.svg"
     }
 ];

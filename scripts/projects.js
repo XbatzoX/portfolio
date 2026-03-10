@@ -7,7 +7,7 @@ function activateNavigationTab(id, divId){
     removeBackgroundsFromTabs();
     setBackgroundFromActiveTab(id);
     setProjectId(id);
-    
+    checkIfOngoingProject(projectId, divId);
 }
 
 function calculateAmountOfProjects(){
@@ -49,7 +49,7 @@ function setProjectId(id){
     }
 }
 
-function checkIfOngoingProject(){
+function checkIfOngoingProject(projectId, divId){
     if(projectId == (amountProjects - 1)){
         renderOngoingProject(projectId, divId);
     }else{

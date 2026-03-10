@@ -7,7 +7,7 @@ function activateNavigationTab(id, divId){
     removeBackgroundsFromTabs();
     setBackgroundFromActiveTab(id);
     setProjectId(id);
-    renderProjectInfos(projectId, divId);
+    
 }
 
 function calculateAmountOfProjects(){
@@ -49,8 +49,22 @@ function setProjectId(id){
     }
 }
 
+function checkIfOngoingProject(){
+    if(projectId == (amountProjects - 1)){
+        renderOngoingProject(projectId, divId);
+    }else{
+        renderProjectInfos(projectId, divId);
+    }
+}
+
 function renderProjectInfos(projectId, divId){
     let contentRef = document.getElementById(divId);
     contentRef.innerHTML = '';
     contentRef.innerHTML = getProjectTemplate(projectId);
+}
+
+function renderOngoingProject(projectId, divId){
+    let contentRef = document.getElementById(divId);
+    contentRef.innerHTML = '';
+    contentRef.innerHTML = getOngoingProjectTemplate(projectId);
 }

@@ -65,15 +65,15 @@ function getOngoingProjectTemplate(projectId){
                     <div class="tec-box-ongoing">
                         <span class="project-duration">Technologien</span>
                         <div class="tec-icon-box">
-                            <img src="./assets/icons/angular_projects.svg">
-                            <img src="./assets/icons/typescript_projects.svg">
-                            <img src="./assets/icons/html_projects.svg">
-                            <img src="./assets/icons/css_projects.svg">
-                            <img src="./assets/icons/vue_js_projects.svg">
-                            <img src="./assets/icons/react_projects.svg">
+                            <img src="${projects[projectId].tecIcons[0]}">
+                            <img src="${projects[projectId].tecIcons[1]}">
+                            <img src="${projects[projectId].tecIcons[2]}">
+                            <img src="${projects[projectId].tecIcons[3]}">
+                            <img src="${projects[projectId].tecIcons[4]}">
+                            <img src="${projects[projectId].tecIcons[5]}">
                         </div>
                         <div class="ongoing-image-box">
-                            <img class="ongoing-image" src="assets/img/ongoing_img.svg">
+                            <img class="ongoing-image" src="${projects[projectId].imagePath}">
                             <span class="ongoing-text">Comming soon...</span>
                         </div>
                     </div>

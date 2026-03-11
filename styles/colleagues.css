@@ -1,0 +1,85 @@
+.my-colleagues-section{
+    font-family: 'MyJosefin';
+    padding-top: 100px;
+    max-width: 1990px;
+    margin: 0 auto;
+    /* display: flex;
+    justify-content: center; */
+}
+
+.my-colleagues-frame{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.caption-container{
+    display: flex;
+    justify-content: center;
+}
+
+.caption-colleagues{
+    font-size: 32px;
+    font-weight: 400;
+    color: #89BCD9;
+}
+
+.comment-container{
+    height: 400px;
+}
+
+.comment-box{
+    color: #F8F5EC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    width: 400px;
+}
+
+.comment-person-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding-top: 55px;
+}
+
+.comment-name{
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.comment-project-container{
+    display: flex;
+    gap: 4px;
+}
+
+.comment-text{
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    max-width: 350px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.comment-description{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.comment-project{
+    font-size: 18px;
+    font-weight: 400;
+    color: #89BCD9;
+}
+
+.comment-bg{
+    background-image: url('../assets/img/comment_shape.svg');
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+}

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./styles/presentation.css">
     <link rel="stylesheet" href="./styles/projects.css">
     <link rel="stylesheet" href="./styles/colleagues.css">
+    <link rel="stylesheet" href="./styles/contact.css">
     <script src="./scripts/projectsObj.js"></script>
     <script src="./scripts/templates.js"></script>
     <script src="./scripts/projects.js"></script>
@@ -272,7 +273,32 @@
         <section class="my-contact-section">
             <div class="my-contact-frame">
                 <div class="my-contact-caption">
-                    <span class="main-line">Contact</span>
+                    <span class="main-line">Contact me</span>
+                    <img id="arrow_up_btn" class="arrow-up" src="./assets/icons/arrow_up.svg" alt="arrow up button"
+                    onmouseover="changeIcon('arrow_up_btn', 'assets/icons/arrow_up_hover.svg')" onmouseout="changeIcon('arrow_up_btn', 'assets/icons/arrow_up.svg')">
+                </div>
+                <div class="my-contact-box">
+                <div class="personal-info-container">
+                    <span class="info-description">
+                        Ob spannende Projekte, neue berufliche Herausforderungen oder ein unverbindlicher Austausch über mögliche Kooperationen - 
+                        ich freue mich über jede Gelegenheit, mich fachlich weiterzuentwickeln und gemeinsam Mehrwert zu schaffen. 
+                        Schreiben Sie mir gern, wenn Sie jemanden suchen, der strukturiert arbeitet, mit Engagement an Aufgaben herangeht und sich kontinuierlich weiterentwickeln möchte. 
+                    </span>
+                    <div class="contact-link-box">
+                        <a class="contact-link" href="mailto:#">
+                            <div class="mail-link-box" onmouseover="changeIcon('mail_link_icon', 'assets/icons/mail_icon_hover.svg')" onmouseout="changeIcon('mail_link_icon', 'assets/icons/mail_icon.svg')">
+                                <img id="mail_link_icon" src="./assets/icons/mail_icon.svg" alt="mail icon as letter">
+                                <span class="mail-text">E-mail: benbasic@outlook.de</span>
+                            </div>
+                        </a>
+                        <a class="contact-link" href="tel:+4915560529190">
+                            <div class="mail-link-box" onmouseover="changeIcon('phone_link_icon', 'assets/icons/phone_icon_hover.svg')" onmouseout="changeIcon('phone_link_icon', 'assets/icons/phone_icon.svg')">
+                                <img id="phone_link_icon" src="./assets/icons/phone_icon.svg" alt="phone icon">
+                                <span>Tel: +49155 60 52 9190</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
                 </div>
             </div>
         </section>

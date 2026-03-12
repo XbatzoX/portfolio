@@ -1,0 +1,68 @@
+.my-contact-section{
+    font-family: 'MyJosefin';
+    padding-top: 100px;
+    width: 100%;
+}
+
+.my-contact-frame{
+    max-width: 1990px;
+    margin: 0 auto;
+    padding-right: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.my-contact-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.my-contact-caption{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    position: relative;
+}
+
+.arrow-up{
+    position: absolute;
+    right: 0;
+    top: 16px;
+}
+
+.personal-info-container{
+    width: 910px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #F8F5EC;
+    display: flex;
+    gap: 24px;
+}
+
+.info-description{
+    width: 455px;
+}
+
+.contact-link{
+    text-decoration: none;
+    color: #F8F5EC;
+}
+
+.mail-link-box{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-link:hover{
+    cursor: pointer;
+    color: #89BCD9;
+}
+
+.mail-text{
+    padding-top: 4px;
+    white-space: nowrap;
+}

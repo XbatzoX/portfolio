@@ -10,7 +10,7 @@
 .my-colleagues-frame{
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 64px;
 }
 
 .caption-container{
@@ -26,6 +26,11 @@
 
 .comment-container{
     height: 400px;
+    max-width: 1990px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
 }
 
 .comment-box{
@@ -36,6 +41,7 @@
     gap: 24px;
     position: relative;
     width: 400px;
+    height: 400px;
 }
 
 .comment-person-box{
@@ -82,4 +88,26 @@
     height: 400px;
     position: absolute;
     top: 0;
+}
+
+.comment-bg-hover{
+    background-image: url('../assets/img/comment_shape_hover.svg');
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 0;
+}
+
+.comments-linkedIn-link{
+    font-size: 16px;
+    font-weight: 400;
+    color: #89BCD9;
+    text-decoration: underline;
+    position: absolute;
+    bottom: 10%;
+    z-index: 2;
+}
+
+.comments-linkedIn-link:hover{
+    cursor: pointer;
 }

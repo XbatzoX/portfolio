@@ -308,7 +308,8 @@
                             </div>
                             <div id="mail_input_box" class="input-container">
                                 <span id="input_mail_title" class="input-info-text">Deine Email</span>
-                                <input id="input_mail" type="text" required class="bg-input" onfocus="setContentMailOnFocus()" onblur="checkMailInput()">
+                                <input id="input_mail" type="text" required class="bg-input" onfocus="setContentMailOnFocus()" onblur="checkMailInput()"
+                                 autocomplete="new-password">
                             </div>
                         </div>
                         <div id="message_input_box" class="input-container">
@@ -319,6 +320,9 @@
                             <img id="privacy_btn" src="./assets/icons/privacy_checkbox.svg" alt="checkbox icon as shape" onmouseover="changePrivacyIcon('privacy_btn', 'assets/icons/privacy_checkbox_hover.svg')"
                              onmouseout="changePrivacyIcon('privacy_btn', 'assets/icons/privacy_checkbox.svg')" onclick="toggleButtonPrivacyPolicy()">
                             <span class="privacy-text">Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
+                        </div>
+                        <div class="submit-container">
+                            <button id="submit_btn" class="btn-disabled" disabled>Send</button>
                         </div>
                     </form>
                 </div>

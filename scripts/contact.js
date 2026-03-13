@@ -1,4 +1,8 @@
 let policyAccepted = false;
+let submitButtonEnabled = false;
+let validName = false;
+let validMail = false;
+let ValidMessage = false;
 
 function checkContentOfName(){
     let contentInputRef = document.getElementById('input_name');
@@ -10,13 +14,16 @@ function checkContentOfName(){
         contentSpanRef.style.color = "#E44C36";
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
+        validName = false;
     }
     if(contentInputRef.value.length >= 3){
         contentSpanRef.innerHTML = '';
         contentInputRef.style.backgroundColor = 'transparent';
         contentInputRef.classList.add('bg-img-done');
         contentDivRef.classList.add('input-height');
+        validName = true;
     }
+    checkInputFields();
 }
 
 function setContentNameOnFocus(){
@@ -35,7 +42,7 @@ function checkMailInput(){
     let contentInputRef = document.getElementById('input_mail');
     let contentSpanRef = document.getElementById('input_mail_title');
     let contentDivRef = document.getElementById('mail_input_box');
-    let validMail = checkValidEmail(String(contentInputRef.value));
+    validMail = checkValidEmail(String(contentInputRef.value));
     if(validMail){
         contentSpanRef.innerHTML = '';
         contentInputRef.style.backgroundColor = 'transparent';
@@ -48,6 +55,7 @@ function checkMailInput(){
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
     }
+    checkInputFields();
 }
 
 function checkValidEmail(email) {
@@ -77,13 +85,16 @@ function checkContentOfMessage(){
         contentSpanRef.style.color = "#E44C36";
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
+        ValidMessage = false;
     }
     if(contentInputRef.value.length >= 3){
         contentSpanRef.innerHTML = '';
         contentInputRef.style.backgroundColor = 'transparent';
         contentInputRef.classList.add('bg-img-done');
         contentDivRef.classList.add('input-height-message');
+        ValidMessage = true;
     }
+    checkInputFields();
 }
 
 function setContentMessageOnFocus(){
@@ -113,5 +124,18 @@ function toggleButtonPrivacyPolicy(){
     }else{
         policyButton.src = 'assets/icons/privacy_checkbox_hover.svg';
         policyAccepted = false;
+    }
+}
+
+function checkInputFields(){
+    let submitButton = document.getElementById('submit_btn');
+    if(validName && validMail && ValidMessage){
+        submitButton.disabled = false;
+        submitButton.classList.remove('btn-disabled');
+        submitButton.classList.add('btn-enabled');
+    }else{
+        submitButton.disabled = true;
+        submitButton.classList.remove('btn-enabled');
+        submitButton.classList.add('btn-disabled');
     }
 }

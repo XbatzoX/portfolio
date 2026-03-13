@@ -179,3 +179,36 @@
 #privacy_btn:hover{
     cursor: pointer;
 }
+
+.submit-container{
+    display: flex;
+    justify-content: end;
+}
+
+#submit_btn{
+    font-family: 'MyJosefin';
+    font-size: 18px;
+    font-weight: 400;
+    width: 101px;
+    height: 45px;
+    text-align: center;
+}
+
+.btn-disabled{
+    color: #F8F5EC;
+    background-color: transparent;
+    border: 1px solid #F8F5EC;
+    border-radius: 30px;
+}
+
+.btn-enabled{
+    color: #89BCD9;
+    background-color: transparent;
+    border: 1px solid #89BCD9;
+    border-radius: 30px;
+}
+
+.btn-enabled:hover{
+    cursor: pointer;
+    background-color: rgba(250, 250, 250, 0.1);
+}

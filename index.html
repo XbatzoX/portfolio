@@ -313,7 +313,12 @@
                         </div>
                         <div id="message_input_box" class="input-container">
                             <span id="input_message_title" class="input-info-text">Deine Nachricht</span>
-                            <textarea id="input_message" class="bg-input-message"></textarea>
+                            <textarea id="input_message" class="bg-input-message" onfocus="setContentMessageOnFocus()" onblur="checkContentOfMessage()"></textarea>
+                        </div>
+                        <div class="privacy-box">
+                            <img id="privacy_btn" src="./assets/icons/privacy_checkbox.svg" alt="checkbox icon as shape" onmouseover="changePrivacyIcon('privacy_btn', 'assets/icons/privacy_checkbox_hover.svg')"
+                             onmouseout="changePrivacyIcon('privacy_btn', 'assets/icons/privacy_checkbox.svg')" onclick="toggleButtonPrivacyPolicy()">
+                            <span class="privacy-text">Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
                         </div>
                     </form>
                 </div>

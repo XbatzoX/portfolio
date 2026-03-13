@@ -33,6 +33,10 @@
     top: 16px;
 }
 
+.arrow-up:hover{
+    cursor: pointer;
+}
+
 .personal-info-container{
     width: 910px;
     font-size: 18px;
@@ -65,4 +69,50 @@
 .mail-text{
     padding-top: 4px;
     white-space: nowrap;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.input-info-text{
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #89BCD9;
+}
+
+.bg-input{
+    width: 445px;
+    font-family: 'MyJosefin';
+    color: #F8F5EC;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #89BCD9;
+    border-radius: 30px;
+    padding-top: 19px;
+    padding-left: 28px;
+    padding: 19px 28px;
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 26px 31px;
+
+}
+
+.bg-input:focus{
+    /* background-color: transparent; */
+    background-color: rgba(250, 250, 250, 0.1);
+    outline: unset;
+}
+
+.bg-img-done{
+    background-image: url('../assets/icons/icon_done.svg');
+}
+
+.input-height{
+    height: 74px;
+    display: flex;
+    justify-content: end;
 }

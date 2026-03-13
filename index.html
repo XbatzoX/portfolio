@@ -16,6 +16,7 @@
     <script src="./scripts/projectsObj.js"></script>
     <script src="./scripts/templates.js"></script>
     <script src="./scripts/projects.js"></script>
+    <script src="./scripts/contact.js"></script>
     <script src="./script.js"></script>
 </head>
 <body onload="init()">
@@ -278,27 +279,33 @@
                     onmouseover="changeIcon('arrow_up_btn', 'assets/icons/arrow_up_hover.svg')" onmouseout="changeIcon('arrow_up_btn', 'assets/icons/arrow_up.svg')">
                 </div>
                 <div class="my-contact-box">
-                <div class="personal-info-container">
-                    <span class="info-description">
-                        Ob spannende Projekte, neue berufliche Herausforderungen oder ein unverbindlicher Austausch über mögliche Kooperationen - 
-                        ich freue mich über jede Gelegenheit, mich fachlich weiterzuentwickeln und gemeinsam Mehrwert zu schaffen. 
-                        Schreiben Sie mir gern, wenn Sie jemanden suchen, der strukturiert arbeitet, mit Engagement an Aufgaben herangeht und sich kontinuierlich weiterentwickeln möchte. 
-                    </span>
-                    <div class="contact-link-box">
-                        <a class="contact-link" href="mailto:#">
-                            <div class="mail-link-box" onmouseover="changeIcon('mail_link_icon', 'assets/icons/mail_icon_hover.svg')" onmouseout="changeIcon('mail_link_icon', 'assets/icons/mail_icon.svg')">
-                                <img id="mail_link_icon" src="./assets/icons/mail_icon.svg" alt="mail icon as letter">
-                                <span class="mail-text">E-mail: benbasic@outlook.de</span>
-                            </div>
-                        </a>
-                        <a class="contact-link" href="tel:+4915560529190">
-                            <div class="mail-link-box" onmouseover="changeIcon('phone_link_icon', 'assets/icons/phone_icon_hover.svg')" onmouseout="changeIcon('phone_link_icon', 'assets/icons/phone_icon.svg')">
-                                <img id="phone_link_icon" src="./assets/icons/phone_icon.svg" alt="phone icon">
-                                <span>Tel: +49155 60 52 9190</span>
-                            </div>
-                        </a>
+                    <div class="personal-info-container">
+                        <span class="info-description">
+                            Ob spannende Projekte, neue berufliche Herausforderungen oder ein unverbindlicher Austausch über mögliche Kooperationen - 
+                            ich freue mich über jede Gelegenheit, mich fachlich weiterzuentwickeln und gemeinsam Mehrwert zu schaffen. 
+                            Schreiben Sie mir gern, wenn Sie jemanden suchen, der strukturiert arbeitet, mit Engagement an Aufgaben herangeht und sich kontinuierlich weiterentwickeln möchte. 
+                        </span>
+                        <div class="contact-link-box">
+                            <a class="contact-link" href="mailto:#">
+                                <div class="mail-link-box" onmouseover="changeIcon('mail_link_icon', 'assets/icons/mail_icon_hover.svg')" onmouseout="changeIcon('mail_link_icon', 'assets/icons/mail_icon.svg')">
+                                    <img id="mail_link_icon" src="./assets/icons/mail_icon.svg" alt="mail icon as letter">
+                                    <span class="mail-text">E-mail: benbasic@outlook.de</span>
+                                </div>
+                            </a>
+                            <a class="contact-link" href="tel:+4915560529190">
+                                <div class="mail-link-box" onmouseover="changeIcon('phone_link_icon', 'assets/icons/phone_icon_hover.svg')" onmouseout="changeIcon('phone_link_icon', 'assets/icons/phone_icon.svg')">
+                                    <img id="phone_link_icon" src="./assets/icons/phone_icon.svg" alt="phone icon">
+                                    <span>Tel: +49155 60 52 9190</span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                    <form class="contact-form" onsubmit="return false" autocomplete="off">
+                        <div id="name_input_box" class="input-container">
+                            <span id="input_name_title" class="input-info-text">Dein Name</span>
+                            <input id="input_name" type="text" required class="bg-input" onfocus="setContentNameOnFocus()" onblur="checkContentOfName()">
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>

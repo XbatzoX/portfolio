@@ -18,6 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 64px;
 }
 
 .my-contact-caption{
@@ -35,6 +36,12 @@
 
 .arrow-up:hover{
     cursor: pointer;
+}
+
+.contact-link-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .personal-info-container{
@@ -71,6 +78,18 @@
     white-space: nowrap;
 }
 
+.contact-form{
+    width: 910px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.person-data-container{
+    display: flex;
+    justify-content: space-between;
+}
+
 .input-container{
     display: flex;
     flex-direction: column;
@@ -85,7 +104,7 @@
 }
 
 .bg-input{
-    width: 445px;
+    width: 387px;
     font-family: 'MyJosefin';
     color: #F8F5EC;
     font-size: 18px;
@@ -115,4 +134,27 @@
     height: 74px;
     display: flex;
     justify-content: end;
+}
+
+.bg-input-message{
+    width: 852px;
+    height: 160px;
+    font-family: 'MyJosefin';
+    color: #F8F5EC;
+    font-size: 18px;
+    background-color: transparent;
+    border: 1px solid #89BCD9;
+    border-radius: 30px;
+    padding-top: 19px;
+    padding-left: 28px;
+    padding: 19px 28px;
+    background-repeat: no-repeat;
+    background-position: right 12px top;
+    background-size: 26px 31px;
+    resize: none;
+}
+
+.bg-input-message:focus{
+    background-color: rgba(250, 250, 250, 0.1);
+    outline: unset;
 }

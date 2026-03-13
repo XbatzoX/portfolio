@@ -301,9 +301,19 @@
                         </div>
                     </div>
                     <form class="contact-form" onsubmit="return false" autocomplete="off">
-                        <div id="name_input_box" class="input-container">
-                            <span id="input_name_title" class="input-info-text">Dein Name</span>
-                            <input id="input_name" type="text" required class="bg-input" onfocus="setContentNameOnFocus()" onblur="checkContentOfName()">
+                        <div class="person-data-container">
+                            <div id="name_input_box" class="input-container">
+                                <span id="input_name_title" class="input-info-text">Dein Name</span>
+                                <input id="input_name" type="text" required class="bg-input" onfocus="setContentNameOnFocus()" onblur="checkContentOfName()">
+                            </div>
+                            <div id="mail_input_box" class="input-container">
+                                <span id="input_mail_title" class="input-info-text">Deine Email</span>
+                                <input id="input_mail" type="text" required class="bg-input" onfocus="setContentMailOnFocus()" onblur="checkMailInput()">
+                            </div>
+                        </div>
+                        <div id="message_input_box" class="input-container">
+                            <span id="input_message_title" class="input-info-text">Deine Nachricht</span>
+                            <textarea id="input_message" class="bg-input-message"></textarea>
                         </div>
                     </form>
                 </div>

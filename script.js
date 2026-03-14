@@ -97,4 +97,7 @@ function scrollToSection(id){
     document.getElementById(id).scrollIntoView({
         behavior: "smooth"
     });
+    if(id == 'why_me_section'){
+        onFocusDesign('why_me', 'link_why_me');
+    }
 }

@@ -161,6 +161,43 @@ body{
     cursor: pointer;
 }
 
+footer{
+    height: 200px;
+    width: 100%;
+    background-color: #89BCD9;
+    font-family: 'MyJosefin';
+    font-size: 18px;
+    font-weight: 400;
+    color: #262E34;
+}
+
+.footer-frame{
+    max-width: 1990px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.footer-left-side{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-link-container{
+    display: flex;
+    justify-content: start;
+}
+
+.impressum-link{
+    text-decoration: none;
+    color: #262E34;
+}
+
+.impressum-link:hover{
+    cursor: pointer;
+    color: #F8F5EC;
+}
+
 nav{
     height: 100px;
     background-color: #89BCD9;

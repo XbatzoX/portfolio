@@ -2,6 +2,7 @@
     font-family: 'MyJosefin';
     padding-top: 100px;
     width: 100%;
+    padding-bottom: 100px;
 }
 
 .my-contact-frame{
@@ -129,13 +130,13 @@
 }
 
 .input-height{
-    height: 74px;
+    height: 71.6px;
     display: flex;
     justify-content: end;
 }
 
 .input-height-message{
-    height: 215px;
+    height: 213.2px;
     display: flex;
     justify-content: end;
 }
@@ -211,4 +212,15 @@
 .btn-enabled:hover{
     cursor: pointer;
     background-color: rgba(250, 250, 250, 0.1);
+}
+
+.privacy-error-text{
+    font-size: 14px;
+    font-weight: 400;
+    color: #E44C36;
+    padding-left: 32px;
+}
+
+.privacy-height{
+    height: 40px;
 }

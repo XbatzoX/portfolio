@@ -121,6 +121,8 @@ function toggleButtonPrivacyPolicy(){
     if(!policyAccepted){
         policyButton.src = 'assets/icons/privacy_checkbox_accepted.svg';
         policyAccepted = true;
+        document.getElementById('privacy_container').classList.add('privacy-height');
+        document.getElementById('privacy_error_text').classList.add('invisible');
     }else{
         policyButton.src = 'assets/icons/privacy_checkbox_hover.svg';
         policyAccepted = false;
@@ -138,4 +140,22 @@ function checkInputFields(){
         submitButton.classList.remove('btn-enabled');
         submitButton.classList.add('btn-disabled');
     }
+}
+
+function sendMessage(){
+    let sendPermission = checkIfPrivacyPolicyAccepted();
+}
+
+function checkIfPrivacyPolicyAccepted(){
+    let sendPermission = false;
+    let contentDivRef = document.getElementById('privacy_container');
+    let contentImgRef = document.getElementById('privacy_btn');
+    let contentSpanRef = document.getElementById('privacy_error_text');
+    if(!policyAccepted){
+        contentDivRef.classList.remove('privacy-height');
+        contentImgRef.src = 'assets/icons/privacy_checkbox_error.svg';
+        contentSpanRef.classList.remove('invisible');
+        sendPermission = true;
+    }
+    return sendPermission;
 }

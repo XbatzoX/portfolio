@@ -92,3 +92,9 @@ function changeBackgroundImage(id, classRemove, classAdd){
     document.getElementById(id).classList.remove(classRemove);
     document.getElementById(id).classList.add(classAdd);
 }
+
+function scrollToSection(id){
+    document.getElementById(id).scrollIntoView({
+        behavior: "smooth"
+    });
+}

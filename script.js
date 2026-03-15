@@ -3,6 +3,7 @@ let manualNavigation = false;
 
 function init(){
     onFocusLanguageDesign('german', 'german_span');
+    loadLanguageData(languageID);
     activateNavigationTab('project_0', 'project_content');
 }
 
@@ -42,6 +43,11 @@ function removeFocusColor(){
     document.getElementById('link_skills').style.color = '#262E34';
     document.getElementById('link_projects').style.color = '#262E34';
     document.getElementById('link_contact').style.color = '#262E34';
+}
+
+function loadLanguage(id, span_id){
+    onFocusLanguageDesign(id, span_id);
+    loadLanguageData(languageID);
 }
 
 function onFocusLanguageDesign(id, span_id){

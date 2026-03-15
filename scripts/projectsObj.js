@@ -62,3 +62,22 @@ const projects = [
         "imagePath" : "assets/img/ongoing_img.svg"
     }
 ];
+
+const navData = [
+    {
+        "de" : [
+            'Warum ich',
+            'Fähigkeiten',
+            'Projekte',
+            'Kontakt'
+        ]
+    },
+    {
+        "en" : [
+            'Why me',
+            'Skills',
+            'Projects',
+            'Contact'
+        ]
+    }
+];

@@ -1,4 +1,5 @@
 let languageID = 0;
+let manualNavigation = false;
 
 function init(){
     onFocusLanguageDesign('german', 'german_span');
@@ -23,8 +24,10 @@ function changeIcon(id, path){
 function onFocusDesign(id, link_id){
     removeFocusFromLink();
     removeFocusColor();
-    document.getElementById(id).classList.add('ellipse');
-    document.getElementById(link_id).style.color = '#F8F5EC';
+    if(id != '' && link_id != ''){
+        document.getElementById(id).classList.add('ellipse');
+        document.getElementById(link_id).style.color = '#F8F5EC';
+    }
 }
 
 function removeFocusFromLink(){
@@ -99,5 +102,57 @@ function scrollToSection(id){
     });
     if(id == 'why_me_section'){
         onFocusDesign('why_me', 'link_why_me');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    let sections = document.querySelectorAll('section');
+    let navLinks = document.querySelectorAll('.nav-links');
+
+    let observer = new IntersectionObserver(entries => {
+        if(manualNavigation) return;
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                // console.log(entry.target.id);
+                setButtonOnNavbar(entry.target.id);
+            }
+        });
+    },{
+        threshold: 0.4
+    });
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            manualNavigation = true;
+            setTimeout(() =>{
+                manualNavigation = false;
+            }, 800);
+        });
+    });
+});
+
+function setButtonOnNavbar(contentId){
+    switch(contentId){
+        case 'hero_section':
+            onFocusDesign('', '');
+            break;
+        case 'why_me_section':
+            onFocusDesign('why_me', 'link_why_me');
+            break;
+        case 'my_skills_section':
+            onFocusDesign('skills', 'link_skills');
+            break;
+        case 'my_projects_section':
+        case 'my_colleagues_section':
+            onFocusDesign('projects', 'link_projects');
+            break;
+        case 'my_contact_section':
+            onFocusDesign('contact', 'link_contact');
+            break;
+        default:
+            onFocusDesign('why_me', 'link_why_me');
     }
 }

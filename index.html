@@ -40,9 +40,11 @@
                             <div class="main-link-frame">
                                 <div class="main-link-container">
                                     <img id="mail_icon" class="link-icons" src="./assets/icons/Email button.svg" alt="e-mail button with letter icon"
-                                     onmouseover="changeIcon('mail_icon', './assets/icons/mail hover.svg')" onmouseout="changeIcon('mail_icon', './assets/icons/Email button.svg')">
+                                     onmouseover="changeIcon('mail_icon', './assets/icons/mail hover.svg')" onmouseout="changeIcon('mail_icon', './assets/icons/Email button.svg')"
+                                     onclick="scrollToSection('my_contact_section')">
                                     <img id="gitub_icon" class="link-icons" src="./assets/icons/Github button.svg" alt="github button with github icon"
-                                     onmouseover="changeIcon('gitub_icon', './assets/icons/github hover.svg')" onmouseout="changeIcon('gitub_icon', './assets/icons/Github button.svg')">
+                                     onmouseover="changeIcon('gitub_icon', './assets/icons/github hover.svg')" onmouseout="changeIcon('gitub_icon', './assets/icons/Github button.svg')"
+                                     onclick="openWebsite('https://github.com/XbatzoX')">
                                     <img id="linkedin_icon" class="link-icons" src="./assets/icons/Linkedin button.svg" alt="linkedIn button with letter icon"
                                      onmouseover="changeIcon('linkedin_icon', './assets/icons/linkedin hover.svg')" onmouseout="changeIcon('linkedin_icon', './assets/icons/Linkedin button.svg')">
                                 </div>
@@ -65,7 +67,7 @@
         </section>
         <nav>
             <div class="nav-container">
-                <div class="nav-logo">
+                <div class="nav-logo" onclick="scrollToSection('hero_section')">
                     <img src="./assets/icons/Logo icon nav.svg" alt="main logo icon">
                     <span class="logo-nav-name">B.Mahalbasic</span>
                     <span class="logo-nav-text">developer</span>

@@ -103,9 +103,13 @@ function scrollToSection(id){
     if(id == 'why_me_section'){
         onFocusDesign('why_me', 'link_why_me');
     }
-    if(id == 'hero_section'){
+    if(id == 'hero_section' || id == 'my_contact_section'){
         manualNavigation = true;
-        onFocusDesign('', '');
+        if(id == 'hero_section'){
+            onFocusDesign('', '');
+        }else if(id == 'my_contact_section'){
+            onFocusDesign('contact', 'link_contact');
+        }
         setTimeout(() => {
            manualNavigation = false; 
         }, 800);
@@ -162,4 +166,8 @@ function setButtonOnNavbar(contentId){
         default:
             onFocusDesign('why_me', 'link_why_me');
     }
+}
+
+function openWebsite(path){
+    window.open(path, "_blank");
 }

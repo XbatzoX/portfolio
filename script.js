@@ -103,6 +103,13 @@ function scrollToSection(id){
     if(id == 'why_me_section'){
         onFocusDesign('why_me', 'link_why_me');
     }
+    if(id == 'hero_section'){
+        manualNavigation = true;
+        onFocusDesign('', '');
+        setTimeout(() => {
+           manualNavigation = false; 
+        }, 800);
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

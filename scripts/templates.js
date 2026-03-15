@@ -40,7 +40,7 @@ function getProjectTemplate(projectId){
                             <div id="live_test_${projectId}" class="live-test-btn">
                                 <span>Live Test</span>
                             </div>
-                            <div id="github_${projectId}" class="github-btn">
+                            <div id="github_${projectId}" class="github-btn" onclick="openWebsite('${projects[projectId].githubPath}')">
                                 <span>GitHub</span>
                             </div>
                         </div>

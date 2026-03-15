@@ -19,7 +19,8 @@ const projects = [
             'assets/icons/css_projects.svg',
             'assets/icons/javascript_projects.svg'
         ],
-        "imagePath" : "assets/img/join_screen.svg"
+        "imagePath" : "assets/img/join_screen.svg",
+        "githubPath" : "https://github.com/XbatzoX/JOIN-2"
     },
     {
         "title" : "El pollo loco",
@@ -41,7 +42,8 @@ const projects = [
             'assets/icons/css_projects.svg',
             'assets/icons/javascript_projects.svg'
         ],
-        "imagePath" : "assets/img/el_pollo_loco_screen.svg"
+        "imagePath" : "assets/img/el_pollo_loco_screen.svg",
+        "githubPath" : "https://github.com/XbatzoX/el-pollo-loco"
     },
     {
         "title" : "Ongoing project",

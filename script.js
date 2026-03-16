@@ -48,6 +48,7 @@ function removeFocusColor(){
 function loadLanguage(id, span_id){
     onFocusLanguageDesign(id, span_id);
     loadLanguageData(languageID);
+    setProjectLanguage();
 }
 
 function onFocusLanguageDesign(id, span_id){
@@ -71,8 +72,10 @@ function removeColorLanguage(){
 function setLanguageID(id){
     if(id == 'german'){
         languageID = 0;
+        projectLanguageId = 0;
     }else{
         languageID = 1;
+        projectLanguageId = 1;
     }
 }
 

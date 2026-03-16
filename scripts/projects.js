@@ -1,6 +1,7 @@
 let projectId = 0;
 let amountProjects = 0;
 let maxAmountOfProjects = 10;
+let projectLanguageId = 0;
 
 function activateNavigationTab(id, divId){
     calculateAmountOfProjects();
@@ -8,6 +9,10 @@ function activateNavigationTab(id, divId){
     setBackgroundFromActiveTab(id);
     setProjectId(id);
     checkIfOngoingProject(projectId, divId);
+}
+
+function setProjectLanguage(){
+    checkIfOngoingProject(projectId, 'project_content');
 }
 
 function calculateAmountOfProjects(){
@@ -60,11 +65,15 @@ function checkIfOngoingProject(projectId, divId){
 function renderProjectInfos(projectId, divId){
     let contentRef = document.getElementById(divId);
     contentRef.innerHTML = '';
-    contentRef.innerHTML = getProjectTemplate(projectId);
+    if(projectLanguageId == 0){
+        contentRef.innerHTML = getProjectTemplate(projectId);
+    }
 }
 
 function renderOngoingProject(projectId, divId){
     let contentRef = document.getElementById(divId);
     contentRef.innerHTML = '';
-    contentRef.innerHTML = getOngoingProjectTemplate(projectId);
+    if(projectLanguageId == 0){
+        contentRef.innerHTML = getOngoingProjectTemplate(projectId);
+    }
 }

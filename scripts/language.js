@@ -1,5 +1,7 @@
 function loadLanguageData(languageId){
     loadNavData(languageId);
+    loadWhyMeData(languageId);
+    loadMySkillsData(languageId);
 }
 
 function loadNavData(languageId){
@@ -22,5 +24,40 @@ function loadEnglishNavData(languageId){
         document.getElementById('link_skills').innerHTML = navData[1].en[1];
         document.getElementById('link_projects').innerHTML = navData[1].en[2];
         document.getElementById('link_contact').innerHTML = navData[1].en[3];
+    }
+}
+
+function loadWhyMeData(languageId){
+    loadGermanWhyMeData(languageId);
+    loadEnglishWhyMeData(languageId);
+}
+
+function loadGermanWhyMeData(languageId){
+    if(languageId == 0){
+        document.getElementById('why_me_caption').innerHTML = whyMeData.de.caption;
+        document.getElementById('city_location_1').innerHTML = whyMeData.de.city_1;
+        document.getElementById('city_location_2').innerHTML = whyMeData.de.city_2;
+        document.getElementById('description_text').innerHTML = whyMeData.de.description;
+    }
+}
+
+function loadEnglishWhyMeData(languageId){
+    if(languageId == 1){
+        document.getElementById('why_me_caption').innerHTML = whyMeData.en.caption;
+        document.getElementById('city_location_1').innerHTML = whyMeData.en.city_1;
+        document.getElementById('city_location_2').innerHTML = whyMeData.en.city_2;
+        document.getElementById('description_text').innerHTML = whyMeData.en.description;
+    }
+}
+
+function loadMySkillsData(languageId){
+    loadGermanMySkillsData(languageId);
+}
+
+function loadGermanMySkillsData(languageId){
+    if(languageId == 0){
+        document.getElementById('my_skills_caption').innerHTML = mySkillsData.de.caption;
+        document.getElementById('actual_learning_id').innerHTML = mySkillsData.de.actualLearning;
+        document.getElementById('actual_learning_text').innerHTML = mySkillsData.de.actualLeraningText;
     }
 }

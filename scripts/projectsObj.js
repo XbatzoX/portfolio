@@ -81,3 +81,43 @@ const navData = [
         ]
     }
 ];
+
+const whyMeData = {
+    "de" : {
+        "caption" : "Warum ich",
+        "city_1" : "Ich bin&nbsp;",
+        "city_2" : "in Lübeck ansässig..",
+        "description" : `Ich bin Benjamin, angehender Frontend-Entwickler in Weiterbildung.
+                        Ich setze UI-Designs in sauberen, strukturierten Code um und lege Wert auf klare Logik, gute Struktur und wartbare Lösungen.
+                        HTML, CSS und JavaScript sind dabei mein Fundament - pragmatisch, zuverlässig und Schritt für Schritt so umgesetzt, dass es im Projektalltag funktioniert.
+                        Ich arbeite lösungsorientiert, lerne schnell und bleibe dran, bis ein Feature wirklich sauber sitzt. Ich bewerbe mich als Junior Frontend-Entwickler
+                        und suche ein Team, in dem ich an echten Anwendungen mitbauen, Verantwortung übernehmen und mich fachlich weiterentwickeln kann.`
+        },
+        "en" : {
+            "caption" : "Why me",
+            "city_1" : "I am&nbsp;",
+            "city_2" : "located in Lübeck..",
+            "description" : `I am Benjamin, an aspiring frontend developer currently in training.
+                             I turn UI designs into clean, well-structured code and focus on clear logic, solid structure, and maintainable solutions.
+                             HTML, CSS, and JavaScript are my foundation — applied pragmatically, reliably, and step by step so that everything works in real project environments.
+                             I work in a solution-oriented way, learn quickly, and stay focused until a feature is implemented cleanly and properly.
+                             I am applying for a position as a Junior Frontend Developer and am looking for a team where I can contribute to real applications, take on responsibility, and continue to grow professionally.`
+        }
+};
+
+const mySkillsData = {
+    "de" : {
+        "caption" : "Meine Fähigkeiten",
+        "actualLearning" : "Ich lerne gerade aktuell",
+        "actualLeraningText" : `Eine kurze Darstellung meiner Skills und welche Skills gerade angeeignet werden.
+                                Dabei liegt der Fokus auf Frontend-Technologien, saubere Umsetzung und die Bereitschaft,
+                                neue Tools und Standards schnell zu lernen und im Projekt sauber einzusetzen.`
+    },
+    "en" : {
+        "caption" : "My Skills",
+        "actualLearning" : "I am currently learning",
+        "actualLearningText" : `A brief overview of my current skills and the ones I am currently developing.
+                                The focus is on frontend technologies, clean implementation, and the willingness
+                                to quickly learn new tools and standards and apply them effectively in projects.`
+    }
+}

@@ -52,12 +52,21 @@ function loadEnglishWhyMeData(languageId){
 
 function loadMySkillsData(languageId){
     loadGermanMySkillsData(languageId);
+    loadEnglishMySkillsData(languageId);
 }
 
 function loadGermanMySkillsData(languageId){
     if(languageId == 0){
         document.getElementById('my_skills_caption').innerHTML = mySkillsData.de.caption;
         document.getElementById('actual_learning_id').innerHTML = mySkillsData.de.actualLearning;
-        document.getElementById('actual_learning_text').innerHTML = mySkillsData.de.actualLeraningText;
+        document.getElementById('actual_learning_text').innerHTML = mySkillsData.de.actualLearningText;
+    }
+}
+
+function loadEnglishMySkillsData(languageId){
+    if(languageId == 1){
+        document.getElementById('my_skills_caption').innerHTML = mySkillsData.en.caption;
+        document.getElementById('actual_learning_id').innerHTML = mySkillsData.en.actualLearning;
+        document.getElementById('actual_learning_text').innerHTML = mySkillsData.en.actualLearningText;
     }
 }

@@ -109,14 +109,14 @@ const mySkillsData = {
     "de" : {
         "caption" : "Meine Fähigkeiten",
         "actualLearning" : "Ich lerne gerade aktuell",
-        "actualLeraningText" : `Eine kurze Darstellung meiner Skills und welche Skills gerade angeeignet werden.
+        "actualLearningText" : `Eine kurze Darstellung meiner Skills und welche Skills gerade angeeignet werden.
                                 Dabei liegt der Fokus auf Frontend-Technologien, saubere Umsetzung und die Bereitschaft,
                                 neue Tools und Standards schnell zu lernen und im Projekt sauber einzusetzen.`
     },
     "en" : {
         "caption" : "My Skills",
         "actualLearning" : "I am currently learning",
-        "actualLearningText" : `A brief overview of my current skills and the ones I am currently developing.
+        "actualLearningText" : `An overview of my current skills and the ones I am currently developing.
                                 The focus is on frontend technologies, clean implementation, and the willingness
                                 to quickly learn new tools and standards and apply them effectively in projects.`
     }

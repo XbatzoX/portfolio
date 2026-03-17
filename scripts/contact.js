@@ -10,7 +10,7 @@ function checkContentOfName(){
     let contentSpanRef = document.getElementById('input_name_title');
     let contentDivRef = document.getElementById('name_input_box');
     if(contentInputRef.value == '' || contentInputRef.value.length < 3){
-        contentDivRef.classList.remove('input-height');
+        // contentDivRef.classList.remove('input-height');
         if(contactLanguageId == 0){
             contentSpanRef.innerHTML = contactMeData.de.form.nameError;
         }else{
@@ -25,7 +25,7 @@ function checkContentOfName(){
         contentSpanRef.innerHTML = '';
         contentInputRef.style.backgroundColor = 'transparent';
         contentInputRef.classList.add('bg-img-done');
-        contentDivRef.classList.add('input-height');
+        // contentDivRef.classList.add('input-height');
         validName = true;
     }
     checkInputFields();
@@ -39,7 +39,7 @@ function setContentNameOnFocus(){
     contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
-    contentDivRef.classList.remove('input-height');
+    // contentDivRef.classList.remove('input-height');
     if(contactLanguageId == 0){
         contentSpanRef.innerHTML = contactMeData.de.form.name;
     }else{
@@ -56,9 +56,9 @@ function checkMailInput(){
         contentSpanRef.innerHTML = '';
         contentInputRef.style.backgroundColor = 'transparent';
         contentInputRef.classList.add('bg-img-done');
-        contentDivRef.classList.add('input-height');
+        // contentDivRef.classList.add('input-height');
     }else{
-        contentDivRef.classList.remove('input-height');
+        // contentDivRef.classList.remove('input-height');
         if(contactLanguageId == 0){
             contentSpanRef.innerHTML = contactMeData.de.form.mailError;
         }else{
@@ -84,7 +84,7 @@ function setContentMailOnFocus(){
     contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
-    contentDivRef.classList.remove('input-height');
+    // contentDivRef.classList.remove('input-height');
     if(contactLanguageId == 0){
         contentSpanRef.innerHTML = contactMeData.de.form.mail;
     }else{

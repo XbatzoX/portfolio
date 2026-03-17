@@ -257,18 +257,14 @@
         <section id="my_contact_section" class="my-contact-section">
             <div class="my-contact-frame">
                 <div class="my-contact-caption">
-                    <span class="main-line">Contact me</span>
+                    <span id="contact_caption" class="main-line"></span>
                     <img id="arrow_up_btn" class="arrow-up" src="./assets/icons/arrow_up.svg" alt="arrow up button"
                     onmouseover="changeIcon('arrow_up_btn', 'assets/icons/arrow_up_hover.svg')" onmouseout="changeIcon('arrow_up_btn', 'assets/icons/arrow_up.svg')"
                     onclick="scrollToSection('hero_section')">
                 </div>
                 <div class="my-contact-box">
                     <div class="personal-info-container">
-                        <span class="info-description">
-                            Ob spannende Projekte, neue berufliche Herausforderungen oder ein unverbindlicher Austausch über mögliche Kooperationen - 
-                            ich freue mich über jede Gelegenheit, mich fachlich weiterzuentwickeln und gemeinsam Mehrwert zu schaffen. 
-                            Schreiben Sie mir gern, wenn Sie jemanden suchen, der strukturiert arbeitet, mit Engagement an Aufgaben herangeht und sich kontinuierlich weiterentwickeln möchte. 
-                        </span>
+                        <span id="contact_info" class="info-description"></span>
                         <div class="contact-link-box">
                             <a class="contact-link" href="mailto:#">
                                 <div class="mail-link-box" onmouseover="changeIcon('mail_link_icon', 'assets/icons/mail_icon_hover.svg')" onmouseout="changeIcon('mail_link_icon', 'assets/icons/mail_icon.svg')">
@@ -304,7 +300,7 @@
                             <div class="privacy-box">
                                 <img id="privacy_btn" src="./assets/icons/privacy_checkbox.svg" alt="checkbox icon as shape" onmouseover="changePrivacyIcon('privacy_btn', 'assets/icons/privacy_checkbox_hover.svg')"
                                 onmouseout="changePrivacyIcon('privacy_btn', 'assets/icons/privacy_checkbox.svg')" onclick="toggleButtonPrivacyPolicy()">
-                                <span class="privacy-text">Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
+                                <span id="privacy_policy_span" class="privacy-text">Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
                             </div>
                             <span id="privacy_error_text" class="privacy-error-text invisible">Bitte akzeptiere die Datenschutzrichtlinie</span>
                         </div>

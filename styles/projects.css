@@ -18,15 +18,6 @@
     justify-content: center;
 }
 
- .projects-content-frame{
-    /* background-color: #2d383f; */
-} 
-
-/* .projects-content-container{
-    max-width: 1990px;
-    margin: 0 auto;
-} */
-
 .tab-navigation-box{
     padding-right: 16px;
     padding-left: 16px;
@@ -253,4 +244,14 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+}
+
+@media(max-width:1150px){
+    .project-content-frame{
+        height: 600px;
+    }
+
+    .caption{
+        font-size: 24px;
+    }
 }

@@ -192,6 +192,13 @@ footer{
     align-items: end;
 }
 
+.footer-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 32px;
+}
+
 .footer-left-side{
     display: flex;
     flex-direction: column;

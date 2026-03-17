@@ -104,3 +104,16 @@ function loadEnglishMyProjectsData(languageId){
         }
     }
 }
+
+function loadContactMeData(languageId){
+
+}
+
+function loadGermanContactMeData(languageId){
+    if(languageId == 0){
+        document.getElementById('contact_caption').innerHTML = contactMeData.de.caption;
+        document.getElementById('contact_info').innerHTML = contactMeData.de.infoText;
+        document.getElementById('input_name_title').innerHTML = contactMeData.de.form.name;
+        document.getElementById
+    }
+}

@@ -73,9 +73,11 @@ function setLanguageID(id){
     if(id == 'german'){
         languageID = 0;
         projectLanguageId = 0;
+        contactLanguageId = 0;
     }else{
         languageID = 1;
         projectLanguageId = 1;
+        contactLanguageId = 1;
     }
 }
 

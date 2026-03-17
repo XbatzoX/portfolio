@@ -3,6 +3,7 @@ let submitButtonEnabled = false;
 let validName = false;
 let validMail = false;
 let ValidMessage = false;
+let contactLanguageId = 0;
 
 function checkContentOfName(){
     let contentInputRef = document.getElementById('input_name');

@@ -217,3 +217,39 @@ const myProjectsData = {
                         His calm, constructive manner makes collaboration pleasant and productive."`
     }
 }
+
+const contactMeData = {
+    "de" : {
+        "caption" : "Kontakt aufnehmen",
+        "infoText" : `Ob spannende Projekte, neue berufliche Herausforderungen oder ein unverbindlicher Austausch über mögliche Kooperationen - 
+                        ich freue mich über jede Gelegenheit, mich fachlich weiterzuentwickeln und gemeinsam Mehrwert zu schaffen. 
+                        Schreiben Sie mir gern, wenn Sie jemanden suchen, der strukturiert arbeitet, mit Engagement an Aufgaben herangeht und sich kontinuierlich weiterentwickeln möchte.`,
+        "form" : {
+            "name" : "Dein Name",
+            "nameError" : "Dein Name ist erforderlich",
+            "mail" : "Deine Email",
+            "mailError" : "Deine Email ist erforderlich",
+            "message" : "Deine Nachricht",
+            "messageError" : "Deine Nachricht ist erforderlich",
+            "privacyPolicy" : "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "privacyError" : "Bitte akzeptiere die Datenschutzrichtlinie."
+        }
+    },
+    "en" : {
+        "caption" : "Contact me",
+        "infoText" : `Whether it's exciting projects, new professional challenges, or an informal exchange about potential collaborations, 
+                        I welcome every opportunity to further develop my expertise and create value together.
+                        Feel free to contact me if you are looking for someone who works in a structured way, approaches tasks with commitment, 
+                        and strives for continuous personal and professional growth.`,
+        "form" : {
+            "name" : "Your name",
+            "nameError" : "Your name is required",
+            "mail" : "Your Email",
+            "mailError" : "Your Email is required",
+            "message" : "Your message",
+            "messageError" : "Your message is required",
+            "privacyPolicy" : "I've read the privacy policy and agree to the processing of my data as outlined.",
+            "privacyError" : "Please accept the privacy policy."
+        }
+    }
+}

@@ -63,6 +63,71 @@ const projects = [
     }
 ];
 
+const projectsEnglish = [
+    {
+        "title" : "Join",
+        "duration" : "7 Wochen",
+        "list" : [{
+            "description" : "Kanban Board",
+            "content" : "A project management tool in the Kanban style, inspired by Trello."
+        },
+        {
+            "description" : "Organization of my tasks within the project",
+            "content" : "To keep my code clean and maintainable, I divided the project into reusable modules and components. I paid particular attention to a clear structure, meaningful naming of files, variables, and classes, as well as thorough documentation."
+        },
+        {
+            "description" : "Practice of teamwork",
+            "content" : "In our three-person project team, the work was clearly structured. My main focus was on the design as well as the data management for registration and contact management."
+        }],
+        "tecIcons" : [
+            'assets/icons/html_projects.svg',
+            'assets/icons/css_projects.svg',
+            'assets/icons/javascript_projects.svg'
+        ],
+        "imagePath" : "assets/img/join_screen.svg",
+        "githubPath" : "https://github.com/XbatzoX/JOIN-2"
+    },
+    {
+        "title" : "El pollo loco",
+        "duration" : "5 Wochen",
+        "list" : [{
+            "description" : "Jump and run game",
+            "content" : "A jump, run, and throw game based on an object-oriented approach. Help Pepe find coins and Tabasco bottles to fight against the crazy hen."
+        },
+        {
+            "description" : "Organization of my activities within the project",
+            "content" : "I built my game using an object-oriented approach by utilizing classes, instances, and inheritance to keep the code clear and modular. This makes individual components easier to maintain, extend, and reuse."
+        },
+        {
+            "description" : "Skill enhancement through the project",
+            "content" : "Through the project, I was able to deepen my knowledge of working with the canvas element and game logic. Additionally, I learned how to develop more complex applications in a structured and maintainable way using object-oriented programming in JavaScript."
+        }],
+        "tecIcons" : [
+            'assets/icons/html_projects.svg',
+            'assets/icons/css_projects.svg',
+            'assets/icons/javascript_projects.svg'
+        ],
+        "imagePath" : "assets/img/el_pollo_loco_screen.svg",
+        "githubPath" : "https://github.com/XbatzoX/el-pollo-loco"
+    },
+    {
+        "title" : "Ongoing project",
+        "list" : {
+            "description" : "About the project",
+            "content" : "The project involves creating an HMI using a panel PC and an interface to a Siemens S7-1500 PLC to visualize and operate industrial systems. I see the advantage over a Siemens HMI in the design and the independence of data management."
+        },
+        "tecIcons" : [
+            'assets/icons/angular_projects.svg',
+            'assets/icons/typescript_projects.svg',
+            'assets/icons/html_projects.svg',
+            'assets/icons/css_projects.svg',
+            'assets/icons/vue_js_projects.svg',
+            'assets/icons/react_projects.svg'
+        ],
+        "imagePath" : "assets/img/ongoing_img.svg"
+    }
+];
+
 const navData = [
     {
         "de" : [
@@ -119,5 +184,36 @@ const mySkillsData = {
         "actualLearningText" : `An overview of my current skills and the ones I am currently developing.
                                 The focus is on frontend technologies, clean implementation, and the willingness
                                 to quickly learn new tools and standards and apply them effectively in projects.`
+    }
+}
+
+const myProjectsData = {
+    "de" : {
+        "caption" : "Meine Projekte",
+        "tabDescription" : "Laufendes Projekt",
+        "captionComments" : "Brauchen Sie einen Teamplayer? Hier ist, was meine Kollegen über mich sagen.",
+        "projectSpan" : "Projekt",
+        "comment1" : `"Ich habe sehr gerne mit Benjamin am JOIN-Projekt gearbeitet. 
+                        Er überzeugt durch ruhige Professionalität, starke technische Fähigkeiten, strukturierten Code und ist ein echter Teamplayer, 
+                        zudem ist er eine große Bereicherung für jedes Team."`,
+        "comment2" : `"Benjamin ist ein zuverlässiger und technisch versierter Entwickler, 
+                        der strukturiert arbeitet und sauberen Code liefert. Seine ruhige, 
+                        konstruktive Art macht die Zusammenarbeit angenehm und produktiv."`,
+        "comment3" : `"Benjamin ist ein zuverlässiger und technisch versierter Entwickler, 
+                        der strukturiert arbeitet und sauberen Code liefert. Seine ruhige, 
+                        konstruktive Art macht die Zusammenarbeit angenehm und produktiv."`
+    },
+    "en" : {
+        "caption" : "My Projects",
+        "tabDescription" : "Ongoing Project",
+        "captionComments" : "Need a teamplayer? Here what my colleagues said about me",
+        "projectSpan" : "Project",
+        "comment1" : `"I really enjoyed working with Benjamin on the JOIN project.
+                        He impresses with his calm professionalism, strong technical skills, structured code, and is a true team player.
+                        Additionally, he is a great asset to any team."`,
+        "comment2" : `"Benjamin is a reliable and technically skilled developer who works in a structured way and delivers clean code. 
+                        His calm, constructive manner makes collaboration pleasant and productive."`,
+        "comment3" : `"Benjamin is a reliable and technically skilled developer who works in a structured way and delivers clean code. 
+                        His calm, constructive manner makes collaboration pleasant and productive."`
     }
 }

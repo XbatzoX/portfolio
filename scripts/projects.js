@@ -67,6 +67,8 @@ function renderProjectInfos(projectId, divId){
     contentRef.innerHTML = '';
     if(projectLanguageId == 0){
         contentRef.innerHTML = getProjectTemplate(projectId);
+    }else{
+        contentRef.innerHTML = getProjectTemplateEnglish(projectId);
     }
 }
 
@@ -75,5 +77,7 @@ function renderOngoingProject(projectId, divId){
     contentRef.innerHTML = '';
     if(projectLanguageId == 0){
         contentRef.innerHTML = getOngoingProjectTemplate(projectId);
+    }else{
+        contentRef.innerHTML = getOngoingProjectTemplateEnglish(projectId);
     }
 }

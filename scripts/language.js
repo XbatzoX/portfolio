@@ -2,6 +2,7 @@ function loadLanguageData(languageId){
     loadNavData(languageId);
     loadWhyMeData(languageId);
     loadMySkillsData(languageId);
+    loadMyProjectsData(languageId);
 }
 
 function loadNavData(languageId){
@@ -68,5 +69,38 @@ function loadEnglishMySkillsData(languageId){
         document.getElementById('my_skills_caption').innerHTML = mySkillsData.en.caption;
         document.getElementById('actual_learning_id').innerHTML = mySkillsData.en.actualLearning;
         document.getElementById('actual_learning_text').innerHTML = mySkillsData.en.actualLearningText;
+    }
+}
+
+function loadMyProjectsData(languageId){
+    loadGermanMyProjectsData(languageId);
+    loadEnglishMyProjectsData(languageId);
+}
+
+function loadGermanMyProjectsData(languageId){
+    calculateAmountOfProjects();
+    let ongoingProjectId = amountProjects - 1;
+    if(languageId == 0){
+        document.getElementById('my_projects_caption').innerHTML = myProjectsData.de.caption;
+        document.getElementById('project_' + ongoingProjectId).innerHTML = myProjectsData.de.tabDescription;
+        document.getElementById('caption_comments').innerHTML = myProjectsData.de.captionComments;
+        for (let index = 1; index <= 3; index++) {
+            document.getElementById('project' + index + '_span').innerHTML = myProjectsData.de.projectSpan;
+            document.getElementById('comment_' + index).innerHTML = myProjectsData.de['comment' + index];
+        }
+    }
+}
+
+function loadEnglishMyProjectsData(languageId){
+    calculateAmountOfProjects();
+    let ongoingProjectId = amountProjects - 1;
+    if(languageId == 1){
+        document.getElementById('my_projects_caption').innerHTML = myProjectsData.en.caption;
+        document.getElementById('project_' + ongoingProjectId).innerHTML = myProjectsData.en.tabDescription;
+        document.getElementById('caption_comments').innerHTML = myProjectsData.en.captionComments;
+        for (let index = 1; index <= 3; index++) {
+            document.getElementById('project' + index + '_span').innerHTML = myProjectsData.en.projectSpan;
+            document.getElementById('comment_' + index).innerHTML = myProjectsData.en['comment' + index];
+        }
     }
 }

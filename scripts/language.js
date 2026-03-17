@@ -3,6 +3,7 @@ function loadLanguageData(languageId){
     loadWhyMeData(languageId);
     loadMySkillsData(languageId);
     loadMyProjectsData(languageId);
+    loadContactMeData(languageId);
 }
 
 function loadNavData(languageId){
@@ -106,7 +107,8 @@ function loadEnglishMyProjectsData(languageId){
 }
 
 function loadContactMeData(languageId){
-
+    loadGermanContactMeData(languageId);
+    loadEnglishContactMeData(languageId);
 }
 
 function loadGermanContactMeData(languageId){
@@ -114,6 +116,23 @@ function loadGermanContactMeData(languageId){
         document.getElementById('contact_caption').innerHTML = contactMeData.de.caption;
         document.getElementById('contact_info').innerHTML = contactMeData.de.infoText;
         document.getElementById('input_name_title').innerHTML = contactMeData.de.form.name;
-        document.getElementById
+        document.getElementById('input_mail_title').innerHTML = contactMeData.de.form.mail;
+        document.getElementById('input_message_title').innerHTML = contactMeData.de.form.message;
+        document.getElementById('privacy_policy_span').innerHTML = contactMeData.de.form.privacyPolicy;
+        document.getElementById('privacy_error_text').innerHTML = contactMeData.de.form.privacyError;
+        document.getElementById('submit_btn').innerHTML = contactMeData.de.form.submitButton;
+    }
+}
+
+function loadEnglishContactMeData(languageId){
+    if(languageId == 1){
+        document.getElementById('contact_caption').innerHTML = contactMeData.en.caption;
+        document.getElementById('contact_info').innerHTML = contactMeData.en.infoText;
+        document.getElementById('input_name_title').innerHTML = contactMeData.en.form.name;
+        document.getElementById('input_mail_title').innerHTML = contactMeData.en.form.mail;
+        document.getElementById('input_message_title').innerHTML = contactMeData.en.form.message;
+        document.getElementById('privacy_policy_span').innerHTML = contactMeData.en.form.privacyPolicy;
+        document.getElementById('privacy_error_text').innerHTML = contactMeData.en.form.privacyError;
+        document.getElementById('submit_btn').innerHTML = contactMeData.en.form.submitButton;
     }
 }

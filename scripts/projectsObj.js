@@ -232,7 +232,8 @@ const contactMeData = {
             "message" : "Deine Nachricht",
             "messageError" : "Deine Nachricht ist erforderlich",
             "privacyPolicy" : "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
-            "privacyError" : "Bitte akzeptiere die Datenschutzrichtlinie."
+            "privacyError" : "Bitte akzeptiere die Datenschutzrichtlinie.",
+            "submitButton" : "Senden"
         }
     },
     "en" : {
@@ -249,7 +250,8 @@ const contactMeData = {
             "message" : "Your message",
             "messageError" : "Your message is required",
             "privacyPolicy" : "I've read the privacy policy and agree to the processing of my data as outlined.",
-            "privacyError" : "Please accept the privacy policy."
+            "privacyError" : "Please accept the privacy policy.",
+            "submitButton" : "Send"
         }
     }
 }

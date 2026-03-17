@@ -11,7 +11,11 @@ function checkContentOfName(){
     let contentDivRef = document.getElementById('name_input_box');
     if(contentInputRef.value == '' || contentInputRef.value.length < 3){
         contentDivRef.classList.remove('input-height');
-        contentSpanRef.innerHTML = 'Dein Name ist erforderlich';
+        if(contactLanguageId == 0){
+            contentSpanRef.innerHTML = contactMeData.de.form.nameError;
+        }else{
+            contentSpanRef.innerHTML = contactMeData.en.form.nameError;
+        }
         contentSpanRef.style.color = "#E44C36";
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
@@ -36,7 +40,11 @@ function setContentNameOnFocus(){
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
     contentDivRef.classList.remove('input-height');
-    contentSpanRef.innerHTML = 'Dein Name';
+    if(contactLanguageId == 0){
+        contentSpanRef.innerHTML = contactMeData.de.form.name;
+    }else{
+        contentSpanRef.innerHTML = contactMeData.en.form.name;
+    }
 }
 
 function checkMailInput(){
@@ -51,7 +59,11 @@ function checkMailInput(){
         contentDivRef.classList.add('input-height');
     }else{
         contentDivRef.classList.remove('input-height');
-        contentSpanRef.innerHTML = 'Deine Email ist erforderlich';
+        if(contactLanguageId == 0){
+            contentSpanRef.innerHTML = contactMeData.de.form.mailError;
+        }else{
+            contentSpanRef.innerHTML = contactMeData.en.form.mailError;
+        }
         contentSpanRef.style.color = "#E44C36";
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
@@ -73,7 +85,11 @@ function setContentMailOnFocus(){
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
     contentDivRef.classList.remove('input-height');
-    contentSpanRef.innerHTML = 'Deine Email';
+    if(contactLanguageId == 0){
+        contentSpanRef.innerHTML = contactMeData.de.form.mail;
+    }else{
+        contentSpanRef.innerHTML = contactMeData.en.form.mail;
+    }
 }
 
 function checkContentOfMessage(){
@@ -82,7 +98,11 @@ function checkContentOfMessage(){
     let contentDivRef = document.getElementById('message_input_box');
     if(contentInputRef.value == '' || contentInputRef.value.length < 3){
         contentDivRef.classList.remove('input-height-message');
-        contentSpanRef.innerHTML = 'Deine Nachricht ist erforderlich';
+        if(contactLanguageId == 0){
+            contentSpanRef.innerHTML = contactMeData.de.form.messageError;
+        }else{
+            contentSpanRef.innerHTML = contactMeData.en.form.messageError;
+        }
         contentSpanRef.style.color = "#E44C36";
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
@@ -107,7 +127,11 @@ function setContentMessageOnFocus(){
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
     contentDivRef.classList.remove('input-height-message');
-    contentSpanRef.innerHTML = 'Deine Nachricht';
+    if(contactLanguageId == 0){
+        contentSpanRef.innerHTML = contactMeData.de.form.message;
+    }else{
+        contentSpanRef.innerHTML = contactMeData.en.form.message;
+    }
 }
 
 function changePrivacyIcon(id, path){

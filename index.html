@@ -283,26 +283,26 @@
                     <form class="contact-form" onsubmit="sendMessage(); return false" autocomplete="off">
                         <div class="person-data-container">
                             <div id="name_input_box" class="input-container">
-                                <span id="input_name_title" class="input-info-text">Dein Name</span>
+                                <span id="input_name_title" class="input-info-text"></span>
                                 <input id="input_name" type="text" required class="bg-input" onfocus="setContentNameOnFocus()" onblur="checkContentOfName()">
                             </div>
                             <div id="mail_input_box" class="input-container">
-                                <span id="input_mail_title" class="input-info-text">Deine Email</span>
+                                <span id="input_mail_title" class="input-info-text"></span>
                                 <input id="input_mail" type="text" required class="bg-input" onfocus="setContentMailOnFocus()" onblur="checkMailInput()"
                                  autocomplete="new-password">
                             </div>
                         </div>
                         <div id="message_input_box" class="input-container">
-                            <span id="input_message_title" class="input-info-text">Deine Nachricht</span>
+                            <span id="input_message_title" class="input-info-text"></span>
                             <textarea id="input_message" class="bg-input-message" onfocus="setContentMessageOnFocus()" onblur="checkContentOfMessage()"></textarea>
                         </div>
                         <div id="privacy_container" class="privacy-container privacy-height">
                             <div class="privacy-box">
                                 <img id="privacy_btn" src="./assets/icons/privacy_checkbox.svg" alt="checkbox icon as shape" onmouseover="changePrivacyIcon('privacy_btn', 'assets/icons/privacy_checkbox_hover.svg')"
                                 onmouseout="changePrivacyIcon('privacy_btn', 'assets/icons/privacy_checkbox.svg')" onclick="toggleButtonPrivacyPolicy()">
-                                <span id="privacy_policy_span" class="privacy-text">Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.</span>
+                                <span id="privacy_policy_span" class="privacy-text"></span>
                             </div>
-                            <span id="privacy_error_text" class="privacy-error-text invisible">Bitte akzeptiere die Datenschutzrichtlinie</span>
+                            <span id="privacy_error_text" class="privacy-error-text invisible"></span>
                         </div>
                         <div class="submit-container">
                             <button id="submit_btn" class="btn-disabled" disabled>Send</button>

@@ -244,6 +244,9 @@ footer{
 
 .header-frame{
     padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .portrait-mobile-container{
@@ -269,6 +272,26 @@ footer{
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
+}
+
+.burger-menu:hover{
+    cursor: pointer;
+}
+
+.nav-mobile{
+    background-image: url(./assets/icons/mobile/shape_overlay_mobile.svg);
+    height: 300px;
+    width: 280px;
+    background-repeat: no-repeat;  
+    background-size: contain;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media(max-width:1550px){

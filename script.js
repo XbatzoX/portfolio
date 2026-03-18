@@ -1,5 +1,6 @@
 let languageID = 0;
 let manualNavigation = false;
+let mobileNavActive = false;
 
 function init(){
     onFocusLanguageDesign('german', 'german_span');
@@ -181,4 +182,31 @@ function setButtonOnNavbar(contentId){
 
 function openWebsite(path){
     window.open(path, "_blank");
+}
+
+function toggleMobileNav(event){
+    event.stopPropagation();
+    let contentNavRef = document.getElementById('nav_mobile');
+    let contentButtonRef = document.getElementById('mobile_nav_btn');
+    if(!mobileNavActive){
+        contentNavRef.classList.remove('invisible');
+        contentButtonRef.src = 'assets/icons/mobile/overlay_close_button.svg';
+        mobileNavActive = true;
+    }else{
+        contentNavRef.classList.add('invisible');
+        contentButtonRef.src = 'assets/icons/mobile/burger_button.svg';
+        mobileNavActive = false;
+    }
+}
+
+function closeNavOverlay(){
+    if(mobileNavActive){
+        document.getElementById('nav_mobile').classList.add('invisible');
+        document.getElementById('mobile_nav_btn').src = 'assets/icons/mobile/burger_button.svg';
+        mobileNavActive = false;
+    }
+}
+
+function stopEventBubbling(event){
+    event.stopPropagation();
 }

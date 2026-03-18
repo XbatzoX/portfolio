@@ -116,6 +116,19 @@ nav{
     cursor: pointer;
 }
 
+.mobile-link-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+
+.mobile-language-container{
+    display: flex;
+    gap: 16px;
+}
+
 @media(max-width:1000px){
     nav{
         display: none;

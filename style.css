@@ -234,9 +234,26 @@ footer{
     cursor: pointer;
 }
 
-nav{
-    height: 100px;
-    background-color: #89BCD9;
+.portrait-frame-mobile{
+    display: none;
+}
+
+.header-mobile{
+    display: none;
+}
+
+.portrait-mobile-container{
+    height: 370px;
+}
+
+.person-image-mobile{
+    height: 350px;
+    width: auto;
+}
+
+.portrait-bg-mobile{
+    height: 225px;
+    width: auto;
 }
 
 @media(max-width:1550px){
@@ -271,5 +288,30 @@ nav{
 
     .arrow-down-btn{
         padding-top: 100px;
+    }
+}
+
+@media(max-width:1000px){
+    .hero-section{
+        height: unset;
+        padding: 0 16px;
+    }
+
+    .hero-container{
+        height: unset;
+    }
+
+    .hero-content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .portrait-frame{
+        display: none;
+    }
+
+    .portrait-frame-mobile{
+        display: block;
     }
 }

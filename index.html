@@ -22,12 +22,21 @@
 </head>
 <body onload="init()">
     <main>
+        <header class="header-mobile">
+
+        </header>
         <section id="hero_section" class="hero-section">
             <div class="hero-container">
                 <div class="hero-content">
                     <div class="portrait-frame">
                         <img class="person-image" src="./assets/img/me_11.png" alt="picture of me">
                         <img class="portrait-bg-image" src="./assets/img/shape.svg">
+                    </div>
+                    <div class="portrait-frame-mobile">
+                        <div class="portrait-mobile-container">
+                            <img class="person-image-mobile" src="./assets/img/me_11.png" alt="picture of me">
+                            <img class="portrait-bg-mobile" src="./assets/icons/mobile/shape_hero_mobile.svg" alt="background image as shape">
+                        </div>
                     </div>
                     <div class="main-indication-container">
                         <div class="logo-container">
@@ -90,11 +99,11 @@
                 <div class="language-container">
                     <div id="german" class="language-bg">
                         <span id="german_span" class="language-box" onclick="loadLanguage('german', 'german_span')"
-                         onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
+                        onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
                     </div>
                     <div id="english" class="language-bg">
                         <span id="english_span" class="language-box" onclick="loadLanguage('english', 'english_span')"
-                         onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
+                        onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,6 @@
 nav{
+    height: 100px;
+    background-color: #89BCD9;
     display: flex;
     align-items: center;
     position: sticky;
@@ -112,4 +114,10 @@ nav{
 
 .language-box:hover{
     cursor: pointer;
+}
+
+@media(max-width:1000px){
+    nav{
+        display: none;
+    }
 }

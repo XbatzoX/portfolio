@@ -125,8 +125,9 @@ nav{
 }
 
 .mobile-language-container{
+    height: 28px;
     display: flex;
-    gap: 16px;
+    gap: 4px;
 }
 
 .mobile-link{
@@ -144,12 +145,14 @@ nav{
 }
 
 .mobile-language-box{
+    width: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .mobile-language-span{
+    cursor: pointer;
     font-family: 'MyJosefin';
     font-size: 18px;
     font-weight: 400;

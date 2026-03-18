@@ -149,8 +149,68 @@
 
 }
 
+#location_img_mobile{
+    display: none;
+}
+
 @media(max-width:1100px){
     .actual-learning-box{
          padding-right: 50px;
+    }
+}
+
+@media(max-width:1000px){
+    .why-me-section{
+        width: unset;
+        padding-top: 64px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .why-me-frame{
+        width: 100%;
+    }
+
+    .main-line{
+        font-size: 32px;
+    }
+
+    .description-container{
+        flex-direction: column;
+    }
+
+    #location_img{
+        display: none;
+    }
+
+    #location_img_mobile{
+        display: block;
+        padding-right: 6px;
+    }
+
+    .city-location-container{
+        font-size: 18px;
+    }
+
+    .left-border{
+        width: 2px;
+        height: 20px;
+    }
+
+    .city-location-frame{
+        display: flex;
+        justify-content: center;
+    }
+
+    .description-text{
+        font-size: 16px;
+        display: block;
+        width: 100%;
+        line-height: 1.6;
+        text-align: center;
+    }
+
+    .lets-talk-ctrl-box{
+        display: none;
     }
 }

@@ -379,6 +379,10 @@ footer{
     .job-name{
         font-size: 14px;
     }
+
+    .main-indication-container{
+        padding-right: 0;
+    }
 }
 
 @media(max-width:550px){

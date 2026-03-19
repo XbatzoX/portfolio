@@ -18,9 +18,11 @@ function setProjectLanguage(){
 function calculateAmountOfProjects(){
     amountProjects = 0;
     let spanProject;
+    let spanProjectMobile;
     for (let index = 0; index < maxAmountOfProjects; index++) {
         spanProject = document.getElementById(`project_${index}`);
-        if(spanProject){
+        spanProjectMobile = document.getElementById(`mobile_project_${index}`);
+        if(spanProject || spanProjectMobile){
             amountProjects += 1;
         }else{
             break;
@@ -109,3 +111,36 @@ slider.addEventListener('mousemove', (e) => {
   const walk = (x - startX) * 1.5; 
   slider.scrollLeft = scrollLeft - walk;
 });
+
+function activateMobileNavigationTab(id, divId){
+    calculateAmountOfProjects();
+    removeBackgroundsFromMobileTabs();
+    setBackgroundFromActiveMobileTab(id);
+}
+
+function removeBackgroundsFromMobileTabs(){
+    let contentSpanRef;
+    for (let index = 0; index < amountProjects; index++) {
+        contentSpanRef = document.getElementById(`mobile_project_${index}`);
+        contentSpanRef.style.color = '#F8F5EC';
+        contentSpanRef.parentElement.classList.remove('mobile-tab-bg');
+    }
+}
+
+function setBackgroundFromActiveMobileTab(id){
+    let contentSpanRef = document.getElementById(id);
+    contentSpanRef.style.color = '#89BCD9';
+    contentSpanRef.parentElement.classList.add('mobile-tab-bg');
+    setBorderRadiusOfBox(id);
+}
+
+function setBorderRadiusOfBox(id){
+    document.getElementById('mobile_content_frame').style.borderTopRightRadius = "30px";
+    document.getElementById('mobile_content_frame').style.borderTopLeftRadius = "30px";
+    let lastProject = amountProjects - 1;
+    if(id == `mobile_project_${lastProject}`){
+        document.getElementById('mobile_content_frame').style.borderTopRightRadius = "0px";
+    }else if(id == 'mobile_project_0'){
+        document.getElementById('mobile_content_frame').style.borderTopLeftRadius = "0px";
+    }
+}

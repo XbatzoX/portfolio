@@ -134,8 +134,8 @@
 .learning-bg-hover{
     position: absolute;
     background-image: url('../assets/img/shape_learning_hover.svg');
-    width: 500px;
-    height: 500px;
+    width: 480px;
+    height: 480px;
     background-repeat: no-repeat;  
     background-size: cover;  
 }
@@ -213,6 +213,31 @@
     top: -10%;
     left: 10%;
     z-index: 1;  
+}
+
+.mobile-btn{
+    cursor: pointer;
+    width: 130px;
+    height: 45px;
+    background-color: #89BCD9;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-btn:active{
+    background-color: #F8F5EC;
+}
+
+.mobile-btn-span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #262E34;
+}
+
+.contact-button-container{
+    display: none;
 }
 
 @media(max-width:1100px){
@@ -310,5 +335,9 @@
         display: flex;
         flex-direction: column;
         gap: 32px;
+    }
+
+    .contact-button-container{
+        display: block;
     }
 }

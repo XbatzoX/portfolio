@@ -47,7 +47,7 @@ function setBackgroundFromActiveTab(id){
 
 function setProjectId(id){
     for (let index = 0; index < amountProjects; index++) {
-        if(id == 'project_' + index){
+        if((id == 'project_' + index) || (id == 'mobile_project_' + index)){
             projectId = index;
             break;
         }else{
@@ -116,6 +116,7 @@ function activateMobileNavigationTab(id, divId){
     calculateAmountOfProjects();
     removeBackgroundsFromMobileTabs();
     setBackgroundFromActiveMobileTab(id);
+    setProjectId(id);
 }
 
 function removeBackgroundsFromMobileTabs(){
@@ -142,5 +143,23 @@ function setBorderRadiusOfBox(id){
         document.getElementById('mobile_content_frame').style.borderTopRightRadius = "0px";
     }else if(id == 'mobile_project_0'){
         document.getElementById('mobile_content_frame').style.borderTopLeftRadius = "0px";
+    }
+}
+
+function checkIfOngoingProjectMobile(projectId, divId){
+    if(projectId == (amountProjects - 1)){
+        renderOngoingProjectMobile(projectId, divId);
+    }else{
+        renderProjectInfosMobile(projectId, divId);
+    }
+}
+
+function renderProjectInfosMobile(projectId, divId){
+    let contentRef = document.getElementById(divId);
+    contentRef.innerHTML = '';
+    if(projectLanguageId == 0){
+        contentRef.innerHTML = getMobileProjectTemplate(projectId);
+    }else{
+        contentRef.innerHTML = getMobileProjectTemplateEnglish(projectId);
     }
 }

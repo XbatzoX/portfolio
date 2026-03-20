@@ -20,7 +20,12 @@ const projects = [
             'assets/icons/javascript_projects.svg'
         ],
         "imagePath" : "assets/img/join_screen.svg",
-        "githubPath" : "https://github.com/XbatzoX/JOIN-2"
+        "githubPath" : "https://github.com/XbatzoX/JOIN-2",
+        "tecText" : [
+            'HTML',
+            'CSS',
+            'JavaScript'
+        ]
     },
     {
         "title" : "El pollo loco",
@@ -43,7 +48,12 @@ const projects = [
             'assets/icons/javascript_projects.svg'
         ],
         "imagePath" : "assets/img/el_pollo_loco_screen.svg",
-        "githubPath" : "https://github.com/XbatzoX/el-pollo-loco"
+        "githubPath" : "https://github.com/XbatzoX/el-pollo-loco",
+        "tecText" : [
+            'HTML',
+            'CSS',
+            'JavaScript'
+        ]
     },
     {
         "title" : "Ongoing project",
@@ -59,7 +69,15 @@ const projects = [
             'assets/icons/vue_js_projects.svg',
             'assets/icons/react_projects.svg'
         ],
-        "imagePath" : "assets/img/ongoing_img.svg"
+        "imagePath" : "assets/img/ongoing_img.svg",
+        "tecText" : [
+            'Angular',
+            'TypeScript',
+            'HTML',
+            'CSS',
+            'VueJs',
+            'React'
+        ]
     }
 ];
 

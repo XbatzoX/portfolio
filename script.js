@@ -6,6 +6,7 @@ function init(){
     onFocusLanguageDesign('german', 'german_span');
     loadLanguageData(languageID);
     activateNavigationTab('project_0', 'project_content');
+    activateMobileNavigationTab('mobile_project_0', 'mobile_project_content');
 }
 
 function changeLogoBig(){

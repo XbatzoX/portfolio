@@ -117,6 +117,7 @@ function activateMobileNavigationTab(id, divId){
     removeBackgroundsFromMobileTabs();
     setBackgroundFromActiveMobileTab(id);
     setProjectId(id);
+    checkIfOngoingProjectMobile(projectId, divId);
 }
 
 function removeBackgroundsFromMobileTabs(){

@@ -355,6 +355,60 @@
     display: none;
 }
 
+.live-test-btn-mobile{
+    cursor: pointer;
+    padding: 13px 30px;
+    border-radius: 30px;
+    background-color: #89BCD9;
+}
+
+.live-test-btn-mobile:active{
+    background-color: #F8F5EC;
+}
+
+.live-test-span-mobile{
+    font-size: 14px;
+    font-weight: 400;
+    color: #262E34;
+}
+
+.github-btn-mobile{
+    cursor: pointer;
+    padding: 13px 30px;
+    border: 1px solid #89BCD9;
+    border-radius: 30px;
+}
+
+.github-btn-mobile:active{
+    background-color: rgba(250, 250, 250, 0.1);
+}
+
+.github-span-mobile{
+    font-size: 14px;
+    font-weight: 400;
+    color: #89BCD9;
+}
+
+.mobile-project-ctrl-container{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
+
+.mobile-image-border{
+    border-radius: 30px;
+    width: 269px;
+    height: 167px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 @media(max-width:1150px){
     .project-content-frame{
         height: 600px;

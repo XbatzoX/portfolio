@@ -268,12 +268,91 @@
 }
 
 .mobile-content-frame{
-    height: 300px;
-    background-color: #2D383F;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
+    display: none;
+}
+
+.mobile-project-content{
+    padding: 24px 16px;
+}
+
+.head-content{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 4px;
+}
+
+.head-span{
+    font-size: 24px;
+    font-weight: 400;
+    color: #89BCD9;
+    padding-bottom: 8px;
+}
+
+.tec-span{
+    font-size: 14px;
+    font-weight: 400;
+    color: #F8F5EC;
+}
+
+.image-container{
+    width: 100%;
+    padding: 16px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.project-list-content{
+    list-style: none;
+    padding-left: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-list-content li{
+    position: relative;
+    padding-left: 50px;
+}
+
+.project-list-content li::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 29px;
+    height: 26px;
+    background-image: url("../assets/img/dot_projects.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mobile-caption-box{
+    padding-top: 6px;
+}
+
+.mobile-caption{
+    font-size: 18px;
+    font-weight: 400;
+    color: #89BCD9;
+}
+
+.mobile-li-text{
+    font-size: 16px;
+    font-weight: 400;
+    color: #F8F5EC;
+    padding-bottom: 32px;
+}
+
+.mobile-project-content{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.projects-mobile-container{
+    display: none;
 }
 
 @media(max-width:1150px){
@@ -287,7 +366,28 @@
 }
 
 @media(max-width:1000px){
+    .my-projects-section{
+        padding-top: 64px;
+    }
+
     .projects-content-container{
         display: none;
+    }
+
+    .mobile-content-frame{
+        display: block;
+        background-color: #2D383F;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+
+    .project-list-content li{
+        padding-left: 40px;
+    }
+
+    .projects-mobile-container{
+        display: block;
     }
 }

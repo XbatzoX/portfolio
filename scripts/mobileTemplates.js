@@ -1,0 +1,3 @@
+function getMobileProjectTemplate(projectId){
+    return ``
+}

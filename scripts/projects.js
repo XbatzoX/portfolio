@@ -13,6 +13,7 @@ function activateNavigationTab(id, divId){
 
 function setProjectLanguage(){
     checkIfOngoingProject(projectId, 'project_content');
+    checkIfOngoingProjectMobile(projectId, 'mobile_project_content');
 }
 
 function calculateAmountOfProjects(){
@@ -162,5 +163,15 @@ function renderProjectInfosMobile(projectId, divId){
         contentRef.innerHTML = getMobileProjectTemplate(projectId);
     }else{
         contentRef.innerHTML = getMobileProjectTemplateEnglish(projectId);
+    }
+}
+
+function renderOngoingProjectMobile(projectId, divId){
+    let contentRef = document.getElementById(divId);
+    contentRef.innerHTML = '';
+    if(projectLanguageId == 0){
+        contentRef.innerHTML = getMobileOngoingProjectTemplate(projectId);
+    }else{
+        contentRef.innerHTML = getMobileOngoingProjectTemplateEnglish(projectId);
     }
 }

@@ -56,7 +56,7 @@ const projects = [
         ]
     },
     {
-        "title" : "Ongoing project",
+        "title" : "Laufendes Projekt",
         "list" : {
             "description" : "Über das Projekt",
             "content" : "Das Projekt wird ein HMI mittels Panel-PC und Schnittstelle zu einer Siemens S7-1500er SPS, um industrielle Anlagen zu visualisieren und bedienen. Den Vorteil gegenüber eines Siemens HMI sehe ich im Design und in der Unabhängigkeit der Datenverwaltung."
@@ -84,7 +84,7 @@ const projects = [
 const projectsEnglish = [
     {
         "title" : "Join",
-        "duration" : "7 Wochen",
+        "duration" : "7 weeks",
         "list" : [{
             "description" : "Kanban Board",
             "content" : "A project management tool in the Kanban style, inspired by Trello."
@@ -103,11 +103,16 @@ const projectsEnglish = [
             'assets/icons/javascript_projects.svg'
         ],
         "imagePath" : "assets/img/join_screen.svg",
-        "githubPath" : "https://github.com/XbatzoX/JOIN-2"
+        "githubPath" : "https://github.com/XbatzoX/JOIN-2",
+        "tecText" : [
+            'HTML',
+            'CSS',
+            'JavaScript'
+        ]
     },
     {
         "title" : "El pollo loco",
-        "duration" : "5 Wochen",
+        "duration" : "5 weeks",
         "list" : [{
             "description" : "Jump and run game",
             "content" : "A jump, run, and throw game based on an object-oriented approach. Help Pepe find coins and Tabasco bottles to fight against the crazy hen."
@@ -126,7 +131,12 @@ const projectsEnglish = [
             'assets/icons/javascript_projects.svg'
         ],
         "imagePath" : "assets/img/el_pollo_loco_screen.svg",
-        "githubPath" : "https://github.com/XbatzoX/el-pollo-loco"
+        "githubPath" : "https://github.com/XbatzoX/el-pollo-loco",
+        "tecText" : [
+            'HTML',
+            'CSS',
+            'JavaScript'
+        ]
     },
     {
         "title" : "Ongoing project",
@@ -142,7 +152,15 @@ const projectsEnglish = [
             'assets/icons/vue_js_projects.svg',
             'assets/icons/react_projects.svg'
         ],
-        "imagePath" : "assets/img/ongoing_img.svg"
+        "imagePath" : "assets/img/ongoing_img.svg",
+         "tecText" : [
+            'Angular',
+            'TypeScript',
+            'HTML',
+            'CSS',
+            'VueJs',
+            'React'
+        ]
     }
 ];
 

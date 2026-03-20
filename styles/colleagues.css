@@ -114,9 +114,18 @@
     cursor: pointer;
 }
 
+.comments-mobile-caption{
+    display: none;
+}
+
+.comments-mobile-span{
+    display: none;
+}
+
 @media(max-width:1310px){
     .comment-container{
         max-width: none;
+        width: 100%;
         margin: unset;
         justify-content: start;
         overflow-x: auto;
@@ -142,5 +151,130 @@
 
     .caption-colleagues{
         font-size: 26px;
+    }
+}
+
+@media(max-width:1000px){
+    .my-colleagues-section{
+        padding-top: 64px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .my-colleagues-frame{
+        padding: 0;
+    }
+
+    .caption-colleagues{
+        display: none;
+    }
+
+    .caption-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: start;
+        gap: 16px;
+    }
+
+    .comments-mobile-caption{
+        display: block;
+        font-family: 'MyAnta';
+        font-size: 32px;
+        font-weight: 400;
+        color: #89BCD9;
+    }
+
+    .comments-mobile-span{
+        display: block;
+        font-family: 'MyJosefin';
+        font-size: 18px;
+        font-weight: 400;
+        color: #F8F5EC;
+    }
+
+    .comment-name{
+        font-size: 24px;
+    }
+
+    .comment-text{
+        font-size: 16px;
+        max-width: 320px;
+    }
+
+    .comment-bg{
+        background-image: url('../assets/icons/mobile/shape_comment_mobile.svg');
+        width: 350px;
+        height: 350px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .comment-bg-hover{
+        background-image: url('../assets/icons/mobile/shape_comment_mobile.svg');
+        width: 350px;
+        height: 350px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .comments-linkedIn-link{
+        bottom: 22%;
+    }
+}
+
+@media(max-width:475px){
+    .comment-container{
+        height: 280px;
+    }
+
+    .comment-name{
+        font-size: 18px;
+    }
+
+    .comment-description{
+        font-size: 16px;
+    }
+
+    .comment-project{
+        font-size: 16px;
+    }
+
+    .comment-text{
+        font-size: 14px;
+        max-width: 200px;
+        max-height: 100px;
+        overflow-y: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        z-index: 10;
+        cursor: default;
+    }
+
+    .comment-text::-webkit-scrollbar{
+        display: none;
+    }
+
+    .comment-person-box{
+        padding-top: 22px;
+    }
+
+    .comment-box{
+        min-width: 280px;
+        gap: 16px;
+        height: unset;
+    }
+
+    .comment-bg{
+        width: 250px;
+        height: 250px;
+    }
+
+    .comment-bg-hover{
+        width: 250px;
+        height: 250px;
+    }
+
+    .comments-linkedIn-link{
+        bottom: 22%;
     }
 }

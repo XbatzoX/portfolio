@@ -225,3 +225,44 @@
 .privacy-height{
     height: 40px;
 }
+
+@media(max-width:1000px){
+    .arrow-up{
+        display: none;
+    }
+
+    .my-contact-section{
+        width: calc(100vw - 32px);
+        padding: 64px 16px;
+    }
+
+    .my-contact-frame{
+        padding-right: 0;
+    }
+
+    .my-contact-box{
+        align-items: unset;
+    }
+
+    .personal-info-container{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .info-description{
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .contact-form{
+        width: 100%;
+    }
+
+    .person-data-container{
+        flex-direction: column;
+    }
+
+    .bg-input-message{
+        width: 100%;
+    }
+}

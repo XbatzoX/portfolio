@@ -5,18 +5,40 @@ let validMail = false;
 let ValidMessage = false;
 let contactLanguageId = 0;
 
+function isMobileActive(id){
+    let mobileActive = false;
+    let contentSpanRef = document.getElementById(id);
+    let contentDisplayRef = window.getComputedStyle(contentSpanRef).display;
+    if(contentDisplayRef == "none"){
+        mobileActive = true;
+    }
+    return mobileActive;
+}
+
 function checkContentOfName(){
     let contentInputRef = document.getElementById('input_name');
     let contentSpanRef = document.getElementById('input_name_title');
     let contentDivRef = document.getElementById('name_input_box');
     if(contentInputRef.value == '' || contentInputRef.value.length < 3){
-        // contentDivRef.classList.remove('input-height');
-        if(contactLanguageId == 0){
-            contentSpanRef.innerHTML = contactMeData.de.form.nameError;
-        }else{
-            contentSpanRef.innerHTML = contactMeData.en.form.nameError;
+        if(!isMobileActive('input_name_title')){
+            if(contactLanguageId == 0){
+                contentSpanRef.innerHTML = contactMeData.de.form.nameError;
+            }else{
+                contentSpanRef.innerHTML = contactMeData.en.form.nameError;
+            }
+            contentSpanRef.style.color = "#E44C36";
         }
-        contentSpanRef.style.color = "#E44C36";
+        if(isMobileActive('input_name_title')){
+            if(contactLanguageId == 0){
+                contentInputRef.value = '';
+                contentInputRef.placeholder = contactMeData.de.form.nameError;
+            }else{
+                contentInputRef.value = '';
+                contentInputRef.placeholder = contactMeData.en.form.nameError;
+            }
+            contentInputRef.classList.add('input-error');
+        }
+        
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
         validName = false;
@@ -184,3 +206,20 @@ function checkIfPrivacyPolicyAccepted(){
     }
     return sendPermission;
 }
+
+function updatePlaceholder(){
+    let inputName = document.getElementById('input_name');
+    if(isMobileActive('input_name_title')){
+        if(contactLanguageId == 0){
+            inputName.placeholder = contactMeData.de.form.name;
+        }else{
+            inputName.placeholder = contactMeData.en.form.name;
+        }
+        
+    }else{
+        inputName.placeholder = '';
+    }
+}
+
+window.addEventListener('resize', updatePlaceholder);
+window.addEventListener('load', updatePlaceholder);

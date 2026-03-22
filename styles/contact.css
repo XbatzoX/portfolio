@@ -227,22 +227,32 @@
     height: 40px;
 }
 
+.work-together{
+    display: none;
+}
+
 @media(max-width:1000px){
     .arrow-up{
         display: none;
     }
 
     .my-contact-section{
-        width: calc(100vw - 32px);
+        width: calc(100% - 32px);
         padding: 64px 16px;
     }
 
     .my-contact-frame{
         padding-right: 0;
+        padding-left: 0;
+    }
+
+    .my-contact-caption{
+        text-align: center;
     }
 
     .my-contact-box{
         align-items: unset;
+        gap: 24px;
     }
 
     .personal-info-container{
@@ -251,7 +261,7 @@
     }
 
     .info-description{
-        width: 100%;
+        width: calc(100% - 16px);
         font-size: 16px;
     }
 
@@ -264,6 +274,41 @@
     }
 
     .bg-input-message{
-        width: 100%;
+        width: calc(100% - 84px);
+        font-size: 16px;
+    }
+
+    .bg-input{
+        width: calc(100% - 72px);
+        font-size: 16px;
+    }
+
+    .privacy-container, .submit-container{
+        width: calc(100% - 16px);
+    }
+
+    .error-text-box{
+        padding-left: 32px;
+    }
+
+    .privacy-error-text{
+        padding-left: 0;
+    }
+
+    .work-together{
+        display: block;
+        font-size: 20px;
+        font-weight: 400;
+        color: #89BCD9;
+        text-align: center;
+        padding-top: 16px;
+    }
+
+    .input-info-text{
+        display: none;
+    }
+
+    .input-error::placeholder{
+        color: #E44C36;
     }
 }

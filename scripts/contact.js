@@ -62,10 +62,21 @@ function setContentNameOnFocus(){
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
     // contentDivRef.classList.remove('input-height');
-    if(contactLanguageId == 0){
-        contentSpanRef.innerHTML = contactMeData.de.form.name;
-    }else{
-        contentSpanRef.innerHTML = contactMeData.en.form.name;
+    if(!isMobileActive('input_name_title')){
+        if(contactLanguageId == 0){
+            contentSpanRef.innerHTML = contactMeData.de.form.name;
+        }else{
+            contentSpanRef.innerHTML = contactMeData.en.form.name;
+        }
+    }
+    if(isMobileActive('input_name_title')){
+        contentInputRef.value = '';
+        contentInputRef.classList.remove('input-error');
+        if(contactLanguageId == 0){
+            contentInputRef.placeholder = contactMeData.de.form.name;
+        }else{
+            contentInputRef.placeholder = contactMeData.en.form.name;
+        }
     }
 }
 
@@ -78,15 +89,25 @@ function checkMailInput(){
         contentSpanRef.innerHTML = '';
         contentInputRef.style.backgroundColor = 'transparent';
         contentInputRef.classList.add('bg-img-done');
-        // contentDivRef.classList.add('input-height');
     }else{
-        // contentDivRef.classList.remove('input-height');
-        if(contactLanguageId == 0){
-            contentSpanRef.innerHTML = contactMeData.de.form.mailError;
-        }else{
-            contentSpanRef.innerHTML = contactMeData.en.form.mailError;
+        if(!isMobileActive('input_mail_title')){
+            if(contactLanguageId == 0){
+                contentSpanRef.innerHTML = contactMeData.de.form.mailError;
+            }else{
+                contentSpanRef.innerHTML = contactMeData.en.form.mailError;
+            }
+            contentSpanRef.style.color = "#E44C36";
         }
-        contentSpanRef.style.color = "#E44C36";
+        if(isMobileActive('input_mail_title')){
+            contentInputRef.value = '';
+            if(contactLanguageId == 0){
+                contentInputRef.placeholder = contactMeData.de.form.mailError
+            }else{
+                contentInputRef.placeholder = contactMeData.en.form.mailError;
+            }
+            contentInputRef.classList.add('input-error');
+        }
+    
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
     }
@@ -106,11 +127,20 @@ function setContentMailOnFocus(){
     contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
-    // contentDivRef.classList.remove('input-height');
-    if(contactLanguageId == 0){
-        contentSpanRef.innerHTML = contactMeData.de.form.mail;
-    }else{
-        contentSpanRef.innerHTML = contactMeData.en.form.mail;
+    if(!isMobileActive('input_mail_title')){
+        if(contactLanguageId == 0){
+            contentSpanRef.innerHTML = contactMeData.de.form.mail;
+        }else{
+            contentSpanRef.innerHTML = contactMeData.en.form.mail;
+        }
+    }
+    if(isMobileActive('input_mail_title')){
+        if(contactLanguageId == 0){
+            contentInputRef.placeholder = contactMeData.de.form.mail;
+        }else{
+            contentInputRef.placeholder = contactMeData.en.form.mail;
+        }
+        contentInputRef.classList.remove('input-error');
     }
 }
 
@@ -209,15 +239,19 @@ function checkIfPrivacyPolicyAccepted(){
 
 function updatePlaceholder(){
     let inputName = document.getElementById('input_name');
+    let inputMail = document.getElementById('input_mail');
     if(isMobileActive('input_name_title')){
         if(contactLanguageId == 0){
             inputName.placeholder = contactMeData.de.form.name;
+            inputMail.placeholder = contactMeData.de.form.mail;
         }else{
             inputName.placeholder = contactMeData.en.form.name;
+            inputMail.placeholder = contactMeData.en.form.mail;
         }
         
     }else{
         inputName.placeholder = '';
+        inputMail.placeholder = '';
     }
 }
 

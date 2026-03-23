@@ -133,14 +133,8 @@ function loadEnglishContactMeData(languageId){
         document.getElementById('contact_info').innerHTML = contactMeData.en.infoText;
         if(!isMobileActive('input_name_title')){
             checkIfErrorMessageEnglish();
-            // document.getElementById('input_name_title').innerHTML = contactMeData.en.form.name;
-            // document.getElementById('input_mail_title').innerHTML = contactMeData.en.form.mail;
-            // document.getElementById('input_message_title').innerHTML = contactMeData.en.form.message;
         }else{
             checkIfErrorMessageEnglishMobile();
-            // document.getElementById('input_name').placeholder = contactMeData.en.form.name;
-            // document.getElementById('input_mail').placeholder = contactMeData.en.form.mail;
-            // document.getElementById('input_message').placeholder = contactMeData.en.form.message;
         }
         
         document.getElementById('privacy_policy_span').innerHTML = contactMeData.en.form.privacyPolicy;

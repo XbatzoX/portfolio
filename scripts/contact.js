@@ -267,7 +267,8 @@ function updatePlaceholder(){
     let inputMessage = document.getElementById('input_message');
     if(isMobileActive('input_name_title')){
         if(contactLanguageId == 0){
-            inputName.placeholder = contactMeData.de.form.name;
+            setInputInfoGerman(inputName, 'input_name_title', 'name');
+            // inputName.placeholder = contactMeData.de.form.name;
             inputMail.placeholder = contactMeData.de.form.mail;
             inputMessage.placeholder = contactMeData.de.form.message;
         }else{
@@ -280,6 +281,17 @@ function updatePlaceholder(){
         inputName.placeholder = '';
         inputMail.placeholder = '';
         inputMessage.placeholder = '';
+    }
+}
+
+function setInputInfoGerman(input, spanId, objName){
+    let spanText = document.getElementById(spanId);
+    if(spanText.innerHTML == contactMeData.de.form[objName] || spanText.innerHTML == ''){
+        input.placeholder = contactMeData.de.form[objName];
+        input.classList.remove('input-error');
+    }else{
+        input.placeholder =contactMeData.de.form[objName + 'Error'];
+        input.classList.add('input-error');
     }
 }
 

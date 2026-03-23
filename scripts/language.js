@@ -139,8 +139,8 @@ function loadEnglishContactMeData(languageId){
         }else{
             checkIfErrorMessageEnglishMobile();
             // document.getElementById('input_name').placeholder = contactMeData.en.form.name;
-            document.getElementById('input_mail').placeholder = contactMeData.en.form.mail;
-            document.getElementById('input_message').placeholder = contactMeData.en.form.message;
+            // document.getElementById('input_mail').placeholder = contactMeData.en.form.mail;
+            // document.getElementById('input_message').placeholder = contactMeData.en.form.message;
         }
         
         document.getElementById('privacy_policy_span').innerHTML = contactMeData.en.form.privacyPolicy;
@@ -250,6 +250,8 @@ function checkErrorMessageEnglish(){
 
 function checkIfErrorMessageEnglishMobile(){
     checkErrorNameEnglishMobile();
+    checkErrorMailEnglishMobile();
+    checkErrorMessageEnglishMobile();
 }
 
 function checkErrorNameEnglishMobile(){
@@ -258,5 +260,23 @@ function checkErrorNameEnglishMobile(){
         inputName.placeholder = contactMeData.en.form.nameError;
     }else{
         inputName.placeholder = contactMeData.en.form.name;
+    }
+}
+
+function checkErrorMailEnglishMobile(){
+    let inputMail = document.getElementById('input_mail');
+    if(inputMail.placeholder == contactMeData.de.form.mailError){
+        inputMail.placeholder = contactMeData.en.form.mailError;
+    }else{
+        inputMail.placeholder = contactMeData.en.form.mail;
+    }
+}
+
+function checkErrorMessageEnglishMobile(){
+    let inputMessage = document.getElementById('input_message');
+    if(inputMessage.placeholder == contactMeData.de.form.messageError){
+        inputMessage.placeholder = contactMeData.en.form.messageError;
+    }else{
+        inputMessage.placeholder = contactMeData.en.form.message;
     }
 }

@@ -149,13 +149,25 @@ function checkContentOfMessage(){
     let contentSpanRef = document.getElementById('input_message_title');
     let contentDivRef = document.getElementById('message_input_box');
     if(contentInputRef.value == '' || contentInputRef.value.length < 3){
-        contentDivRef.classList.remove('input-height-message');
-        if(contactLanguageId == 0){
-            contentSpanRef.innerHTML = contactMeData.de.form.messageError;
-        }else{
-            contentSpanRef.innerHTML = contactMeData.en.form.messageError;
+        if(!isMobileActive('input_message_title')){
+            if(contactLanguageId == 0){
+                contentSpanRef.innerHTML = contactMeData.de.form.messageError;
+            }else{
+                contentSpanRef.innerHTML = contactMeData.en.form.messageError;
+            }
+            contentSpanRef.style.color = "#E44C36";
         }
-        contentSpanRef.style.color = "#E44C36";
+        if(isMobileActive('input_message_title')){
+            contentInputRef.value = '';
+            if(contactLanguageId == 0){
+                contentInputRef.placeholder = contactMeData.de.form.messageError;
+            }else{
+                contentInputRef.placeholder = contactMeData.en.form.messageError;
+            }
+            contentInputRef.classList.add('input-error');
+        }
+        
+        contentDivRef.classList.remove('input-height-message');
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
         ValidMessage = false;
@@ -179,11 +191,23 @@ function setContentMessageOnFocus(){
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
     contentDivRef.classList.remove('input-height-message');
-    if(contactLanguageId == 0){
-        contentSpanRef.innerHTML = contactMeData.de.form.message;
-    }else{
-        contentSpanRef.innerHTML = contactMeData.en.form.message;
+    if(!isMobileActive('input_message_title')){
+        if(contactLanguageId == 0){
+            contentSpanRef.innerHTML = contactMeData.de.form.message;
+        }else{
+            contentSpanRef.innerHTML = contactMeData.en.form.message;
+        }
     }
+    if(isMobileActive('input_message_title')){
+        contentInputRef.value = '';
+        if(contactLanguageId == 0){
+            contentInputRef.placeholder = contactMeData.de.form.message;
+        }else{
+            contentInputRef.placeholder = contactMeData.en.form.message;
+        }
+        contentInputRef.classList.remove('input-error');
+    }
+    
 }
 
 function changePrivacyIcon(id, path){
@@ -240,18 +264,22 @@ function checkIfPrivacyPolicyAccepted(){
 function updatePlaceholder(){
     let inputName = document.getElementById('input_name');
     let inputMail = document.getElementById('input_mail');
+    let inputMessage = document.getElementById('input_message');
     if(isMobileActive('input_name_title')){
         if(contactLanguageId == 0){
             inputName.placeholder = contactMeData.de.form.name;
             inputMail.placeholder = contactMeData.de.form.mail;
+            inputMessage.placeholder = contactMeData.de.form.message;
         }else{
             inputName.placeholder = contactMeData.en.form.name;
             inputMail.placeholder = contactMeData.en.form.mail;
+            inputMessage.placeholder = contactMeData.en.form.message;
         }
         
     }else{
         inputName.placeholder = '';
         inputMail.placeholder = '';
+        inputMessage.placeholder = '';
     }
 }
 

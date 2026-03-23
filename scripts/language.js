@@ -115,9 +115,12 @@ function loadGermanContactMeData(languageId){
     if(languageId == 0){
         document.getElementById('contact_caption').innerHTML = contactMeData.de.caption;
         document.getElementById('contact_info').innerHTML = contactMeData.de.infoText;
-        document.getElementById('input_name_title').innerHTML = contactMeData.de.form.name;
-        document.getElementById('input_mail_title').innerHTML = contactMeData.de.form.mail;
-        document.getElementById('input_message_title').innerHTML = contactMeData.de.form.message;
+        if(!isMobileActive('input_name_title')){
+            checkIfErrorMessageGerman();
+        }else{
+            checkIfErrorMessageGermanMobile();
+        }
+        
         document.getElementById('privacy_policy_span').innerHTML = contactMeData.de.form.privacyPolicy;
         document.getElementById('privacy_error_text').innerHTML = contactMeData.de.form.privacyError;
         document.getElementById('submit_btn').innerHTML = contactMeData.de.form.submitButton;
@@ -128,11 +131,132 @@ function loadEnglishContactMeData(languageId){
     if(languageId == 1){
         document.getElementById('contact_caption').innerHTML = contactMeData.en.caption;
         document.getElementById('contact_info').innerHTML = contactMeData.en.infoText;
-        document.getElementById('input_name_title').innerHTML = contactMeData.en.form.name;
-        document.getElementById('input_mail_title').innerHTML = contactMeData.en.form.mail;
-        document.getElementById('input_message_title').innerHTML = contactMeData.en.form.message;
+        if(!isMobileActive('input_name_title')){
+            checkIfErrorMessageEnglish();
+            // document.getElementById('input_name_title').innerHTML = contactMeData.en.form.name;
+            // document.getElementById('input_mail_title').innerHTML = contactMeData.en.form.mail;
+            // document.getElementById('input_message_title').innerHTML = contactMeData.en.form.message;
+        }else{
+            checkIfErrorMessageEnglishMobile();
+            // document.getElementById('input_name').placeholder = contactMeData.en.form.name;
+            document.getElementById('input_mail').placeholder = contactMeData.en.form.mail;
+            document.getElementById('input_message').placeholder = contactMeData.en.form.message;
+        }
+        
         document.getElementById('privacy_policy_span').innerHTML = contactMeData.en.form.privacyPolicy;
         document.getElementById('privacy_error_text').innerHTML = contactMeData.en.form.privacyError;
         document.getElementById('submit_btn').innerHTML = contactMeData.en.form.submitButton;
+    }
+}
+
+function checkIfErrorMessageGerman(){
+    checkErrorNameGerman();
+    checkErrorMailGerman();
+    checkErrorMessageGerman();
+}
+
+function checkErrorNameGerman(){
+    let spanName = document.getElementById('input_name_title');
+    if(spanName.innerHTML == contactMeData.en.form.nameError){
+        spanName.innerHTML = contactMeData.de.form.nameError;
+    }else{
+        spanName.innerHTML = contactMeData.de.form.name;
+    }
+}
+
+function checkErrorMailGerman(){
+    let spanMail = document.getElementById('input_mail_title');
+    if(spanMail.innerHTML == contactMeData.en.form.mailError){
+        spanMail.innerHTML = contactMeData.de.form.mailError;
+    }else{
+        spanMail.innerHTML = contactMeData.de.form.mail;
+    }
+}
+
+function checkErrorMessageGerman(){
+    let spanMessage = document.getElementById('input_message_title');
+    if(spanMessage.innerHTML == contactMeData.en.form.messageError){
+        spanMessage.innerHTML = contactMeData.de.form.messageError;
+    }else{
+        spanMessage.innerHTML = contactMeData.de.form.message;
+    }
+}
+
+function checkIfErrorMessageGermanMobile(){
+    checkErrorNameGermanMobile();
+    checkErrorMailGermanMobile();
+    checkErrorMessageGermanMobile();
+}
+
+function checkErrorNameGermanMobile(){
+    let inputName = document.getElementById('input_name');
+    if(inputName.placeholder == contactMeData.en.form.nameError){
+        inputName.placeholder = contactMeData.de.form.nameError;
+    }else{
+        inputName.placeholder = contactMeData.de.form.name;
+    }
+}
+
+function checkErrorMailGermanMobile(){
+    let inputMail = document.getElementById('input_mail');
+    if(inputMail.placeholder == contactMeData.en.form.mailError){
+        inputMail.placeholder = contactMeData.de.form.mailError;
+    }else{
+        inputMail.placeholder = contactMeData.de.form.mail;
+    }
+}
+
+function checkErrorMessageGermanMobile(){
+    let inputMessage = document.getElementById('input_message');
+    if(inputMessage.placeholder == contactMeData.en.form.messageError){
+        inputMessage.placeholder = contactMeData.de.form.messageError;
+    }else{
+        inputMessage.placeholder = contactMeData.de.form.message;
+    }
+}
+
+function checkIfErrorMessageEnglish(){
+    checkErrorNameEnglish();
+    checkErrorMailEnglish();
+    checkErrorMessageEnglish();
+}
+
+function checkErrorNameEnglish(){
+    let spanName = document.getElementById('input_name_title');
+    if(spanName.innerHTML == contactMeData.de.form.nameError){
+        spanName.innerHTML = contactMeData.en.form.nameError;
+    }else{
+        spanName.innerHTML = contactMeData.en.form.name;
+    }
+}
+
+function checkErrorMailEnglish(){
+    let spanMail = document.getElementById('input_mail_title');
+    if(spanMail.innerHTML == contactMeData.de.form.mailError){
+        spanMail.innerHTML = contactMeData.en.form.mailError;
+    }else{
+        spanMail.innerHTML = contactMeData.en.form.mail;
+    }
+}
+
+function checkErrorMessageEnglish(){
+    let spanMessage = document.getElementById('input_message_title');
+    if(spanMessage.innerHTML == contactMeData.de.form.messageError){
+        spanMessage.innerHTML = contactMeData.en.form.messageError;
+    }else{
+        spanMessage.innerHTML = contactMeData.en.form.message;
+    }
+}
+
+function checkIfErrorMessageEnglishMobile(){
+    checkErrorNameEnglishMobile();
+}
+
+function checkErrorNameEnglishMobile(){
+    let inputName = document.getElementById('input_name');
+    if(inputName.placeholder == contactMeData.de.form.nameError){
+        inputName.placeholder = contactMeData.en.form.nameError;
+    }else{
+        inputName.placeholder = contactMeData.en.form.name;
     }
 }

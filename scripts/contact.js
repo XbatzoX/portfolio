@@ -156,6 +156,7 @@ function checkContentOfMessage(){
                 contentSpanRef.innerHTML = contactMeData.en.form.messageError;
             }
             contentSpanRef.style.color = "#E44C36";
+            contentDivRef.classList.remove('input-height-message');
         }
         if(isMobileActive('input_message_title')){
             contentInputRef.value = '';
@@ -167,7 +168,7 @@ function checkContentOfMessage(){
             contentInputRef.classList.add('input-error');
         }
         
-        contentDivRef.classList.remove('input-height-message');
+        
         contentInputRef.style.border = "1px solid #E44C36";
         contentInputRef.style.backgroundColor = 'transparent';
         ValidMessage = false;
@@ -190,13 +191,14 @@ function setContentMessageOnFocus(){
     contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
-    contentDivRef.classList.remove('input-height-message');
+    
     if(!isMobileActive('input_message_title')){
         if(contactLanguageId == 0){
             contentSpanRef.innerHTML = contactMeData.de.form.message;
         }else{
             contentSpanRef.innerHTML = contactMeData.en.form.message;
         }
+        contentDivRef.classList.remove('input-height-message');
     }
     if(isMobileActive('input_message_title')){
         contentInputRef.value = '';
@@ -266,18 +268,33 @@ function updatePlaceholder(){
     let inputMail = document.getElementById('input_mail');
     let inputMessage = document.getElementById('input_message');
     if(isMobileActive('input_name_title')){
+        document.getElementById('message_input_box').classList.add('input-height-message');
         if(contactLanguageId == 0){
             setInputInfoGerman(inputName, 'input_name_title', 'name');
             // inputName.placeholder = contactMeData.de.form.name;
-            inputMail.placeholder = contactMeData.de.form.mail;
-            inputMessage.placeholder = contactMeData.de.form.message;
+            setInputInfoGerman(inputMail, 'input_mail_title', 'mail');
+            // inputMail.placeholder = contactMeData.de.form.mail;
+            setInputInfoGerman(inputMessage, 'input_message_title', 'message');
+            // inputMessage.placeholder = contactMeData.de.form.message;
         }else{
-            inputName.placeholder = contactMeData.en.form.name;
-            inputMail.placeholder = contactMeData.en.form.mail;
-            inputMessage.placeholder = contactMeData.en.form.message;
+            setInputInfoEnglish(inputName, 'input_name_title', 'name');
+            // inputName.placeholder = contactMeData.en.form.name;
+            setInputInfoEnglish(inputMail, 'input_mail_title', 'mail');
+            // inputMail.placeholder = contactMeData.en.form.mail;
+            setInputInfoEnglish(inputMessage, 'input_message_title', 'message');
+            // inputMessage.placeholder = contactMeData.en.form.message;
         }
         
     }else{
+        if(contactLanguageId == 0){
+            setDesktopInputInfoGerman(inputName, 'input_name_title', 'name');
+            setDesktopInputInfoGerman(inputMail, 'input_mail_title', 'mail');
+            setDesktopInputInfoGerman(inputMessage, 'input_message_title', 'message');
+        }else{
+            setDesktopInputInfoEnglish(inputName, 'input_name_title', 'name');
+            setDesktopInputInfoEnglish(inputMail, 'input_mail_title', 'mail');
+            setDesktopInputInfoEnglish(inputMessage, 'input_message_title', 'message');
+        }
         inputName.placeholder = '';
         inputMail.placeholder = '';
         inputMessage.placeholder = '';
@@ -286,14 +303,46 @@ function updatePlaceholder(){
 
 function setInputInfoGerman(input, spanId, objName){
     let spanText = document.getElementById(spanId);
-    if(spanText.innerHTML == contactMeData.de.form[objName] || spanText.innerHTML == ''){
+    if(spanText.innerHTML == contactMeData.de.form[objName] || (spanText.innerHTML == '' && input.placeholder != contactMeData.de.form[objName + 'Error'])){
         input.placeholder = contactMeData.de.form[objName];
         input.classList.remove('input-error');
     }else{
-        input.placeholder =contactMeData.de.form[objName + 'Error'];
+        input.placeholder = contactMeData.de.form[objName + 'Error'];
         input.classList.add('input-error');
     }
 }
+
+function setDesktopInputInfoGerman(input, spanId, objName){
+    let spanText = document.getElementById(spanId);
+    if(input.placeholder == contactMeData.de.form[objName] || (input.placeholder == '' && spanText.innerHTML != contactMeData.de.form[objName + 'Error'])){
+        spanText.innerHTML = contactMeData.de.form[objName];
+    }else{
+        spanText.innerHTML = contactMeData.de.form[objName + 'Error'];
+        spanText.style.color = '#E44C36';
+    }
+}
+
+function setInputInfoEnglish(input, spanId, objName){
+    let spanText = document.getElementById(spanId);
+    if(spanText.innerHTML == contactMeData.en.form[objName] || (spanText.innerHTML == '' && input.placeholder != contactMeData.en.form[objName + 'Error'])){
+        input.placeholder = contactMeData.en.form[objName];
+        input.classList.remove('input-error');
+    }else{
+        input.placeholder = contactMeData.en.form[objName + 'Error'];
+        input.classList.add('input-error');
+    }
+}
+
+function setDesktopInputInfoEnglish(input, spanId, objName){
+    let spanText = document.getElementById(spanId);
+    if(input.placeholder == contactMeData.en.form[objName] || (input.placeholder == '' && spanText.innerHTML != contactMeData.en.form[objName + 'Error'])){
+        spanText.innerHTML = contactMeData.en.form[objName];
+    }else{
+        spanText.innerHTML = contactMeData.en.form[objName + 'Error'];
+        spanText.style.color = '#E44C36';
+    }
+}
+
 
 window.addEventListener('resize', updatePlaceholder);
 window.addEventListener('load', updatePlaceholder);

@@ -211,3 +211,11 @@ function closeNavOverlay(){
 function stopEventBubbling(event){
     event.stopPropagation();
 }
+
+function githubFooterAction(){
+    changeIcon('github_footer_mobile', 'assets/icons/mobile/footer_github_mobile_active.svg');
+    setTimeout(() => {
+        changeIcon('github_footer_mobile', 'assets/icons/mobile/footer_github_mobile.svg');
+    }, 800);
+    openWebsite('https://github.com/XbatzoX');
+}

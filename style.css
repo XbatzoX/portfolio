@@ -417,6 +417,10 @@ footer{
         display: flex;
         gap: 24px;
     }
+
+    .footer-icon-mobile{
+        cursor: pointer;
+    }
 }
 
 @media(max-width:550px){

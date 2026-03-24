@@ -231,6 +231,10 @@
     display: none;
 }
 
+.arrow-up-mobile-container{
+    display: none;
+}
+
 @media(max-width:1000px){
     .arrow-up{
         display: none;
@@ -317,5 +321,16 @@
 
     .input-error::placeholder{
         color: #E44C36;
+    }
+
+    .arrow-up-mobile-container{
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+        padding-bottom: 36px;
+    }
+
+    #arrow_up_btn_mobile:hover{
+        cursor: pointer;
     }
 }

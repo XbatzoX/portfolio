@@ -212,14 +212,16 @@ const mySkillsData = {
         "actualLearning" : "Ich lerne gerade aktuell",
         "actualLearningText" : `Eine kurze Darstellung meiner Skills und welche Skills gerade angeeignet werden.
                                 Dabei liegt der Fokus auf Frontend-Technologien, saubere Umsetzung und die Bereitschaft,
-                                neue Tools und Standards schnell zu lernen und im Projekt sauber einzusetzen.`
+                                neue Tools und Standards schnell zu lernen und im Projekt sauber einzusetzen.`,
+        "actualLearningMobile" : "Meine derzeitigen Lernschwerpunkte"
     },
     "en" : {
         "caption" : "My Skills",
         "actualLearning" : "I am currently learning",
         "actualLearningText" : `An overview of my current skills and the ones I am currently developing.
                                 The focus is on frontend technologies, clean implementation, and the willingness
-                                to quickly learn new tools and standards and apply them effectively in projects.`
+                                to quickly learn new tools and standards and apply them effectively in projects.`,
+        "actualLearningMobile" : "What I am currently learning"
     }
 }
 
@@ -237,7 +239,9 @@ const myProjectsData = {
                         konstruktive Art macht die Zusammenarbeit angenehm und produktiv."`,
         "comment3" : `"Benjamin ist ein zuverlässiger und technisch versierter Entwickler, 
                         der strukturiert arbeitet und sauberen Code liefert. Seine ruhige, 
-                        konstruktive Art macht die Zusammenarbeit angenehm und produktiv."`
+                        konstruktive Art macht die Zusammenarbeit angenehm und produktiv."`,
+        "mobileCaption" : "Brauchen Sie einen Teamplayer?",
+        "mobileSpan" : "Hier ist, was meine Kollegen über mich sagen."
     },
     "en" : {
         "caption" : "My Projects",
@@ -250,7 +254,9 @@ const myProjectsData = {
         "comment2" : `"Benjamin is a reliable and technically skilled developer who works in a structured way and delivers clean code. 
                         His calm, constructive manner makes collaboration pleasant and productive."`,
         "comment3" : `"Benjamin is a reliable and technically skilled developer who works in a structured way and delivers clean code. 
-                        His calm, constructive manner makes collaboration pleasant and productive."`
+                        His calm, constructive manner makes collaboration pleasant and productive."`,
+        "mobileCaption" : "Need a teamplayer?",
+        "mobileSpan" : "Here what my colleagues said about me."
     }
 }
 
@@ -270,7 +276,8 @@ const contactMeData = {
             "privacyPolicy" : "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
             "privacyError" : "Bitte akzeptiere die Datenschutzrichtlinie.",
             "submitButton" : "Senden"
-        }
+        },
+        "spanMobile" : "Lass uns zusammenarbeiten!"
     },
     "en" : {
         "caption" : "Contact me",
@@ -288,6 +295,7 @@ const contactMeData = {
             "privacyPolicy" : "I've read the privacy policy and agree to the processing of my data as outlined.",
             "privacyError" : "Please accept the privacy policy.",
             "submitButton" : "Send"
-        }
+        },
+        "spanMobile" : "Let us work together!"
     }
 }

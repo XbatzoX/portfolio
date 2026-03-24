@@ -23,7 +23,7 @@
 </head>
 <body onload="init()" onclick="closeNavOverlay()">
     <main>
-        <header class="header-mobile">
+        <header id="header_mobile" class="header-mobile">
             <div class="header-frame">
                 <div class="logo-main-box">
                     <img class="main-logo" src="./assets/icons/mobile/logo_mobile.svg" alt="logo icon">
@@ -257,13 +257,9 @@
                          onmouseout="changeBackgroundImage('learning_bg', 'learning-bg-hover', 'learning-bg')"></div>
                     </div>
                     <div class="actual-learning-box-mobile">
-                        <span id="mobile_learning_id" class="mobile-learning-info">Meine derzeitigen Lernschwerpunkte</span>
+                        <span id="mobile_learning_id" class="mobile-learning-info"></span>
                         <div class="mobile-learning-content-box">
-                            <span id="actual_text_mobile">
-                                Eine kurze Darstellung meiner Skills und welche Skills gerade angeeignet werden.
-                                Dabei liegt der Fokus auf Frontend-Technologien, saubere Umsetzung und die Bereitschaft,
-                                neue Tools und Standards schnell zu lernen und im Projekt sauber einzusetzen.
-                            </span>
+                            <span id="actual_text_mobile"> </span>
                             <div class="mobile-icon-box">
                                 <div class="mobile-icon-line">
                                     <img src="./assets/icons/mobile/vue_icon_mobile.svg" alt="vue js icon as actual learning info">
@@ -306,13 +302,13 @@
                     <div class="projects-mobile-container">
                         <div class="tab-navbox-mobile">
                             <div class="mobile-tab">
-                                <span id="mobile_project_0" class="mobile-tab-span" onclick="activateMobileNavigationTab(id, 'mobile_project_content')">1. Projekt</span>
+                                <span id="mobile_project_0" class="mobile-tab-span" onclick="activateMobileNavigationTab(id, 'mobile_project_content')"></span>
                             </div>
                             <div class="mobile-tab">
-                                <span id="mobile_project_1" class="mobile-tab-span" onclick="activateMobileNavigationTab(id, 'mobile_project_content')">2. Projekt</span>
+                                <span id="mobile_project_1" class="mobile-tab-span" onclick="activateMobileNavigationTab(id, 'mobile_project_content')"></span>
                             </div>
                             <div class="mobile-tab">
-                                <span id="mobile_project_2" class="mobile-tab-span" onclick="activateMobileNavigationTab(id, 'mobile_project_content')">3. Projekt</span>
+                                <span id="mobile_project_2" class="mobile-tab-span" onclick="activateMobileNavigationTab(id, 'mobile_project_content')"></span>
                             </div>
                         </div>
                         <div id="mobile_content_frame" class="mobile-content-frame">
@@ -326,8 +322,8 @@
             <div class="my-colleagues-frame">
                 <div class="caption-container">
                     <span id="caption_comments" class="caption-colleagues"></span>
-                    <span id="comments_mobile_caption" class="comments-mobile-caption">Brauchen Sie einen Teamplayer?</span>
-                    <span id="comments_mobile_span" class="comments-mobile-span">Hier ist, was meine Kollegen über mich sagen.</span>
+                    <span id="comments_mobile_caption" class="comments-mobile-caption"></span>
+                    <span id="comments_mobile_span" class="comments-mobile-span"></span>
                 </div>
                 <div class="comment-container">
                     <div class="comment-box" onmouseover="changeBackgroundImage('comment_bg_0', 'comment-bg', 'comment-bg-hover')"
@@ -382,7 +378,7 @@
                 </div>
                 <div class="my-contact-box">
                     <div class="personal-info-container">
-                        <span class="work-together">Lass uns zusammenarbeiten!</span>
+                        <span id="work_mobile" class="work-together"></span>
                         <span id="contact_info" class="info-description"></span>
                         <div class="contact-link-box">
                             <a class="contact-link" href="mailto:#">
@@ -434,7 +430,7 @@
             <div class="arrow-up-mobile-container">
                 <img id="arrow_up_btn_mobile" src="./assets/icons/mobile/arrow_up_mobile.svg" alt="arrow up button to hero section"
                 onmouseover="changeIcon('arrow_up_btn_mobile', 'assets/icons/mobile/arrow_up_active_mobile.svg')" onmouseout="changeIcon('arrow_up_btn_mobile', 'assets/icons/mobile/arrow_up_mobile.svg')"
-                onclick="scrollToSection('hero_section')">
+                onclick="scrollToSection('header_mobile')">
             </div>
         </section>
     </main>
@@ -464,7 +460,7 @@
                 </div>
             </div>
             <div class="footer-container-mobile">
-                <div class="footer-logo" onclick="scrollToSection('hero_section')">
+                <div class="footer-logo" onclick="scrollToSection('header_mobile')">
                     <img src="./assets/icons/Logo icon nav.svg" alt="main logo icon">
                     <span class="logo-nav-name">B.Mahalbasic</span>
                     <span class="logo-nav-text">developer</span>

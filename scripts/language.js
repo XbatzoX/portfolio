@@ -62,6 +62,8 @@ function loadGermanMySkillsData(languageId){
         document.getElementById('my_skills_caption').innerHTML = mySkillsData.de.caption;
         document.getElementById('actual_learning_id').innerHTML = mySkillsData.de.actualLearning;
         document.getElementById('actual_learning_text').innerHTML = mySkillsData.de.actualLearningText;
+        document.getElementById('mobile_learning_id').innerHTML = mySkillsData.de.actualLearningMobile;
+        document.getElementById('actual_text_mobile').innerHTML = mySkillsData.de.actualLearningText;
     }
 }
 
@@ -70,6 +72,8 @@ function loadEnglishMySkillsData(languageId){
         document.getElementById('my_skills_caption').innerHTML = mySkillsData.en.caption;
         document.getElementById('actual_learning_id').innerHTML = mySkillsData.en.actualLearning;
         document.getElementById('actual_learning_text').innerHTML = mySkillsData.en.actualLearningText;
+        document.getElementById('mobile_learning_id').innerHTML = mySkillsData.en.actualLearningMobile;
+        document.getElementById('actual_text_mobile').innerHTML = mySkillsData.en.actualLearningText;
     }
 }
 
@@ -88,7 +92,10 @@ function loadGermanMyProjectsData(languageId){
         for (let index = 1; index <= 3; index++) {
             document.getElementById('project' + index + '_span').innerHTML = myProjectsData.de.projectSpan;
             document.getElementById('comment_' + index).innerHTML = myProjectsData.de['comment' + index];
+            document.getElementById('mobile_project_' + (index - 1)).innerHTML = `${index}. Projekt`;
         }
+        document.getElementById('comments_mobile_caption').innerHTML = myProjectsData.de.mobileCaption;
+        document.getElementById('comments_mobile_span').innerHTML = myProjectsData.de.mobileSpan;
     }
 }
 
@@ -102,7 +109,10 @@ function loadEnglishMyProjectsData(languageId){
         for (let index = 1; index <= 3; index++) {
             document.getElementById('project' + index + '_span').innerHTML = myProjectsData.en.projectSpan;
             document.getElementById('comment_' + index).innerHTML = myProjectsData.en['comment' + index];
+            document.getElementById('mobile_project_' + (index - 1)).innerHTML = `${index}. Project`;
         }
+        document.getElementById('comments_mobile_caption').innerHTML = myProjectsData.en.mobileCaption;
+        document.getElementById('comments_mobile_span').innerHTML = myProjectsData.en.mobileSpan;
     }
 }
 
@@ -120,7 +130,7 @@ function loadGermanContactMeData(languageId){
         }else{
             checkIfErrorMessageGermanMobile();
         }
-        
+        document.getElementById('work_mobile').innerHTML = contactMeData.de.spanMobile;
         document.getElementById('privacy_policy_span').innerHTML = contactMeData.de.form.privacyPolicy;
         document.getElementById('privacy_error_text').innerHTML = contactMeData.de.form.privacyError;
         document.getElementById('submit_btn').innerHTML = contactMeData.de.form.submitButton;
@@ -136,7 +146,7 @@ function loadEnglishContactMeData(languageId){
         }else{
             checkIfErrorMessageEnglishMobile();
         }
-        
+        document.getElementById('work_mobile').innerHTML = contactMeData.en.spanMobile;
         document.getElementById('privacy_policy_span').innerHTML = contactMeData.en.form.privacyPolicy;
         document.getElementById('privacy_error_text').innerHTML = contactMeData.en.form.privacyError;
         document.getElementById('submit_btn').innerHTML = contactMeData.en.form.submitButton;

@@ -1,0 +1,57 @@
+html{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.imprint-frame{
+    max-width: 1990px;
+    margin: 0 auto;
+    font-family: 'MyJosefin';
+}
+
+.imprint-container{
+    padding: 32px 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.imprint-caption{
+    font-family: 'MyAnta';
+    font-size: 54px;
+    font-weight: 400;
+    color: #89BCD9;
+    padding-bottom: 32px;
+}
+
+.imprint-line{
+    font-size: 19px;
+    font-weight: 700;
+    color: #89BCD9;
+}
+
+.content-box{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.imprint-list, .imprint-content{
+    font-size: 19px;
+    font-weight: 400;
+    color: #F8F5EC;
+}
+
+.highlight{
+    color: #89BCD9;
+}
+
+.imprint-link{
+    text-decoration: none;
+    color: #89BCD9;
+}
+
+.imprint-link:hover{
+    cursor: pointer;
+    font-weight: 700;
+}

@@ -3,9 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Legal notice</title>
+
+    <link rel="shortcut icon" href="../assets/icons/Logo icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/imprint.css">
+    <script src="../scripts/projectsObj.js"></script>
+    <script src="../scripts/language.js"></script>
     
+    <script src="../script.js"></script>
+    <script src="../scripts/imprint.js"></script>
+</head>
+<body onload="initImprint()">
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="nav-logo" onclick="goToHeroPage()">
+                    <img src="../assets/icons/Logo icon nav.svg" alt="main logo icon">
+                    <span class="logo-nav-name">B.Mahalbasic</span>
+                    <span class="logo-nav-text">developer</span>
+                </div>
+                <div class="nav-link-container">
+                    <div id="why_me" class="link-bg">
+                        <a id="link_why_me" class="nav-links" href="../index.html#why_me_section" onclick="onFocusDesign('why_me', 'link_why_me')">Warum ich</a>
+                    </div>
+                    <div id="skills" class="link-bg">
+                        <a id="link_skills" class="nav-links" href="../index.html#my_skills_section" onclick="onFocusDesign('skills', 'link_skills')">Fähigkeiten</a>
+                    </div>
+                    <div id="projects" class="link-bg">
+                        <a id="link_projects" class="nav-links" href="../index.html#my_projects_section" onclick="onFocusDesign('projects', 'link_projects')">Projekte</a>
+                    </div>
+                    <div id="contact" class="link-bg">
+                        <a id="link_contact" class="nav-links" href="../index.html#my_contact_section" onclick="onFocusDesign('contact', 'link_contact')">Kontakt</a>
+                    </div>
+                </div>
+                <div class="language-container">
+                    <div id="german" class="language-bg">
+                        <span id="german_span" class="language-box" onclick="loadLanguage('german', 'german_span')"
+                        onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
+                    </div>
+                    <div id="english" class="language-bg">
+                        <span id="english_span" class="language-box" onclick="loadLanguage('english', 'english_span')"
+                        onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="imprint-frame">
+            <div class="imprint-container">
+                <span id="imprint_caption" class="imprint-caption">Impressum</span>
+                <div class="imprint-list-container">
+                    <span id="list_caption" class="imprint-line">Angaben gemäß § 5 DDG</span>
+                    <ul class="imprint-list">
+                        <li>Benjamin Mahalbasic</li>
+                        <li>Ratzeburger Allee 86</li>
+                        <li>23562 Lübeck</li>
+                    </ul>
+                </div>
+                <div class="content-box">
+                    <span id="contact_span" class="imprint-line">Kontakt</span>
+                    <span class="imprint-content">Email: benbasic@outlook.de</span>
+                </div>
+                <div class="content-box">
+                    <span id="terms_span" class="imprint-line">Akzeptanz der Nutzungsbedingungen</span>
+                    <span id="terms_content" class="imprint-content">
+                        Durch den Zugriff auf und die Nutzung von <span class="highlight">Portfolio</span> (Produkt) erkennen Sie die folgenden Bedingungen sowie alle Richtlinien, 
+                        Hinweise oder Änderungen an, die Ihnen von Zeit zu Zeit vorgelegt werden können, und stimmen ihnen zu. Wir, die oben genannten Studierenden, 
+                        behalten uns vor, diese Bedingungen jederzeit und ohne vorherige Ankündigung zu ändern oder zu aktualisieren.
+                    </span>
+                </div>
+                <div class="content-box">
+                    <span id="scope_span" class="imprint-line">Geltungsbereich und Eigentum am Produkt</span>
+                    <span id="scope_content" class="imprint-content">
+                        <span class="highlight">Portfolio</span> wurde im Rahmen eines studentischen Gruppenprojekts in einem Webdevelopment-Bootcamp bei 
+                        der <a class="imprint-link" href="http://developerakademie.com" target="_blank">Developer Akademie GmbH</a> entwickelt. 
+                        Es dient ausschließlich Bildungszwecken und ist nicht für eine umfangreiche private oder geschäftliche Nutzung vorgesehen. 
+                        Daher können wir keine durchgehende Verfügbarkeit, Zuverlässigkeit, Genauigkeit oder sonstige Qualitätsmerkmale dieses Produkts garantieren. 
+                        Das Design von <span class="highlight">Portfolio</span> ist Eigentum der <a class="imprint-link" href="http://developerakademie.com" target="_blank">Developer Akademie GmbH</a>. Jede unbefugte Nutzung, Reproduktion, Modifikation, 
+                        Verbreitung oder Vervielfältigung des Designs ist strengstens untersagt.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="nav_mobile" class="nav-mobile-container invisible">
+            <div class="nav-mobile" onclick="stopEventBubbling(event)">
+                <div class="mobile-link-container">
+                    <a class="mobile-link" href="#why_me_section">Warum ich</a>
+                    <a class="mobile-link" href="#my_skills_section">Fähigkeiten</a>
+                    <a class="mobile-link" href="#my_projects_section">Projekte</a>
+                    <a class="mobile-link" href="#my_contact_section">Kontakt</a>
+                    <div class="mobile-language-container">
+                        <div id="german_mobile" class="mobile-language-box">
+                            <span id="german_span_mobile" class="mobile-language-span" onclick="loadLanguage('german', 'german_span')"
+                            onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
+                        </div>
+                        <div id="english_mobile" class="mobile-language-box">
+                            <span id="english_span_mobile" class="mobile-language-span" onclick="loadLanguage('english', 'english_span')"
+                            onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 </html>

@@ -58,17 +58,23 @@ function onFocusLanguageDesign(id, span_id){
     removeColorLanguage();
     setLanguageID(id);
     document.getElementById(id).classList.add('ellipse-language');
+    document.getElementById(id + '_mobile').classList.add('ellipse-language');
     document.getElementById(span_id).style.color ='#F8F5EC';
+    document.getElementById(span_id + '_mobile').style.color ='#F8F5EC';
 }
 
 function removeFocusFromLanguage(){
     document.getElementById('german').classList.remove('ellipse-language');
     document.getElementById('english').classList.remove('ellipse-language');
+    document.getElementById('german_mobile').classList.remove('ellipse-language');
+    document.getElementById('english_mobile').classList.remove('ellipse-language');
 }
 
 function removeColorLanguage(){
     document.getElementById('german_span').style.color = '#262E34';
     document.getElementById('english_span').style.color = '#262E34';
+    document.getElementById('german_span_mobile').style.color = '#262E34';
+    document.getElementById('english_span_mobile').style.color = '#262E34';
 }
 
 function setLanguageID(id){
@@ -86,13 +92,19 @@ function setLanguageID(id){
 function onHoverLanguageDesign(id){
     if((languageID == 0) && (id == 'english')){
         document.getElementById('german').classList.remove('ellipse-language');
+        document.getElementById('german_mobile').classList.remove('ellipse-language');
         document.getElementById('german_span').style.color ='#262E34';
+        document.getElementById('german_span_mobile').style.color ='#262E34';
         document.getElementById('english_span').style.color ='#F8F5EC';
+        document.getElementById('english_span_mobile').style.color ='#F8F5EC';
     }
     if((languageID == 1) && (id == 'german')){
         document.getElementById('english').classList.remove('ellipse-language');
+        document.getElementById('english_mobile').classList.remove('ellipse-language');
         document.getElementById('english_span').style.color = '#262E34';
+        document.getElementById('english_span_mobile').style.color = '#262E34';
         document.getElementById('german_span').style.color = '#F8F5EC';
+        document.getElementById('german_span_mobile').style.color = '#F8F5EC';
     }
 }
 

@@ -3,10 +3,34 @@ let manualNavigation = false;
 let mobileNavActive = false;
 
 function init(){
-    onFocusLanguageDesign('german', 'german_span');
+    let objData = prepareLanguageDesign();
+    onFocusLanguageDesign(objData.language, objData.languageSpan);
     loadLanguageData(languageID);
     activateNavigationTab('project_0', 'project_content');
     activateMobileNavigationTab('mobile_project_0', 'mobile_project_content');
+}
+
+function prepareLanguageDesign(){
+    let objData = {
+        "language" : "",
+        "languageSpan" : ""
+    };
+    checkLocalStorage();
+    if(languageID == 0){
+        objData.language = 'german';
+        objData.languageSpan = 'german_span';
+    }else{
+        objData.language = 'english';
+        objData.languageSpan = 'english_span';
+    }
+    return objData;
+}
+
+function checkLocalStorage(){
+    let myLaguageId = JSON.parse(localStorage.getItem('myLanguage'));
+    if(myLaguageId != null){
+        languageID = myLaguageId;
+    }
 }
 
 function changeLogoBig(){
@@ -87,6 +111,7 @@ function setLanguageID(id){
         projectLanguageId = 1;
         contactLanguageId = 1;
     }
+    localStorage.setItem('myLanguage', JSON.stringify(languageID));
 }
 
 function onHoverLanguageDesign(id){

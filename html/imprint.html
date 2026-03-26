@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../styles/nav.css">
     <link rel="stylesheet" href="../styles/imprint.css">
+    <script src="../scripts/imprintObj.js"></script>
     <script src="../scripts/projectsObj.js"></script>
     <script src="../scripts/language.js"></script>
-    
-    <script src="../script.js"></script>
     <script src="../scripts/imprint.js"></script>
+    <script src="../script.js"></script>
+    
 </head>
 <body onload="initImprint()">
     <header>
@@ -41,11 +42,11 @@
                 </div>
                 <div class="language-container">
                     <div id="german" class="language-bg">
-                        <span id="german_span" class="language-box" onclick="loadLanguage('german', 'german_span')"
+                        <span id="german_span" class="language-box" onclick="loadImprintLanguage('german', 'german_span')"
                         onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
                     </div>
                     <div id="english" class="language-bg">
-                        <span id="english_span" class="language-box" onclick="loadLanguage('english', 'english_span')"
+                        <span id="english_span" class="language-box" onclick="loadImprintLanguage('english', 'english_span')"
                         onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
                     </div>
                 </div>
@@ -55,9 +56,9 @@
     <main>
         <div class="imprint-frame">
             <div class="imprint-container">
-                <span id="imprint_caption" class="imprint-caption">Impressum</span>
+                <span id="imprint_caption" class="imprint-caption"></span>
                 <div class="imprint-list-container">
-                    <span id="list_caption" class="imprint-line">Angaben gemäß § 5 DDG</span>
+                    <span id="list_caption" class="imprint-line"></span>
                     <ul class="imprint-list">
                         <li>Benjamin Mahalbasic</li>
                         <li>Ratzeburger Allee 86</li>

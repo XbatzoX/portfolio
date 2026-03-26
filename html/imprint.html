@@ -18,7 +18,7 @@
 </head>
 <body onload="initImprint()">
     <header>
-        <nav>
+        <nav id="imprint_nav">
             <div class="nav-container">
                 <div class="nav-logo" onclick="goToHeroPage()">
                     <img src="../assets/icons/Logo icon nav.svg" alt="main logo icon">
@@ -88,13 +88,48 @@
                     </span>
                 </div>
                 <div class="content-box">
-                    <span id=""></span>
+                    <span id="rights_span" class="imprint-line">Schutzrechte</span>
+                    <span id="rights_content" class="imprint-content">
+                        Abgesehen vom Design, das der <a class="imprint-link" href="http://developerakademie.com" target="_blank">Developer Akademie GmbH</a> gehört, behalten wir, 
+                        die genannten Studierenden, sämtliche Schutzrechte an <span class="highlight">Portfolio</span>, 
+                        einschließlich aller damit verbundenen urheberrechtlich geschützten Materialien,
+                        Marken und sonstigen geschützten Informationen.
+                    </span>
+                </div>
+                <div class="content-box">
+                    <span id="use_span" class="imprint-line">Nutzung des Produkts</span>
+                    <span id="use_content" class="imprint-content">
+                        <span class="highlight">Portfolio</span> darf ausschließlich für rechtmäßige Zwecke und im Einklang mit allen geltenden Gesetzen und Vorschriften genutzt werden. 
+                        Jede Nutzung von <span class="highlight">Portfolio</span> für illegale Aktivitäten oder zur Belästigung, Schädigung, 
+                        Bedrohung oder Einschüchterung anderer Personen ist streng verboten. 
+                        Sie sind allein verantwortlich für Ihre Interaktionen mit anderen Nutzern von <span class="highlight">Portfolio</span>.
+                    </span>
+                </div>
+                <div class="content-box">
+                    <span id="disclaim_span" class="imprint-line">Haftungsausschluss und Haftungsbeschränkung</span>
+                    <span id="disclaim_content" class="imprint-content">
+                        <span class="highlight">Portfolio</span> wird „wie gesehen“ und ohne jegliche ausdrückliche oder stillschweigende Gewährleistung bereitgestellt, 
+                        einschließlich, aber nicht beschränkt auf die stillschweigenden Gewährleistungen der Marktgängigkeit, 
+                        Eignung für einen bestimmten Zweck und Nichtverletzung von Rechten. In keinem Fall haften wir, die genannten Studierenden, 
+                        oder die <a class="imprint-link" href="http://developerakademie.com" target="_blank">Developer Akademie GmbH</a> für direkte, indirekte, zufällige, besondere, Folge- oder exemplarische Schäden, einschließlich, 
+                        aber nicht beschränkt auf Schäden aus entgangenem Gewinn, Goodwill, Nutzung, Daten oder anderen immateriellen Verlusten, 
+                        selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, 
+                        die sich aus der Nutzung oder Leistung von <span class="highlight">Portfolio</span> ergeben oder damit im Zusammenhang stehen.
+                    </span>
+                </div>
+                <div class="content-box">
+                    <span id="indemnity_span" class="imprint-line">Freistellung</span>
+                    <span id="indemnity_content" class="imprint-content">
+                        Sie erklären sich damit einverstanden, uns, die genannten Studierenden, die <a class="imprint-link" href="http://developerakademie.com" target="_blank">Developer Akademie GmbH</a> sowie unsere verbundenen Unternehmen, 
+                        Partner, leitenden Angestellten, Direktoren, 
+                        Vertreter und Mitarbeitenden von sämtlichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder 
+                        Haftungen (einschließlich angemessener Anwaltskosten) freizustellen, 
+                        die aus Ihrer Nutzung von <span class="highlight">Portfolio</span> und/oder Ihrem Verstoß gegen diesen Rechtshinweis entstehen.
+                        Datum: 26. März 2026
+                    </span>
                 </div>
             </div>
         </div>
-
-
-
         <div id="nav_mobile" class="nav-mobile-container invisible">
             <div class="nav-mobile" onclick="stopEventBubbling(event)">
                 <div class="mobile-link-container">
@@ -116,5 +151,47 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="footer-frame">
+            <div class="footer-container">
+                <div class="footer-left-side">
+                    <div class="footer-link-container"></div>
+                    <span>&copy; Benjamin Mahalbasic 2026</span>
+                </div>
+                <div class="footer-logo" onclick="scrollToSection('imprint_nav')">
+                    <img src="../assets/icons/Logo icon nav.svg" alt="main logo icon">
+                    <span class="logo-nav-name">B.Mahalbasic</span>
+                    <span class="logo-nav-text">developer</span>
+                </div>
+                <div class="footer-right-side">
+                    <img id="mail_footer" src="../assets/icons/mail_icon_footer.svg" alt="mail link bitton as letter icon"
+                    onmouseover="changeIcon('mail_footer', '../assets/icons/mail_icon_footer_hover.svg')" onmouseout="changeIcon('mail_footer', '../assets/icons/mail_icon_footer.svg')"
+                    onclick="goToContactSection()">
+                    <img id="github_footer" src="../assets/icons/github_icon_footer.svg" alt="github icon as link button"
+                    onmouseover="changeIcon('github_footer', '../assets/icons/github_icon_footer_hover.svg')" onmouseout="changeIcon('github_footer', '../assets/icons/github_icon_footer.svg')"
+                    onclick="openWebsite('https://github.com/XbatzoX')">
+                    <img id="linkedin_footer" src="../assets/icons/linkedin_icon_footer.svg" alt="linkedIn icon as link button"
+                    onmouseover="changeIcon('linkedin_footer', '../assets/icons/linkedin_icon_footer_hover.svg')" onmouseout="changeIcon('linkedin_footer', '../assets/icons/linkedin_icon_footer.svg')">
+                </div>
+            </div>
+            <div class="footer-container-mobile">
+                <div class="footer-logo" onclick="scrollToSection('imprint_nav')">
+                    <img src="../assets/icons/Logo icon nav.svg" alt="main logo icon">
+                    <span class="logo-nav-name">B.Mahalbasic</span>
+                    <span class="logo-nav-text">developer</span>
+                </div>
+                <div class="footer-ctrl-mobile">
+                    <img id="github_footer_mobile" class="footer-icon-mobile" src="../assets/icons/mobile/footer_github_mobile.svg" alt="github icon as link button"
+                    onclick="githubImprintFooterAction()">
+                    <img id="mail_footer_mobile" class="footer-icon-mobile" src="../assets/icons/mobile/footer_mail_mobile.svg" alt="mail link bitton as letter icon"
+                    onclick="goToContactSection()">
+                    <img id="linkedin_footer_mobile" class="footer-icon-mobile" src="../assets/icons/mobile/footer_linkedin_mobile.svg" alt="linkedIn icon as link button">
+                </div>
+                <div class="footer-description-mobile">
+                    <span class="copyright-span">&copy; Benjamin Mahalbasic 2026</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

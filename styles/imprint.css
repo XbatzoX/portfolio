@@ -60,3 +60,8 @@ header{
     cursor: pointer;
     font-weight: 700;
 }
+
+.scroll-point{
+    width: 100%;
+    
+}

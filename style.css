@@ -311,6 +311,18 @@ footer{
     font-size: 14px;
 }
 
+.policy-link{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #89BCD9;
+}
+
+.policy-link:hover{
+    cursor: pointer;
+    font-weight: 700;
+}
+
 @media(max-width:1550px){
     .hero-content{
         align-items: end;

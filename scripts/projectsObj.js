@@ -273,7 +273,8 @@ const contactMeData = {
             "mailError" : "Deine Email ist erforderlich",
             "message" : "Deine Nachricht",
             "messageError" : "Deine Nachricht ist erforderlich",
-            "privacyPolicy" : "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "privacyPolicy" : `Ich habe die <a class="policy-link" href="./html/privacy_policy.html">Datenschutzrichtlinie</a> 
+                                gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.`,
             "privacyError" : "Bitte akzeptiere die Datenschutzrichtlinie.",
             "submitButton" : "Senden"
         },
@@ -292,7 +293,8 @@ const contactMeData = {
             "mailError" : "Your Email is required",
             "message" : "Your message",
             "messageError" : "Your message is required",
-            "privacyPolicy" : "I've read the privacy policy and agree to the processing of my data as outlined.",
+            "privacyPolicy" : `I've read the <a class="policy-link" href="./html/privacy_policy.html">privacy policy</a> 
+                                and agree to the processing of my data as outlined.`,
             "privacyError" : "Please accept the privacy policy.",
             "submitButton" : "Send"
         },

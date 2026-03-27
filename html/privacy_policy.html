@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy policy</title>
+
+    <link rel="shortcut icon" href="../assets/icons/Logo icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/fonts.css">
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/imprint.css">
+    <script src="../scripts/policyObj.js"></script>
+    <script src="../scripts/projectsObj.js"></script>
+    <script src="../scripts/language.js"></script>
+    <script src="../scripts/imprint.js"></script>
+    <script src="../scripts/policy.js"></script>
+    <script src="../script.js"></script> 
+</head>
+<body onload="initPolicy()">
+    <header>
+        <nav id="imprint_nav">
+            <div class="nav-container">
+                <div class="nav-logo" onclick="goToHeroPage()">
+                    <img src="../assets/icons/Logo icon nav.svg" alt="main logo icon">
+                    <span class="logo-nav-name">B.Mahalbasic</span>
+                    <span class="logo-nav-text">developer</span>
+                </div>
+                <div class="nav-link-container">
+                    <div id="why_me" class="link-bg">
+                        <a id="link_why_me" class="nav-links" href="../index.html#why_me_section" onclick="onFocusDesign('why_me', 'link_why_me')">Warum ich</a>
+                    </div>
+                    <div id="skills" class="link-bg">
+                        <a id="link_skills" class="nav-links" href="../index.html#my_skills_section" onclick="onFocusDesign('skills', 'link_skills')">Fähigkeiten</a>
+                    </div>
+                    <div id="projects" class="link-bg">
+                        <a id="link_projects" class="nav-links" href="../index.html#my_projects_section" onclick="onFocusDesign('projects', 'link_projects')">Projekte</a>
+                    </div>
+                    <div id="contact" class="link-bg">
+                        <a id="link_contact" class="nav-links" href="../index.html#my_contact_section" onclick="onFocusDesign('contact', 'link_contact')">Kontakt</a>
+                    </div>
+                </div>
+                <div class="language-container">
+                    <div id="german" class="language-bg">
+                        <span id="german_span" class="language-box" onclick="loadImprintLanguage('german', 'german_span')"
+                        onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
+                    </div>
+                    <div id="english" class="language-bg">
+                        <span id="english_span" class="language-box" onclick="loadImprintLanguage('english', 'english_span')"
+                        onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div id="header_mobile" class="header-mobile">
+            <div class="header-frame">
+                <div class="logo-main-box">
+                    <img class="main-logo" src="../assets/icons/mobile/logo_mobile.svg" alt="logo icon">
+                    <span class="main-name">B.Mahalbasic</span>
+                    <span class="job-name">developer</span>
+                </div>
+                <div class="burger-menu" onclick="toggleMobileNavImprint(event)">
+                    <img id="mobile_nav_btn" src="../assets/icons/mobile/burger_button.svg" alt="navbar button as burger icon">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="mobile-nav-imprint">
+            <div id="nav_mobile" class="nav-mobile-container invisible">
+                <div class="nav-mobile" onclick="stopEventBubbling(event)">
+                    <div class="mobile-link-container">
+                        <a id="link_why_me_mobile" class="mobile-link" href="../index.html#why_me_section"></a>
+                        <a id="link_my_skills_mobile" class="mobile-link" href="../index.html#my_skills_section"></a>
+                        <a id="link_my_projects_mobile" class="mobile-link" href="../index.html#my_projects_section"></a>
+                        <a id="link_contact_me_mobile" class="mobile-link" href="../index.html#my_contact_section"></a>
+                        <div class="mobile-language-container">
+                            <div id="german_mobile" class="mobile-language-box">
+                                <span id="german_span_mobile" class="mobile-language-span" onclick="loadImprintLanguage('german', 'german_span')"
+                                onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
+                            </div>
+                            <div id="english_mobile" class="mobile-language-box">
+                                <span id="english_span_mobile" class="mobile-language-span" onclick="loadImprintLanguage('english', 'english_span')"
+                                onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="imprint-frame">
+            <div class="imprint-container">
+                <div class="arrow-left-frame">
+                    <div class="arrow-left-btn" onclick="goToHeroPage()">
+                        <img src="../assets/icons/mobile/arrow_left_mobile.svg" alt="go to hero page as arrow left button">
+                    </div>
+                </div>
+                <span id="policy_caption" class="imprint-caption">Datenschutzrichtlinie</span>
+                <div class="content-box">
+                    <span id="glance_span" class="imprint-line">1. Datenschutz auf einen Blick</span>
+                    <span id="glance_content" class="imprint-content">
+                        Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, 
+                        wenn Sie diese Website besuchen. 
+                        Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
+                    </span>
+                </div>
+                <div class="content-box">
+                    <span id="collection_span" class="imprint-line">2. Datenerfassung bei Kontaktaufnahme</span>
+                    <span id="collection_content" class="imprint-content">
+                        Wenn Sie mir per E-Mail oder über ein Kontaktformular Anfragen zukommen lassen, 
+                        werden Ihre Angaben aus der Anfrage inklusive der von Ihnen dort angegebenen Kontaktdaten 
+                        (z. B. Name, E-Mail-Adresse) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert. 
+                        Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.
+                        Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, 
+                        sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. 
+                        In allen übrigen Fällen beruht die Verarbeitung auf meinem berechtigten Interesse an der effektiven Bearbeitung 
+                        der an mich gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

@@ -16,7 +16,7 @@
     <script src="../scripts/imprint.js"></script>
     <script src="../script.js"></script> 
 </head>
-<body onload="initImprint()">
+<body onload="initImprint()" onclick="closeNavOverlayImprint()">
     <header>
         <nav id="imprint_nav">
             <div class="nav-container">
@@ -51,10 +51,49 @@
                 </div>
             </div>
         </nav>
+        <div id="header_mobile" class="header-mobile">
+            <div class="header-frame">
+                <div class="logo-main-box">
+                    <img class="main-logo" src="../assets/icons/mobile/logo_mobile.svg" alt="logo icon">
+                    <span class="main-name">B.Mahalbasic</span>
+                    <span class="job-name">developer</span>
+                </div>
+                <div class="burger-menu" onclick="toggleMobileNavImprint(event)">
+                    <img id="mobile_nav_btn" src="../assets/icons/mobile/burger_button.svg" alt="navbar button as burger icon">
+                </div>
+            </div>
+        </div>
     </header>
     <main>
+        <div class="mobile-nav-imprint">
+            <div id="nav_mobile" class="nav-mobile-container invisible">
+                <div class="nav-mobile" onclick="stopEventBubbling(event)">
+                    <div class="mobile-link-container">
+                        <a id="link_why_me_mobile" class="mobile-link" href="../index.html#why_me_section"></a>
+                        <a id="link_my_skills_mobile" class="mobile-link" href="../index.html#my_skills_section"></a>
+                        <a id="link_my_projects_mobile" class="mobile-link" href="../index.html#my_projects_section"></a>
+                        <a id="link_contact_me_mobile" class="mobile-link" href="../index.html#my_contact_section"></a>
+                        <div class="mobile-language-container">
+                            <div id="german_mobile" class="mobile-language-box">
+                                <span id="german_span_mobile" class="mobile-language-span" onclick="loadImprintLanguage('german', 'german_span')"
+                                onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
+                            </div>
+                            <div id="english_mobile" class="mobile-language-box">
+                                <span id="english_span_mobile" class="mobile-language-span" onclick="loadImprintLanguage('english', 'english_span')"
+                                onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="imprint-frame">
             <div class="imprint-container">
+                <div class="arrow-left-frame">
+                    <div class="arrow-left-btn" onclick="goToHeroPage()">
+                        <img src="../assets/icons/mobile/arrow_left_mobile.svg" alt="go to hero page as arrow left button">
+                    </div>
+                </div>
                 <span id="imprint_caption" class="imprint-caption"></span>
                 <div class="imprint-list-container">
                     <span id="list_caption" class="imprint-line"></span>
@@ -91,26 +130,6 @@
                 <div class="content-box">
                     <span id="indemnity_span" class="imprint-line"></span>
                     <span id="indemnity_content" class="imprint-content"></span>
-                </div>
-            </div>
-        </div>
-        <div id="nav_mobile" class="nav-mobile-container invisible">
-            <div class="nav-mobile" onclick="stopEventBubbling(event)">
-                <div class="mobile-link-container">
-                    <a class="mobile-link" href="#why_me_section">Warum ich</a>
-                    <a class="mobile-link" href="#my_skills_section">Fähigkeiten</a>
-                    <a class="mobile-link" href="#my_projects_section">Projekte</a>
-                    <a class="mobile-link" href="#my_contact_section">Kontakt</a>
-                    <div class="mobile-language-container">
-                        <div id="german_mobile" class="mobile-language-box">
-                            <span id="german_span_mobile" class="mobile-language-span" onclick="loadLanguage('german', 'german_span')"
-                            onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
-                        </div>
-                        <div id="english_mobile" class="mobile-language-box">
-                            <span id="english_span_mobile" class="mobile-language-span" onclick="loadLanguage('english', 'english_span')"
-                            onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

@@ -190,3 +190,26 @@ function loadIndemnityDataEnglish(languageId){
         document.getElementById('indemnity_content').innerHTML = imprintData.en.indemnity.content;
     }
 }
+
+function toggleMobileNavImprint(event){
+    event.stopPropagation();
+    let contentNavRef = document.getElementById('nav_mobile');
+    let contentButtonRef = document.getElementById('mobile_nav_btn');
+    if(!mobileNavActive){
+        contentNavRef.classList.remove('invisible');
+        contentButtonRef.src = '../assets/icons/mobile/overlay_close_button.svg';
+        mobileNavActive = true;
+    }else{
+        contentNavRef.classList.add('invisible');
+        contentButtonRef.src = '../assets/icons/mobile/burger_button.svg';
+        mobileNavActive = false;
+    }
+}
+
+function closeNavOverlayImprint(){
+    if(mobileNavActive){
+        document.getElementById('nav_mobile').classList.add('invisible');
+        document.getElementById('mobile_nav_btn').src = '../assets/icons/mobile/burger_button.svg';
+        mobileNavActive = false;
+    }
+}

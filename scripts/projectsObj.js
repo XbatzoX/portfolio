@@ -223,7 +223,7 @@ const mySkillsData = {
                                 to quickly learn new tools and standards and apply them effectively in projects.`,
         "actualLearningMobile" : "What I am currently learning"
     }
-}
+};
 
 const myProjectsData = {
     "de" : {
@@ -258,7 +258,7 @@ const myProjectsData = {
         "mobileCaption" : "Need a teamplayer?",
         "mobileSpan" : "Here what my colleagues said about me."
     }
-}
+};
 
 const contactMeData = {
     "de" : {
@@ -299,5 +299,14 @@ const contactMeData = {
             "submitButton" : "Send"
         },
         "spanMobile" : "Let us work together!"
+    }
+};
+
+const footerData = {
+    "de" : {
+        "legalNotice" : "Impressum"
+    },
+    "en" : {
+        "legalNotice" : "Legal notice"
     }
 }

@@ -4,6 +4,7 @@ function loadLanguageData(languageId){
     loadMySkillsData(languageId);
     loadMyProjectsData(languageId);
     loadContactMeData(languageId);
+    loadFooterData(languageId);
 }
 
 function loadNavData(languageId){
@@ -302,5 +303,24 @@ function checkErrorMessageEnglishMobile(){
         inputMessage.placeholder = contactMeData.en.form.messageError;
     }else{
         inputMessage.placeholder = contactMeData.en.form.message;
+    }
+}
+
+function loadFooterData(languageId){
+    loadFooterDataGerman(languageId);
+    loadFooterDataEnglish(languageId);
+}
+
+function loadFooterDataGerman(languageId){
+    if(languageId == 0){
+        document.getElementById('impressum_link').innerHTML = footerData.de.legalNotice;
+        document.getElementById('impressum_link_mobile').innerHTML = footerData.de.legalNotice;
+    }
+}
+
+function loadFooterDataEnglish(languageId){
+    if(languageId == 1){
+        document.getElementById('impressum_link').innerHTML = footerData.en.legalNotice;
+        document.getElementById('impressum_link_mobile').innerHTML = footerData.en.legalNotice;
     }
 }

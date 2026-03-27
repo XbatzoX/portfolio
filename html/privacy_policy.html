@@ -17,7 +17,7 @@
     <script src="../scripts/policy.js"></script>
     <script src="../script.js"></script> 
 </head>
-<body onload="initPolicy()">
+<body onload="initPolicy()" onclick="closeNavOverlayImprint()">
     <header>
         <nav id="imprint_nav">
             <div class="nav-container">
@@ -76,11 +76,11 @@
                         <a id="link_contact_me_mobile" class="mobile-link" href="../index.html#my_contact_section"></a>
                         <div class="mobile-language-container">
                             <div id="german_mobile" class="mobile-language-box">
-                                <span id="german_span_mobile" class="mobile-language-span" onclick="loadImprintLanguage('german', 'german_span')"
+                                <span id="german_span_mobile" class="mobile-language-span" onclick="loadPolicyLanguage('german', 'german_span')"
                                 onmouseover="onHoverLanguageDesign('german')" onmouseout="hoverOverLanguageDesign()">DE</span>
                             </div>
                             <div id="english_mobile" class="mobile-language-box">
-                                <span id="english_span_mobile" class="mobile-language-span" onclick="loadImprintLanguage('english', 'english_span')"
+                                <span id="english_span_mobile" class="mobile-language-span" onclick="loadPolicyLanguage('english', 'english_span')"
                                 onmouseover="onHoverLanguageDesign('english')" onmouseout="hoverOverLanguageDesign()">EN</span>
                             </div>
                         </div>
@@ -95,54 +95,31 @@
                         <img src="../assets/icons/mobile/arrow_left_mobile.svg" alt="go to hero page as arrow left button">
                     </div>
                 </div>
-                <span id="policy_caption" class="imprint-caption">Datenschutzrichtlinie</span>
+                <span id="policy_caption" class="imprint-caption"></span>
                 <div class="content-box">
-                    <span id="glance_span" class="imprint-line">1. Datenschutz auf einen Blick</span>
-                    <span id="glance_content" class="imprint-content">
-                        Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, 
-                        wenn Sie diese Website besuchen. 
-                        Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.
-                    </span>
+                    <span id="glance_span" class="imprint-line"></span>
+                    <span id="glance_content" class="imprint-content"></span>
                 </div>
                 <div class="content-box">
-                    <span id="collection_span" class="imprint-line">2. Datenerfassung bei Kontaktaufnahme</span>
-                    <span id="collection_content" class="imprint-content">
-                        Wenn Sie mir per E-Mail oder über ein Kontaktformular Anfragen zukommen lassen, 
-                        werden Ihre Angaben aus der Anfrage inklusive der von Ihnen dort angegebenen Kontaktdaten 
-                        (z. B. Name, E-Mail-Adresse) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei mir gespeichert. 
-                        Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter.
-                        Die Verarbeitung dieser Daten erfolgt auf Grundlage von Art. 6 Abs. 1 lit. b DSGVO, 
-                        sofern Ihre Anfrage mit der Erfüllung eines Vertrags zusammenhängt oder zur Durchführung vorvertraglicher Maßnahmen erforderlich ist. 
-                        In allen übrigen Fällen beruht die Verarbeitung auf meinem berechtigten Interesse an der effektiven Bearbeitung 
-                        der an mich gerichteten Anfragen (Art. 6 Abs. 1 lit. f DSGVO).
-                    </span>
+                    <span id="collection_span" class="imprint-line"></span>
+                    <span id="collection_content" class="imprint-content"></span>
                 </div>
                 <div class="content-box">
-                    <span id="hosting_span" class="imprint-line">3. Hosting und Server-Log-Dateien</span>
-                    <span id="hosting_content" class="imprint-content">
-                        Der Anbieter dieser Website erhebt und speichert automatisch Informationen in sogenannten Server-Log-Dateien, 
-                        die Ihr Browser automatisch an uns übermittelt. Dies sind:
-                    </span>
+                    <span id="hosting_span" class="imprint-line"></span>
+                    <span id="hosting_content" class="imprint-content"></span>
                     <ul class="imprint-list">
-                        <li id="li_1">Browsertyp und Browserversion</li>
-                        <li id="li_2">Verwendetes Betriebssystem</li>
-                        <li id="li_3">Referrer URL (die zuvor besuchte Seite)</li>
-                        <li id="li_4">Hostname des zugreifenden Rechners</li>
-                        <li id="li_5">Uhrzeit der Serveranfrage</li>
-                        <li id="li_6">IP-Adresse</li>
+                        <li id="li_1"></li>
+                        <li id="li_2"></li>
+                        <li id="li_3"></li>
+                        <li id="li_4"></li>
+                        <li id="li_5"></li>
+                        <li id="li_6"></li>
                     </ul>
-                    <span id="hosting_content_end" class="imprint-content">
-                        Diese Daten sind notwendig, um die Website sicher und stabil darzustellen. 
-                        Die Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. f DSGVO (Berechtigtes Interesse am Betrieb der Website).
-                    </span>
+                    <span id="hosting_content_end" class="imprint-content"></span>
                 </div>
                 <div class="content-box">
-                    <span id="policyRights_span" class="imprint-line">4. Ihre Rechte (Auskunft, Löschung, Sperrung)</span>
-                    <span id="policyRights_content" class="imprint-content">
-                        Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft 
-                        über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung 
-                        und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten.
-                    </span>
+                    <span id="policyRights_span" class="imprint-line"></span>
+                    <span id="policyRights_content" class="imprint-content"></span>
                 </div>
             </div>
         </div>

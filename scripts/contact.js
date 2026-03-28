@@ -70,7 +70,9 @@ function setContentNameOnFocus(){
         }
     }
     if(isMobileActive('input_name_title')){
-        contentInputRef.value = '';
+        if((contentInputRef.placeholder == contactMeData.de.form.nameError) || (contentInputRef.placeholder == contactMeData.en.form.nameError)){
+            contentInputRef.value = '';
+        }
         contentInputRef.classList.remove('input-error');
         if(contactLanguageId == 0){
             contentInputRef.placeholder = contactMeData.de.form.name;
@@ -201,7 +203,9 @@ function setContentMessageOnFocus(){
         contentDivRef.classList.remove('input-height-message');
     }
     if(isMobileActive('input_message_title')){
-        contentInputRef.value = '';
+        if((contentInputRef.placeholder == contactMeData.de.form.messageError) || (contentInputRef.placeholder == contactMeData.en.form.messageError)){
+            contentInputRef.value = '';
+        }
         if(contactLanguageId == 0){
             contentInputRef.placeholder = contactMeData.de.form.message;
         }else{

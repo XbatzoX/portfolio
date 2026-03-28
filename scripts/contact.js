@@ -289,6 +289,7 @@ function checkResponseOfPost(resp){
         }else{
             alert('message sent successfully');
         }
+        clearInputs();
     }else{
         if(contactLanguageId == 0){
             alert('Fehler: ' + resp.error);
@@ -296,6 +297,12 @@ function checkResponseOfPost(resp){
             alert('Error: ' + resp.error);
         } 
     }
+}
+
+function clearInputs(){
+    document.getElementById('input_name').value = '';
+    document.getElementById('input_mail').value = '';
+    document.getElementById('input_message').value = '';
 }
 
 function checkIfPrivacyPolicyAccepted(){

@@ -97,6 +97,7 @@
     flex-direction: column;
     align-items: start;
     justify-content: end;
+    height: 215px;
 }
 
 .input-info-text{

@@ -188,12 +188,8 @@ function changeBackgroundImage(id, classRemove, classAdd){
 }
 
 function scrollToSection(id){
-    document.getElementById(id).scrollIntoView({
-        behavior: "smooth"
-    });
-    if(id == 'why_me_section'){
-        onFocusDesign('why_me', 'link_why_me');
-    }
+    document.getElementById(id).scrollIntoView({behavior: "smooth"});
+    if(id == 'why_me_section'){onFocusDesign('why_me', 'link_why_me');}
     if(id == 'hero_section' || id == 'my_contact_section'){
         manualNavigation = true;
         if(id == 'hero_section'){
@@ -201,36 +197,22 @@ function scrollToSection(id){
         }else if(id == 'my_contact_section'){
             onFocusDesign('contact', 'link_contact');
         }
-        setTimeout(() => {
-           manualNavigation = false; 
-        }, 800);
+        setTimeout(() => {manualNavigation = false; }, 800);
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('.nav-links');
-
     let observer = new IntersectionObserver(entries => {
         if(manualNavigation) return;
-        entries.forEach(entry => {
-            if(entry.isIntersecting){
-                setButtonOnNavbar(entry.target.id);
-            }
-        });
-    },{
-        threshold: 0.4
-    });
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
+        entries.forEach(entry => {if(entry.isIntersecting){setButtonOnNavbar(entry.target.id);}});
+    },{threshold: 0.4});
+    sections.forEach(section => {observer.observe(section);});
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             manualNavigation = true;
-            setTimeout(() =>{
-                manualNavigation = false;
-            }, 800);
+            setTimeout(() =>{manualNavigation = false;}, 800);
         });
     });
 });

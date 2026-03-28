@@ -400,17 +400,19 @@
                         <div class="person-data-container">
                             <div id="name_input_box" class="input-container input-height">
                                 <span id="input_name_title" class="input-info-text"></span>
-                                <input id="input_name" type="text" required class="bg-input" onfocus="setContentNameOnFocus()" onblur="checkContentOfName()">
+                                <input id="input_name" type="text" required class="bg-input" onfocus="setContentNameOnFocus()" 
+                                onblur="checkContentOfName()" maxlength="20">
                             </div>
                             <div id="mail_input_box" class="input-container input-height">
                                 <span id="input_mail_title" class="input-info-text"></span>
                                 <input id="input_mail" type="text" required class="bg-input" onfocus="setContentMailOnFocus()" onblur="checkMailInput()"
-                                 autocomplete="new-password">
+                                 autocomplete="new-password" maxlength="20">
                             </div>
                         </div>
                         <div id="message_input_box" class="input-container">
                             <span id="input_message_title" class="input-info-text"></span>
-                            <textarea id="input_message" class="bg-input-message" onfocus="setContentMessageOnFocus()" onblur="checkContentOfMessage()"></textarea>
+                            <textarea id="input_message" class="bg-input-message" onfocus="setContentMessageOnFocus()" 
+                            onblur="checkContentOfMessage()" maxlength="400"></textarea>
                         </div>
                         <div id="privacy_container" class="privacy-container privacy-height">
                             <div class="privacy-box">

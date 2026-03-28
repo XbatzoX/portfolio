@@ -247,10 +247,55 @@ function checkInputFields(){
 
 function sendMessage(){
     let sendPermission = checkIfPrivacyPolicyAccepted();
+    if(sendPermission){
+        let inputDataObj = getInputData();
+        sendForm(inputDataObj);
+    }
+}
+
+function getInputData(){
+    let inputData = {
+        "name" : "",
+        "email" : "",
+        "message" : ""
+    };
+    inputData.name = document.getElementById('input_name').value;
+    inputData.email = document.getElementById('input_mail').value;
+    inputData.message = document.getElementById('input_message').value;
+    return inputData;
+}
+
+async function sendForm(dataObj){
+    let data = dataObj;
+    let response = await fetch('https://benjamin-mahalbasic.de/contact.php', {
+        method : 'POST',
+        headers: {
+        "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+    let responseAsJson = await response.json();
+    checkResponseOfPost(responseAsJson);
+}
+
+function checkResponseOfPost(resp){
+    if(resp.success){
+        if(contactLanguageId == 0){
+            alert('mail erfolgreich gesendet');
+        }else{
+            alert('message sent successfully');
+        }
+    }else{
+        if(contactLanguageId == 0){
+            alert('Fehler: ' + resp.error);
+        }else{
+            alert('Error: ' + resp.error);
+        } 
+    }
 }
 
 function checkIfPrivacyPolicyAccepted(){
-    let sendPermission = false;
+    let sendPermission = true;
     let contentDivRef = document.getElementById('privacy_container');
     let contentImgRef = document.getElementById('privacy_btn');
     let contentSpanRef = document.getElementById('privacy_error_text');
@@ -258,7 +303,7 @@ function checkIfPrivacyPolicyAccepted(){
         contentDivRef.classList.remove('privacy-height');
         contentImgRef.src = 'assets/icons/privacy_checkbox_error.svg';
         contentSpanRef.classList.remove('invisible');
-        sendPermission = true;
+        sendPermission = false;
     }
     return sendPermission;
 }

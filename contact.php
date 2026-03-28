@@ -12,7 +12,7 @@ header("Content-Type: application/json; charset=utf-8");
 // ------------------------------------------------------------
 
 // >>> DEINE EMAIL HIER EINTRAGEN <<<
-$siteEmail = "benmahal@icloud.com";
+$siteEmail = "benbasic@outlook.de";
 
 switch ($_SERVER['REQUEST_METHOD']) {
 

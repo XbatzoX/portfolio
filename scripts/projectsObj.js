@@ -21,6 +21,7 @@ const projects = [
         ],
         "imagePath" : "assets/img/join_screen.svg",
         "githubPath" : "https://github.com/XbatzoX/JOIN-2",
+        "liveTestPath" : "https://join.benjamin-mahalbasic.de",
         "tecText" : [
             'HTML',
             'CSS',
@@ -49,6 +50,7 @@ const projects = [
         ],
         "imagePath" : "assets/img/el_pollo_loco_screen.svg",
         "githubPath" : "https://github.com/XbatzoX/el-pollo-loco",
+        "liveTestPath" : "https://elPolloLoco.benjamin-mahalbasic.de",
         "tecText" : [
             'HTML',
             'CSS',
@@ -104,6 +106,7 @@ const projectsEnglish = [
         ],
         "imagePath" : "assets/img/join_screen.svg",
         "githubPath" : "https://github.com/XbatzoX/JOIN-2",
+        "liveTestPath" : "https://join.benjamin-mahalbasic.de",
         "tecText" : [
             'HTML',
             'CSS',
@@ -132,6 +135,7 @@ const projectsEnglish = [
         ],
         "imagePath" : "assets/img/el_pollo_loco_screen.svg",
         "githubPath" : "https://github.com/XbatzoX/el-pollo-loco",
+        "liveTestPath" : "https://elPolloLoco.benjamin-mahalbasic.de",
         "tecText" : [
             'HTML',
             'CSS',

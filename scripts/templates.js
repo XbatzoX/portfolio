@@ -37,7 +37,7 @@ function getProjectTemplate(projectId){
                             <img src="${projects[projectId].imagePath}">
                         </div>
                         <div class="tec-ctrl-box">
-                            <div id="live_test_${projectId}" class="live-test-btn">
+                            <div id="live_test_${projectId}" class="live-test-btn" onclick="openWebsite('${projects[projectId].liveTestPath}')">
                                 <span>Live Test</span>
                             </div>
                             <div id="github_${projectId}" class="github-btn" onclick="openWebsite('${projects[projectId].githubPath}')">
@@ -120,7 +120,7 @@ function getProjectTemplateEnglish(projectId){
                             <img src="${projectsEnglish[projectId].imagePath}">
                         </div>
                         <div class="tec-ctrl-box">
-                            <div id="live_test_${projectId}" class="live-test-btn">
+                            <div id="live_test_${projectId}" class="live-test-btn" onclick="openWebsite('${projectsEnglish[projectId].liveTestPath}')">
                                 <span>Live Test</span>
                             </div>
                             <div id="github_${projectId}" class="github-btn" onclick="openWebsite('${projectsEnglish[projectId].githubPath}')">

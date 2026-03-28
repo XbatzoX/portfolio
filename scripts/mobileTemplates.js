@@ -33,7 +33,7 @@ function getMobileProjectTemplate(projectId){
                     <span class="mobile-li-text">${projects[projectId].list[2].content}</span>
                 </ul>
                 <div class="mobile-project-ctrl-container">
-                    <div class="live-test-btn-mobile">
+                    <div class="live-test-btn-mobile" onclick="openWebsite('${projects[projectId].liveTestPath}')">
                         <span class="live-test-span-mobile">Live test</span>
                     </div>
                     <div class="github-btn-mobile" onclick="openWebsite('${projects[projectId].githubPath}')">
@@ -104,7 +104,7 @@ function getMobileProjectTemplateEnglish(projectId){
                     <span class="mobile-li-text">${projectsEnglish[projectId].list[2].content}</span>
                 </ul>
                 <div class="mobile-project-ctrl-container">
-                    <div class="live-test-btn-mobile">
+                    <div class="live-test-btn-mobile" onclick="openWebsite('${projectsEnglish[projectId].liveTestPath}')">
                         <span class="live-test-span-mobile">Live test</span>
                     </div>
                     <div class="github-btn-mobile" onclick="openWebsite('${projectsEnglish[projectId].githubPath}')">

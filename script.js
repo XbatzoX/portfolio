@@ -2,6 +2,9 @@ let languageID = 0;
 let manualNavigation = false;
 let mobileNavActive = false;
 
+/**
+ * This function is used to initialize all data during onload
+ */
 function init(){
     let objData = prepareLanguageDesign();
     onFocusLanguageDesign(objData.language, objData.languageSpan);
@@ -10,6 +13,11 @@ function init(){
     activateMobileNavigationTab('mobile_project_0', 'mobile_project_content');
 }
 
+/**
+ * This function checks the language ID of local storage and prepares strings for language data load
+ * 
+ * @returns - an object filled with language string data
+ */
 function prepareLanguageDesign(){
     let objData = {
         "language" : "",
@@ -26,6 +34,9 @@ function prepareLanguageDesign(){
     return objData;
 }
 
+/**
+ * This function is used to check language entry on local storage
+ */
 function checkLocalStorage(){
     let myLaguageId = JSON.parse(localStorage.getItem('myLanguage'));
     if(myLaguageId != null){
@@ -33,21 +44,39 @@ function checkLocalStorage(){
     }
 }
 
+/**
+ * This function is used for the logo animation on hero page
+ */
 function changeLogoBig(){
     const contentLogoRef = document.getElementById('main_logo');
     contentLogoRef.src = './assets/icons/Logo icon hover.svg';
 }
 
+/**
+ * This function is used for the logo animation on hero page
+ */
 function changeLogoSmall(){
     const contentLogoRef = document.getElementById('main_logo');
     contentLogoRef.src = './assets/icons/Logo icon.svg';
 }
 
+/**
+ * This global function changes the icon of an element 
+ * 
+ * @param {string} id - includes the id from element 
+ * @param {string} path - includes the path of new icon image 
+ */
 function changeIcon(id, path){
     const contentIconRef = document.getElementById(id);
     contentIconRef.src = path;
 }
 
+/**
+ * This function is used to design the elements of navbar during actions
+ * 
+ * @param {string} id - includes the id of the clicked navbar element 
+ * @param {string} link_id - includes the id of clicked link element
+ */
 function onFocusDesign(id, link_id){
     removeFocusFromLink();
     removeFocusColor();
@@ -57,6 +86,9 @@ function onFocusDesign(id, link_id){
     }
 }
 
+/**
+ * This function removes the shape of all elements
+ */
 function removeFocusFromLink(){
     document.getElementById('why_me').classList.remove('ellipse');
     document.getElementById('skills').classList.remove('ellipse');
@@ -64,6 +96,9 @@ function removeFocusFromLink(){
     document.getElementById('contact').classList.remove('ellipse');
 }
 
+/**
+ * This function sets the standard color on all nav links
+ */
 function removeFocusColor(){
     document.getElementById('link_why_me').style.color = '#262E34';
     document.getElementById('link_skills').style.color = '#262E34';
@@ -71,6 +106,12 @@ function removeFocusColor(){
     document.getElementById('link_contact').style.color = '#262E34';
 }
 
+/**
+ * This function is used to load all language data and design the language buttons
+ * 
+ * @param {string} id - includes the id of language button container 
+ * @param {string} span_id - includes the id of language button span
+ */
 function loadLanguage(id, span_id){
     onFocusLanguageDesign(id, span_id);
     loadLanguageData(languageID);
@@ -174,7 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if(manualNavigation) return;
         entries.forEach(entry => {
             if(entry.isIntersecting){
-                // console.log(entry.target.id);
                 setButtonOnNavbar(entry.target.id);
             }
         });

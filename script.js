@@ -118,6 +118,12 @@ function loadLanguage(id, span_id){
     setProjectLanguage();
 }
 
+/**
+ * This subfunction of loadLanguage set the languageId and designed the clicked link
+ * 
+ * @param {string} id - includes the id of language button container 
+ * @param {string} span_id - includes the id of language button span
+ */
 function onFocusLanguageDesign(id, span_id){
     removeFocusFromLanguage();
     removeColorLanguage();
@@ -128,6 +134,9 @@ function onFocusLanguageDesign(id, span_id){
     document.getElementById(span_id + '_mobile').style.color ='#F8F5EC';
 }
 
+/**
+ * This function removes the focus from language buttons
+ */
 function removeFocusFromLanguage(){
     document.getElementById('german').classList.remove('ellipse-language');
     document.getElementById('english').classList.remove('ellipse-language');
@@ -135,6 +144,9 @@ function removeFocusFromLanguage(){
     document.getElementById('english_mobile').classList.remove('ellipse-language');
 }
 
+/**
+ * This function set the default link color
+ */
 function removeColorLanguage(){
     document.getElementById('german_span').style.color = '#262E34';
     document.getElementById('english_span').style.color = '#262E34';
@@ -142,6 +154,11 @@ function removeColorLanguage(){
     document.getElementById('english_span_mobile').style.color = '#262E34';
 }
 
+/**
+ * This function set the language ID of page and write it to local storage
+ * 
+ * @param {string} id - includes the clicked language as string 
+ */
 function setLanguageID(id){
     if(id == 'german'){
         languageID = 0;
@@ -155,25 +172,47 @@ function setLanguageID(id){
     localStorage.setItem('myLanguage', JSON.stringify(languageID));
 }
 
+/**
+ * This function is used to change the design of language design of buttons during hover
+ * 
+ * @param {string} id - includes the id of button which is on hover effect 
+ */
 function onHoverLanguageDesign(id){
     if((languageID == 0) && (id == 'english')){
-        document.getElementById('german').classList.remove('ellipse-language');
-        document.getElementById('german_mobile').classList.remove('ellipse-language');
-        document.getElementById('german_span').style.color ='#262E34';
-        document.getElementById('german_span_mobile').style.color ='#262E34';
-        document.getElementById('english_span').style.color ='#F8F5EC';
-        document.getElementById('english_span_mobile').style.color ='#F8F5EC';
+        languageDesignToEnglish();
     }
     if((languageID == 1) && (id == 'german')){
-        document.getElementById('english').classList.remove('ellipse-language');
-        document.getElementById('english_mobile').classList.remove('ellipse-language');
-        document.getElementById('english_span').style.color = '#262E34';
-        document.getElementById('english_span_mobile').style.color = '#262E34';
-        document.getElementById('german_span').style.color = '#F8F5EC';
-        document.getElementById('german_span_mobile').style.color = '#F8F5EC';
+        languageDesignToGerman();
     }
 }
 
+/**
+ * This function changes the button design on hover to english
+ */
+function languageDesignToEnglish(){
+    document.getElementById('german').classList.remove('ellipse-language');
+    document.getElementById('german_mobile').classList.remove('ellipse-language');
+    document.getElementById('german_span').style.color ='#262E34';
+    document.getElementById('german_span_mobile').style.color ='#262E34';
+    document.getElementById('english_span').style.color ='#F8F5EC';
+    document.getElementById('english_span_mobile').style.color ='#F8F5EC';
+}
+
+/**
+ * This function changes the button design on hover to german
+ */
+function languageDesignToGerman(){
+    document.getElementById('english').classList.remove('ellipse-language');
+    document.getElementById('english_mobile').classList.remove('ellipse-language');
+    document.getElementById('english_span').style.color = '#262E34';
+    document.getElementById('english_span_mobile').style.color = '#262E34';
+    document.getElementById('german_span').style.color = '#F8F5EC';
+    document.getElementById('german_span_mobile').style.color = '#F8F5EC';
+}
+
+/**
+ * This function changes the design of language buttons during mouse out effect
+ */
 function hoverOverLanguageDesign(){
     if(languageID == 0){
         onFocusLanguageDesign('german', 'german_span')
@@ -182,11 +221,23 @@ function hoverOverLanguageDesign(){
     }
 }
 
+/**
+ * This function is used to change any backroundImage of classes
+ * 
+ * @param {string} id - includes the id of container 
+ * @param {string} classRemove - includes class name with old background image
+ * @param {string} classAdd - includes class name with new background image 
+ */
 function changeBackgroundImage(id, classRemove, classAdd){
     document.getElementById(id).classList.remove(classRemove);
     document.getElementById(id).classList.add(classAdd);
 }
 
+/**
+ * This function is used scroll to a selected section
+ * 
+ * @param {string} id - includes the id of scroll destination 
+ */
 function scrollToSection(id){
     document.getElementById(id).scrollIntoView({behavior: "smooth"});
     if(id == 'why_me_section'){onFocusDesign('why_me', 'link_why_me');}
@@ -201,6 +252,9 @@ function scrollToSection(id){
     }
 }
 
+/**
+ * This event listener is used to set the correct link on navbar during manual scrolling on page
+ */
 document.addEventListener('DOMContentLoaded', () => {
     let sections = document.querySelectorAll('section');
     let navLinks = document.querySelectorAll('.nav-links');
@@ -217,6 +271,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+/**
+ * This function set the design of the link button on navbar
+ * 
+ * @param {string} contentId - includes the id of the actual focus section 
+ */
 function setButtonOnNavbar(contentId){
     switch(contentId){
         case 'hero_section':
@@ -240,10 +299,20 @@ function setButtonOnNavbar(contentId){
     }
 }
 
+/**
+ * This function is used to open a website in a new tab
+ * 
+ * @param {string} path - includes the path of website 
+ */
 function openWebsite(path){
     window.open(path, "_blank");
 }
 
+/**
+ * This function is used to open and close the mobile navbar
+ * 
+ * @param {event} event - includes the event to close the overlay if a click on body is recognized 
+ */
 function toggleMobileNav(event){
     event.stopPropagation();
     let contentNavRef = document.getElementById('nav_mobile');
@@ -259,6 +328,9 @@ function toggleMobileNav(event){
     }
 }
 
+/**
+ * This function is used to close the nav mobile overlay
+ */
 function closeNavOverlay(){
     if(mobileNavActive){
         document.getElementById('nav_mobile').classList.add('invisible');
@@ -267,10 +339,18 @@ function closeNavOverlay(){
     }
 }
 
+/**
+ * This function is used to stop event bubbling
+ * 
+ * @param {event} event - includes the event which is bubbling to the top layer 
+ */
 function stopEventBubbling(event){
     event.stopPropagation();
 }
 
+/**
+ * This function is used to change the icon of github link in mobile version
+ */
 function githubFooterAction(){
     changeIcon('github_footer_mobile', 'assets/icons/mobile/footer_github_mobile_active.svg');
     setTimeout(() => {

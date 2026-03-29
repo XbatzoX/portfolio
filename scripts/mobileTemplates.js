@@ -1,3 +1,8 @@
+/**
+ * This function is used to render project data in my projects section
+ * @param {number} projectId - includes the project id from project list 
+ * @returns - html div tag
+ */
 function getMobileProjectTemplate(projectId){
     return `<div class="mobile-project-content">
                 <div class="head-content">
@@ -43,6 +48,11 @@ function getMobileProjectTemplate(projectId){
             </div>`;
 }
 
+/**
+ * This function is used to render project data in my projects section
+ * @param {number} projectId - includes the project id from project list 
+ * @returns - html div tag
+ */
 function getMobileOngoingProjectTemplate(projectId){
     return `<div class="mobile-project-content">
                 <div class="head-content">
@@ -69,6 +79,11 @@ function getMobileOngoingProjectTemplate(projectId){
             </div>`;
 }
 
+/**
+ * This function is used to render project data in english
+ * @param {number} projectId - includes the project id from project list 
+ * @returns - html div tag
+ */
 function getMobileProjectTemplateEnglish(projectId){
     return `<div class="mobile-project-content">
                 <div class="head-content">
@@ -114,6 +129,11 @@ function getMobileProjectTemplateEnglish(projectId){
             </div>`;
 }
 
+/**
+ * This function is used to render project data in english
+ * @param {number} projectId - includes the project id from project list 
+ * @returns - html div tag
+ */
 function getMobileOngoingProjectTemplateEnglish(projectId){
     return `<div class="mobile-project-content">
                 <div class="head-content">

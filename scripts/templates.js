@@ -1,3 +1,8 @@
+/**
+ * This function is used to render project data in my projects section
+ * @param {number} projectId - includes projectId from active project 
+ * @returns - html div tag with content
+ */
 function getProjectTemplate(projectId){
     return `<div class="content-box">
                 <div class="left-side">
@@ -49,6 +54,11 @@ function getProjectTemplate(projectId){
             </div>`;
 }
 
+/**
+ * This function is used to render ongoingProject data in my projects section
+ * @param {number} projectId - includes projectId from active project 
+ * @returns - html div tag with content
+ */
 function getOngoingProjectTemplate(projectId){
     return `<div class="content-box">
                 <div class="left-side">
@@ -81,6 +91,11 @@ function getOngoingProjectTemplate(projectId){
             </div>`;
 }
 
+/**
+ * This function is used to render project data in my projects section
+ * @param {number} projectId - includes projectId from active project 
+ * @returns - html div tag with content
+ */
 function getProjectTemplateEnglish(projectId){
     return `<div class="content-box">
                 <div class="left-side">
@@ -132,6 +147,11 @@ function getProjectTemplateEnglish(projectId){
             </div>`;
 }
 
+/**
+ * This function is used to render ongoingProject data in my projects section
+ * @param {number} projectId - includes projectId from active project 
+ * @returns - html div tag with content
+ */
 function getOngoingProjectTemplateEnglish(projectId){
     return `<div class="content-box">
                 <div class="left-side">

@@ -253,45 +253,89 @@ function inputMailFocusMobile(contentInputRef){
     }
 }
 
+/**
+ * This function is used to check the input value of message box
+ */
 function checkContentOfMessage(){
     let contentInputRef = document.getElementById('input_message');
     let contentSpanRef = document.getElementById('input_message_title');
     let contentDivRef = document.getElementById('message_input_box');
     if(contentInputRef.value == '' || contentInputRef.value.length < 3){
-        if(!isMobileActive('input_message_title')){
-            if(contactLanguageId == 0){
-                contentSpanRef.innerHTML = contactMeData.de.form.messageError;
-            }else{
-                contentSpanRef.innerHTML = contactMeData.en.form.messageError;
-            }
-            contentSpanRef.style.color = "#E44C36";
-            contentDivRef.classList.remove('input-height-message');
-        }
-        if(isMobileActive('input_message_title')){
-            contentInputRef.value = '';
-            if(contactLanguageId == 0){
-                contentInputRef.placeholder = contactMeData.de.form.messageError;
-            }else{
-                contentInputRef.placeholder = contactMeData.en.form.messageError;
-            }
-            contentInputRef.classList.add('input-error');
-        }
-        
-        
-        contentInputRef.style.border = "1px solid #E44C36";
-        contentInputRef.style.backgroundColor = 'transparent';
-        ValidMessage = false;
+        inputMessageErrorData(contentSpanRef, contentInputRef, contentDivRef);
     }
     if(contentInputRef.value.length >= 3){
-        contentSpanRef.innerHTML = '';
-        contentInputRef.style.backgroundColor = 'transparent';
-        contentInputRef.classList.add('bg-img-done');
-        contentDivRef.classList.add('input-height-message');
-        ValidMessage = true;
+        inputMessageValidData(contentSpanRef, contentInputRef, contentDivRef);
     }
     checkInputFields();
 }
 
+/**
+ * This function is used to set the error message of message input value
+ * 
+ * @param {HTMLElement} contentSpanRef - includes the html element of span info 
+ * @param {HTMLElement} contentInputRef - includes the html element of placeholder from textarea 
+ */
+function inputMessageErrorData(contentSpanRef, contentInputRef, contentDivRef){
+    inputMessageErrorDesktop(contentSpanRef, contentDivRef);
+    inputMessageErrorMobile(contentInputRef);
+    contentInputRef.style.border = "1px solid #E44C36";
+    contentInputRef.style.backgroundColor = 'transparent';
+    ValidMessage = false;
+}
+
+/**
+ * This function creates a design info of valid input data of message text area
+ * 
+ * @param {HTMLElement} contentSpanRef - includes html element of info span
+ * @param {HTMLElement} contentInputRef - includes html element of textarea (placeholder)
+ * @param {HTMLElement} contentDivRef - includes html element of message container
+ */
+function inputMessageValidData(contentSpanRef, contentInputRef, contentDivRef){
+    contentSpanRef.innerHTML = '';
+    contentInputRef.style.backgroundColor = 'transparent';
+    contentInputRef.classList.add('bg-img-done');
+    contentDivRef.classList.add('input-height-message');
+    ValidMessage = true;
+}
+
+/**
+ * This function set the correct language error info of input message in desktop view
+ * 
+ * @param {HTMLElement} contentSpanRef - includes the html element of info span
+ * @param {HTMLElement} contentDivRef  - includes the html element of message container
+ */
+function inputMessageErrorDesktop(contentSpanRef, contentDivRef){
+    if(!isMobileActive('input_message_title')){
+        if(contactLanguageId == 0){
+            contentSpanRef.innerHTML = contactMeData.de.form.messageError;
+        }else{
+            contentSpanRef.innerHTML = contactMeData.en.form.messageError;
+        }
+        contentSpanRef.style.color = "#E44C36";
+        contentDivRef.classList.remove('input-height-message');
+    }
+}
+
+/**
+ * This function set the correct language error info of input message in mobile view
+ * 
+ * @param {HTMLElement} contentInputRef - includes html element of textarea tag 
+ */
+function inputMessageErrorMobile(contentInputRef){
+    if(isMobileActive('input_message_title')){
+        contentInputRef.value = '';
+        if(contactLanguageId == 0){
+            contentInputRef.placeholder = contactMeData.de.form.messageError;
+        }else{
+            contentInputRef.placeholder = contactMeData.en.form.messageError;
+        }
+        contentInputRef.classList.add('input-error');
+    }
+}
+
+/**
+ * This function is used to gives designed feedback if the input field is on focus
+ */
 function setContentMessageOnFocus(){
     let contentInputRef = document.getElementById('input_message');
     let contentSpanRef = document.getElementById('input_message_title');
@@ -300,7 +344,17 @@ function setContentMessageOnFocus(){
     contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
-    
+    inputMessageFocusDesktop(contentSpanRef, contentDivRef);
+    inputMessageFocusMobile(contentInputRef);
+}
+
+/**
+ * This function gives on Focus feedback in desktop view
+ * 
+ * @param {HTMLElement} contentSpanRef - includes html element of info span 
+ * @param {HTMLElement} contentDivRef - includes html element of message container 
+ */
+function inputMessageFocusDesktop(contentSpanRef, contentDivRef){
     if(!isMobileActive('input_message_title')){
         if(contactLanguageId == 0){
             contentSpanRef.innerHTML = contactMeData.de.form.message;
@@ -309,6 +363,14 @@ function setContentMessageOnFocus(){
         }
         contentDivRef.classList.remove('input-height-message');
     }
+}
+
+/**
+ * This function gives on focus feedback in mobile view
+ * 
+ * @param {HTMLElement} contentInputRef - includes html element of textarea field 
+ */
+function inputMessageFocusMobile(contentInputRef){
     if(isMobileActive('input_message_title')){
         if((contentInputRef.placeholder == contactMeData.de.form.messageError) || (contentInputRef.placeholder == contactMeData.en.form.messageError)){
             contentInputRef.value = '';
@@ -320,9 +382,14 @@ function setContentMessageOnFocus(){
         }
         contentInputRef.classList.remove('input-error');
     }
-    
 }
 
+/**
+ * This function is used to change the privacy button image after user action
+ * 
+ * @param {string} id - includes id of privacy policy button container 
+ * @param {string} path - includes path of image 
+ */
 function changePrivacyIcon(id, path){
     if(!policyAccepted){
         const contentIconRef = document.getElementById(id);
@@ -330,6 +397,9 @@ function changePrivacyIcon(id, path){
     }
 }
 
+/**
+ * This function changes the image of privacy button after clicked actions
+ */
 function toggleButtonPrivacyPolicy(){
     let policyButton = document.getElementById('privacy_btn');
     if(!policyAccepted){
@@ -343,6 +413,9 @@ function toggleButtonPrivacyPolicy(){
     }
 }
 
+/**
+ * This function activate/deactivate the submit button after checking all values of input fields
+ */
 function checkInputFields(){
     let submitButton = document.getElementById('submit_btn');
     if(validName && validMail && ValidMessage){
@@ -356,6 +429,9 @@ function checkInputFields(){
     }
 }
 
+/**
+ * This function is used to checks if privacy policy is accepted and send the formular to domain
+ */
 function sendMessage(){
     let sendPermission = checkIfPrivacyPolicyAccepted();
     if(sendPermission){
@@ -364,6 +440,11 @@ function sendMessage(){
     }
 }
 
+/**
+ * This function creates an object filled with input values
+ * 
+ * @returns - an object filled with input values
+ */
 function getInputData(){
     let inputData = {
         "name" : "",
@@ -376,6 +457,11 @@ function getInputData(){
     return inputData;
 }
 
+/**
+ * This function send the formular to damoin
+ * 
+ * @param {object} dataObj - includes an object with input values
+ */
 async function sendForm(dataObj){
     let data = dataObj;
     let response = await fetch('https://benjamin-mahalbasic.de/contact.php', {
@@ -389,6 +475,11 @@ async function sendForm(dataObj){
     checkResponseOfPost(responseAsJson);
 }
 
+/**
+ * This function is used to gives the user a feedback if formular was sent
+ * 
+ * @param {json} resp - includes a json with response feedback
+ */
 function checkResponseOfPost(resp){
     if(resp.success){
         if(contactLanguageId == 0){
@@ -406,12 +497,20 @@ function checkResponseOfPost(resp){
     }
 }
 
+/**
+ * This function is used to clear the input fields of formular
+ */
 function clearInputs(){
     document.getElementById('input_name').value = '';
     document.getElementById('input_mail').value = '';
     document.getElementById('input_message').value = '';
 }
 
+/**
+ * This function checks if privacy policy is accepted
+ * 
+ * @returns - a boolean feedback
+ */
 function checkIfPrivacyPolicyAccepted(){
     let sendPermission = true;
     let contentDivRef = document.getElementById('privacy_container');
@@ -434,18 +533,12 @@ function updatePlaceholder(){
         document.getElementById('message_input_box').classList.add('input-height-message');
         if(contactLanguageId == 0){
             setInputInfoGerman(inputName, 'input_name_title', 'name');
-            // inputName.placeholder = contactMeData.de.form.name;
             setInputInfoGerman(inputMail, 'input_mail_title', 'mail');
-            // inputMail.placeholder = contactMeData.de.form.mail;
             setInputInfoGerman(inputMessage, 'input_message_title', 'message');
-            // inputMessage.placeholder = contactMeData.de.form.message;
         }else{
             setInputInfoEnglish(inputName, 'input_name_title', 'name');
-            // inputName.placeholder = contactMeData.en.form.name;
             setInputInfoEnglish(inputMail, 'input_mail_title', 'mail');
-            // inputMail.placeholder = contactMeData.en.form.mail;
             setInputInfoEnglish(inputMessage, 'input_message_title', 'message');
-            // inputMessage.placeholder = contactMeData.en.form.message;
         }
         
     }else{

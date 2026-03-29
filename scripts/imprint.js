@@ -1,3 +1,4 @@
+/**This function is used to intialize imrint page on load**/
 function initImprint(){
     checkLocalStorage();
     let objData = prepareLanguage();
@@ -5,6 +6,10 @@ function initImprint(){
     loadImprintLanguageData(languageID);
 }
 
+/**
+ * This function prepares language data from int to string
+ * @returns - an object with two strings
+ */
 function prepareLanguage(){
     let objData = {
         "language" : "",
@@ -20,23 +25,32 @@ function prepareLanguage(){
     return objData;
 }
 
+/*** This function is used to scroll to top of page*/
 function scrollToTop(){
     window.scrollTo(0,0);
 }
 
+/**
+ * This function loads the iprint data in the correct language if language button is clicked
+ * @param {string} id -includes id of language button container 
+ * @param {*} id_span - includes id of language button text
+ */
 function loadImprintLanguage(id, id_span){
     onFocusLanguageDesign(id, id_span);
     loadImprintLanguageData(languageID);
 }
 
+/*** This function loads the hero page of index.html*/
 function goToHeroPage(){
     window.location.href = '../index.html#hero_section';
 }
 
+/*** This function scroll to contact section of index.html*/
 function goToContactSection(){
     window.location.href = '../index.html#my_contact_section';
 }
 
+/*** This function changes the icon after click action on github button*/
 function githubImprintFooterAction(){
     changeIcon('github_footer_mobile', '../assets/icons/mobile/footer_github_mobile_active.svg');
     setTimeout(() => {
@@ -45,6 +59,10 @@ function githubImprintFooterAction(){
     openWebsite('https://github.com/XbatzoX');
 }
 
+/**
+ * This function loads all data of imprint page in the correct language
+ * @param {number} languageId - includes the number of language ID 
+ */
 function loadImprintLanguageData(languageId){
     loadNavData(languageId);
     loadCaptionData(languageId);
@@ -56,11 +74,19 @@ function loadImprintLanguageData(languageId){
     loadIndemnityData(languageId);
 }
 
+/**
+ * This function load the caption data
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadCaptionData(languageId){
     loadCaptionDataGerman(languageId);
     loadCaptionDataEnglish(languageId);
 }
 
+/**
+ * This function loads caption data in german
+ * @param {number} languageId - includes the number of language ID 
+ */
 function loadCaptionDataGerman(languageId){
     if(languageId == 0){
         document.getElementById('imprint_caption').innerHTML = imprintData.de.caption.imprintHead;
@@ -69,6 +95,10 @@ function loadCaptionDataGerman(languageId){
     }
 }
 
+/**
+ * This function loads caption data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadCaptionDataEnglish(languageId){
     if(languageId == 1){
         document.getElementById('imprint_caption').innerHTML = imprintData.en.caption.imprintHead;
@@ -77,11 +107,19 @@ function loadCaptionDataEnglish(languageId){
     }
 }
 
+/**
+ * This function loads the terms data in the correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadTermsData(languageId){
     loadTermsDataGerman(languageId);
     loadTermsDataEnglish(languageId);
 }
 
+/**
+ * This function loads terms data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadTermsDataGerman(languageId){
     if(languageId == 0){
         document.getElementById('terms_span').innerHTML = imprintData.de.terms.head;
@@ -89,6 +127,10 @@ function loadTermsDataGerman(languageId){
     }
 }
 
+/**
+ * This function loads terms data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadTermsDataEnglish(languageId){
     if(languageId == 1){
         document.getElementById('terms_span').innerHTML = imprintData.en.terms.head;
@@ -96,11 +138,19 @@ function loadTermsDataEnglish(languageId){
     }
 }
 
+/**
+ * This function loads the scope data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadScopeData(languageId){
     loadScopeDataGerman(languageId);
     loadScopeDataEnglish(languageId);
 }
 
+/**
+ * This function loads the scope dat in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadScopeDataGerman(languageId){
     if(languageId == 0){
         document.getElementById('scope_span').innerHTML = imprintData.de.scope.head;
@@ -108,6 +158,10 @@ function loadScopeDataGerman(languageId){
     }
 }
 
+/**
+ * This function loads the scope data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadScopeDataEnglish(languageId){
     if(languageId == 1){
         document.getElementById('scope_span').innerHTML = imprintData.en.scope.head;
@@ -115,11 +169,19 @@ function loadScopeDataEnglish(languageId){
     }
 }
 
+/**
+ * This function loads the rights data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadRightsData(languageId){
     loadRightsDataGerman(languageId);
     loadRightsDataEnglish(languageId);
 }
 
+/**
+ * This function loads the rights data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadRightsDataGerman(languageId){
     if(languageId == 0){
         document.getElementById('rights_span').innerHTML = imprintData.de.rights.head;
@@ -127,6 +189,10 @@ function loadRightsDataGerman(languageId){
     }
 }
 
+/**
+ * This function loads the rights data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadRightsDataEnglish(languageId){
     if(languageId == 1){
         document.getElementById('rights_span').innerHTML = imprintData.en.rights.head;
@@ -134,11 +200,19 @@ function loadRightsDataEnglish(languageId){
     }
 }
 
+/**
+ * This function loads the use data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadUseData(languageId){
     loadUseDataGerman(languageId);
     loadUseDataEnglish(languageId);
 }
 
+/**
+ * This function loads the use data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadUseDataGerman(languageId){
     if(languageId == 0){
         document.getElementById('use_span').innerHTML = imprintData.de.use.head;
@@ -146,6 +220,10 @@ function loadUseDataGerman(languageId){
     }
 }
 
+/**
+ * This function loads the use data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadUseDataEnglish(languageId){
     if(languageId == 1){
         document.getElementById('use_span').innerHTML = imprintData.en.use.head;
@@ -153,11 +231,19 @@ function loadUseDataEnglish(languageId){
     }
 }
 
+/**
+ * This function loads the discliam dat in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadDisclaimData(languageId){
     loadDisclaimDataGerman(languageId);
     loadDisclaimDataEnglish(languageId);
 }
 
+/**
+ * This function loads disclaim data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadDisclaimDataGerman(languageId){
     if(languageId == 0){
         document.getElementById('disclaim_span').innerHTML = imprintData.de.disclaim.head;
@@ -165,6 +251,10 @@ function loadDisclaimDataGerman(languageId){
     }
 }
 
+/**
+ * This function loads disclaim data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadDisclaimDataEnglish(languageId){
     if(languageId == 1){
         document.getElementById('disclaim_span').innerHTML = imprintData.en.disclaim.head;
@@ -172,11 +262,19 @@ function loadDisclaimDataEnglish(languageId){
     }
 }
 
+/**
+ * This function loads indemnity data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadIndemnityData(languageId){
     loadIndemnityDataGerman(languageId);
     loadIndemnityDataEnglish(languageId);
 }
 
+/**
+ * This function loads indemnity data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadIndemnityDataGerman(languageId){
     if(languageId == 0){
         document.getElementById('indemnity_span').innerHTML = imprintData.de.indemnity.head;
@@ -184,6 +282,10 @@ function loadIndemnityDataGerman(languageId){
     }
 }
 
+/**
+ * This function loads indemnity data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadIndemnityDataEnglish(languageId){
     if(languageId == 1){
         document.getElementById('indemnity_span').innerHTML = imprintData.en.indemnity.head;
@@ -191,6 +293,10 @@ function loadIndemnityDataEnglish(languageId){
     }
 }
 
+/**
+ * This function is used to activate/deactivate the mobile navbar
+ * @param {event} event - includes the bubbling event to close the overlay
+ */
 function toggleMobileNavImprint(event){
     event.stopPropagation();
     let contentNavRef = document.getElementById('nav_mobile');
@@ -206,6 +312,9 @@ function toggleMobileNavImprint(event){
     }
 }
 
+/**
+ * This function closes the mobile navbar overlay
+ */
 function closeNavOverlayImprint(){
     if(mobileNavActive){
         document.getElementById('nav_mobile').classList.add('invisible');

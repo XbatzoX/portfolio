@@ -1,3 +1,7 @@
+/**
+ * This function loads the language data into index.html
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadLanguageData(languageId){
     loadNavData(languageId);
     loadWhyMeData(languageId);
@@ -7,6 +11,10 @@ function loadLanguageData(languageId){
     loadFooterData(languageId);
 }
 
+/**
+ * This function loads the nav data in the correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadNavData(languageId){
     loadGermanNavData(languageId);
     loadEnglishNavData(languageId);
@@ -14,6 +22,10 @@ function loadNavData(languageId){
     loadEnglishNavDataMobile(languageId);
 }
 
+/**
+ * This function loads the nav data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadGermanNavData(languageId){
     if(languageId == 0){
         document.getElementById('link_why_me').innerHTML = navData[0].de[0];
@@ -23,6 +35,10 @@ function loadGermanNavData(languageId){
     }
 }
 
+/**
+ * This function loads the nav data in german at mobile view
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadGermanNavDataMobile(languageId){
     if(languageId == 0){
         document.getElementById('link_why_me_mobile').innerHTML = navData[0].de[0];
@@ -32,6 +48,10 @@ function loadGermanNavDataMobile(languageId){
     }
 }
 
+/**
+ * This function loads nav data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadEnglishNavData(languageId){
     if(languageId == 1){
         document.getElementById('link_why_me').innerHTML = navData[1].en[0];
@@ -41,6 +61,10 @@ function loadEnglishNavData(languageId){
     }
 }
 
+/**
+ * This function loads nav data in english in mobile view
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadEnglishNavDataMobile(languageId){
     if(languageId == 1){
         document.getElementById('link_why_me_mobile').innerHTML = navData[1].en[0];
@@ -50,11 +74,19 @@ function loadEnglishNavDataMobile(languageId){
     }
 }
 
+/**
+ * This function loads why me section data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadWhyMeData(languageId){
     loadGermanWhyMeData(languageId);
     loadEnglishWhyMeData(languageId);
 }
 
+/**
+ * This function loads why me section data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadGermanWhyMeData(languageId){
     if(languageId == 0){
         document.getElementById('why_me_caption').innerHTML = whyMeData.de.caption;
@@ -64,6 +96,10 @@ function loadGermanWhyMeData(languageId){
     }
 }
 
+/**
+ * This function loads why me section data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadEnglishWhyMeData(languageId){
     if(languageId == 1){
         document.getElementById('why_me_caption').innerHTML = whyMeData.en.caption;
@@ -73,11 +109,19 @@ function loadEnglishWhyMeData(languageId){
     }
 }
 
+/**
+ * This function loads my skills section data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadMySkillsData(languageId){
     loadGermanMySkillsData(languageId);
     loadEnglishMySkillsData(languageId);
 }
 
+/**
+ * This function loads my skills section data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadGermanMySkillsData(languageId){
     if(languageId == 0){
         document.getElementById('my_skills_caption').innerHTML = mySkillsData.de.caption;
@@ -88,6 +132,10 @@ function loadGermanMySkillsData(languageId){
     }
 }
 
+/**
+ * This function loads my skills section data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadEnglishMySkillsData(languageId){
     if(languageId == 1){
         document.getElementById('my_skills_caption').innerHTML = mySkillsData.en.caption;
@@ -98,11 +146,19 @@ function loadEnglishMySkillsData(languageId){
     }
 }
 
+/**
+ * This function loads my projects section data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadMyProjectsData(languageId){
     loadGermanMyProjectsData(languageId);
     loadEnglishMyProjectsData(languageId);
 }
 
+/**
+ * This function loads my projects section data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadGermanMyProjectsData(languageId){
     calculateAmountOfProjects();
     let ongoingProjectId = amountProjects - 1;
@@ -120,6 +176,10 @@ function loadGermanMyProjectsData(languageId){
     }
 }
 
+/**
+ * This function loads my projects section data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadEnglishMyProjectsData(languageId){
     calculateAmountOfProjects();
     let ongoingProjectId = amountProjects - 1;
@@ -137,11 +197,19 @@ function loadEnglishMyProjectsData(languageId){
     }
 }
 
+/**
+ * This function loads contact me section data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadContactMeData(languageId){
     loadGermanContactMeData(languageId);
     loadEnglishContactMeData(languageId);
 }
 
+/**
+ * This function loads contact me section data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadGermanContactMeData(languageId){
     if(languageId == 0){
         document.getElementById('contact_caption').innerHTML = contactMeData.de.caption;
@@ -158,6 +226,10 @@ function loadGermanContactMeData(languageId){
     }
 }
 
+/**
+ * This function loads contact me section data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadEnglishContactMeData(languageId){
     if(languageId == 1){
         document.getElementById('contact_caption').innerHTML = contactMeData.en.caption;
@@ -174,143 +246,19 @@ function loadEnglishContactMeData(languageId){
     }
 }
 
-function checkIfErrorMessageGerman(){
-    checkErrorNameGerman();
-    checkErrorMailGerman();
-    checkErrorMessageGerman();
-}
-
-function checkErrorNameGerman(){
-    let spanName = document.getElementById('input_name_title');
-    if(spanName.innerHTML == contactMeData.en.form.nameError){
-        spanName.innerHTML = contactMeData.de.form.nameError;
-    }else{
-        spanName.innerHTML = contactMeData.de.form.name;
-    }
-}
-
-function checkErrorMailGerman(){
-    let spanMail = document.getElementById('input_mail_title');
-    if(spanMail.innerHTML == contactMeData.en.form.mailError){
-        spanMail.innerHTML = contactMeData.de.form.mailError;
-    }else{
-        spanMail.innerHTML = contactMeData.de.form.mail;
-    }
-}
-
-function checkErrorMessageGerman(){
-    let spanMessage = document.getElementById('input_message_title');
-    if(spanMessage.innerHTML == contactMeData.en.form.messageError){
-        spanMessage.innerHTML = contactMeData.de.form.messageError;
-    }else{
-        spanMessage.innerHTML = contactMeData.de.form.message;
-    }
-}
-
-function checkIfErrorMessageGermanMobile(){
-    checkErrorNameGermanMobile();
-    checkErrorMailGermanMobile();
-    checkErrorMessageGermanMobile();
-}
-
-function checkErrorNameGermanMobile(){
-    let inputName = document.getElementById('input_name');
-    if(inputName.placeholder == contactMeData.en.form.nameError){
-        inputName.placeholder = contactMeData.de.form.nameError;
-    }else{
-        inputName.placeholder = contactMeData.de.form.name;
-    }
-}
-
-function checkErrorMailGermanMobile(){
-    let inputMail = document.getElementById('input_mail');
-    if(inputMail.placeholder == contactMeData.en.form.mailError){
-        inputMail.placeholder = contactMeData.de.form.mailError;
-    }else{
-        inputMail.placeholder = contactMeData.de.form.mail;
-    }
-}
-
-function checkErrorMessageGermanMobile(){
-    let inputMessage = document.getElementById('input_message');
-    if(inputMessage.placeholder == contactMeData.en.form.messageError){
-        inputMessage.placeholder = contactMeData.de.form.messageError;
-    }else{
-        inputMessage.placeholder = contactMeData.de.form.message;
-    }
-}
-
-function checkIfErrorMessageEnglish(){
-    checkErrorNameEnglish();
-    checkErrorMailEnglish();
-    checkErrorMessageEnglish();
-}
-
-function checkErrorNameEnglish(){
-    let spanName = document.getElementById('input_name_title');
-    if(spanName.innerHTML == contactMeData.de.form.nameError){
-        spanName.innerHTML = contactMeData.en.form.nameError;
-    }else{
-        spanName.innerHTML = contactMeData.en.form.name;
-    }
-}
-
-function checkErrorMailEnglish(){
-    let spanMail = document.getElementById('input_mail_title');
-    if(spanMail.innerHTML == contactMeData.de.form.mailError){
-        spanMail.innerHTML = contactMeData.en.form.mailError;
-    }else{
-        spanMail.innerHTML = contactMeData.en.form.mail;
-    }
-}
-
-function checkErrorMessageEnglish(){
-    let spanMessage = document.getElementById('input_message_title');
-    if(spanMessage.innerHTML == contactMeData.de.form.messageError){
-        spanMessage.innerHTML = contactMeData.en.form.messageError;
-    }else{
-        spanMessage.innerHTML = contactMeData.en.form.message;
-    }
-}
-
-function checkIfErrorMessageEnglishMobile(){
-    checkErrorNameEnglishMobile();
-    checkErrorMailEnglishMobile();
-    checkErrorMessageEnglishMobile();
-}
-
-function checkErrorNameEnglishMobile(){
-    let inputName = document.getElementById('input_name');
-    if(inputName.placeholder == contactMeData.de.form.nameError){
-        inputName.placeholder = contactMeData.en.form.nameError;
-    }else{
-        inputName.placeholder = contactMeData.en.form.name;
-    }
-}
-
-function checkErrorMailEnglishMobile(){
-    let inputMail = document.getElementById('input_mail');
-    if(inputMail.placeholder == contactMeData.de.form.mailError){
-        inputMail.placeholder = contactMeData.en.form.mailError;
-    }else{
-        inputMail.placeholder = contactMeData.en.form.mail;
-    }
-}
-
-function checkErrorMessageEnglishMobile(){
-    let inputMessage = document.getElementById('input_message');
-    if(inputMessage.placeholder == contactMeData.de.form.messageError){
-        inputMessage.placeholder = contactMeData.en.form.messageError;
-    }else{
-        inputMessage.placeholder = contactMeData.en.form.message;
-    }
-}
-
+/**
+ * This function is used to load the footer data in correct language
+ * @param {number} languageId - includes the number of language ID 
+ */
 function loadFooterData(languageId){
     loadFooterDataGerman(languageId);
     loadFooterDataEnglish(languageId);
 }
 
+/**
+ * This function loads the footer data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadFooterDataGerman(languageId){
     if(languageId == 0){
         document.getElementById('impressum_link').innerHTML = footerData.de.legalNotice;
@@ -318,6 +266,10 @@ function loadFooterDataGerman(languageId){
     }
 }
 
+/**
+ * This function loads the footer data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
 function loadFooterDataEnglish(languageId){
     if(languageId == 1){
         document.getElementById('impressum_link').innerHTML = footerData.en.legalNotice;

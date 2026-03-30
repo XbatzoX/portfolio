@@ -48,7 +48,7 @@ const projects = [
             'assets/icons/css_projects.svg',
             'assets/icons/javascript_projects.svg'
         ],
-        "imagePath" : "assets/img/el_pollo_loco_screen.svg",
+        "imagePath" : "assets/img/el_pollo_loco_screen.png",
         "githubPath" : "https://github.com/XbatzoX/el-pollo-loco",
         "liveTestPath" : "https://elPolloLoco.benjamin-mahalbasic.de",
         "tecText" : [
@@ -133,7 +133,7 @@ const projectsEnglish = [
             'assets/icons/css_projects.svg',
             'assets/icons/javascript_projects.svg'
         ],
-        "imagePath" : "assets/img/el_pollo_loco_screen.svg",
+        "imagePath" : "assets/img/el_pollo_loco_screen.png",
         "githubPath" : "https://github.com/XbatzoX/el-pollo-loco",
         "liveTestPath" : "https://elPolloLoco.benjamin-mahalbasic.de",
         "tecText" : [

@@ -170,7 +170,7 @@ function loadGermanMyProjectsData(languageId){
         document.getElementById('my_projects_caption').innerHTML = myProjectsData.de.caption;
         if(false){document.getElementById('project_' + ongoingProjectId).innerHTML = myProjectsData.de.tabDescription;}
         document.getElementById('caption_comments').innerHTML = myProjectsData.de.captionComments;
-        for (let index = 1; index <= 3; index++) {
+        for (let index = 1; index <= 2; index++) {
             document.getElementById('project' + index + '_span').innerHTML = myProjectsData.de.projectSpan;
             document.getElementById('comment_' + index).innerHTML = myProjectsData.de['comment' + index];
             if(index < 3){document.getElementById('mobile_project_' + (index - 1)).innerHTML = `${index}. Projekt`;}          
@@ -191,7 +191,7 @@ function loadEnglishMyProjectsData(languageId){
         document.getElementById('my_projects_caption').innerHTML = myProjectsData.en.caption;
         if(false){document.getElementById('project_' + ongoingProjectId).innerHTML = myProjectsData.en.tabDescription;}
         document.getElementById('caption_comments').innerHTML = myProjectsData.en.captionComments;
-        for (let index = 1; index <= 3; index++) {
+        for (let index = 1; index <= 2; index++) {
             document.getElementById('project' + index + '_span').innerHTML = myProjectsData.en.projectSpan;
             document.getElementById('comment_' + index).innerHTML = myProjectsData.en['comment' + index];
             if(index < 3){document.getElementById('mobile_project_' + (index - 1)).innerHTML = `${index}. Project`;}

@@ -30,7 +30,7 @@
     margin: 0 auto;
     display: flex;
     justify-content: space-around;
-    gap: 20px;
+    gap: 50px;
 }
 
 .comment-box{
@@ -120,8 +120,18 @@
     display: none;
 }
 
+#future_comment{
+    display: none;
+}
+
 @media(max-width:1310px){
-    .comment-container{
+    .caption-colleagues{
+        font-size: 26px;
+    }
+}
+
+@media(max-width:1000px){
+.comment-container{
         max-width: none;
         width: 100%;
         margin: unset;
@@ -147,12 +157,6 @@
         min-width: 400px;
     }
 
-    .caption-colleagues{
-        font-size: 26px;
-    }
-}
-
-@media(max-width:1000px){
     .my-colleagues-section{
         padding-top: 64px;
         padding-left: 16px;
@@ -220,6 +224,12 @@
     }
 }
 
+@media(max-width:540px){
+    .comment-container{
+        gap: 0px;
+    }
+}
+
 @media(max-width:475px){
     .comment-container{
         height: 280px;
@@ -274,5 +284,11 @@
 
     .comments-linkedIn-link{
         bottom: 22%;
+    }
+}
+
+@media(max-width:380px){
+    .comment-box{
+        min-width: 260px;
     }
 }

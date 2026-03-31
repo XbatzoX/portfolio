@@ -27,8 +27,10 @@ function toggleButtonPrivacyPolicy(){
         policyButton.src = 'assets/icons/privacy_checkbox_hover.svg';
         policyAccepted = false;
     }
+    checkInputFields();
 }
 
+/** This function is used to check the state of policy checkbox */
 function resetPrivatePolicyButton(){
     let policyButton = document.getElementById('privacy_btn');
     if(policyAccepted){
@@ -44,10 +46,20 @@ function checkInputFields(){
     let submitButton = document.getElementById('submit_btn');
     if(validName && validMail && ValidMessage){
         submitButton.disabled = false;
+        checkSubmitButton(submitButton);
+    }else{
+        submitButton.disabled = true;
+        submitButton.classList.remove('btn-enabled');
+        submitButton.classList.add('btn-disabled');
+    }
+}
+
+/** This function is used to design the submit button in activated/deactivated status */
+function checkSubmitButton(submitButton){
+    if(policyAccepted){
         submitButton.classList.remove('btn-disabled');
         submitButton.classList.add('btn-enabled');
     }else{
-        submitButton.disabled = true;
         submitButton.classList.remove('btn-enabled');
         submitButton.classList.add('btn-disabled');
     }
@@ -132,6 +144,7 @@ function clearInputs(){
     setContentMailOnFocus();
     setContentMessageOnFocus();
     resetPrivatePolicyButton();
+    checkSubmitButton(document.getElementById('submit_btn'));
 }
 
 /**

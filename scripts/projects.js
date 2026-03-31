@@ -75,7 +75,7 @@ function setProjectId(id){
 /** This function is used to check if ongoing project is clicked */
 function checkIfOngoingProject(projectId, divId){
     if(projectId == (amountProjects - 1)){
-        renderOngoingProject(projectId, divId);
+        // renderOngoingProject(projectId, divId);
     }else{
         renderProjectInfos(projectId, divId);
     }
@@ -205,7 +205,7 @@ function setBorderRadiusOfBox(id){
  */
 function checkIfOngoingProjectMobile(projectId, divId){
     if(projectId == (amountProjects - 1)){
-        renderOngoingProjectMobile(projectId, divId);
+        // renderOngoingProjectMobile(projectId, divId);
     }else{
         renderProjectInfosMobile(projectId, divId);
     }

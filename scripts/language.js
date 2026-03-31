@@ -168,12 +168,12 @@ function loadGermanMyProjectsData(languageId){
     let ongoingProjectId = amountProjects - 1;
     if(languageId == 0){
         document.getElementById('my_projects_caption').innerHTML = myProjectsData.de.caption;
-        document.getElementById('project_' + ongoingProjectId).innerHTML = myProjectsData.de.tabDescription;
+        if(false){document.getElementById('project_' + ongoingProjectId).innerHTML = myProjectsData.de.tabDescription;}
         document.getElementById('caption_comments').innerHTML = myProjectsData.de.captionComments;
         for (let index = 1; index <= 3; index++) {
             document.getElementById('project' + index + '_span').innerHTML = myProjectsData.de.projectSpan;
             document.getElementById('comment_' + index).innerHTML = myProjectsData.de['comment' + index];
-            document.getElementById('mobile_project_' + (index - 1)).innerHTML = `${index}. Projekt`;
+            if(index < 3){document.getElementById('mobile_project_' + (index - 1)).innerHTML = `${index}. Projekt`;}          
         }
         document.getElementById('comments_mobile_caption').innerHTML = myProjectsData.de.mobileCaption;
         document.getElementById('comments_mobile_span').innerHTML = myProjectsData.de.mobileSpan;
@@ -189,12 +189,12 @@ function loadEnglishMyProjectsData(languageId){
     let ongoingProjectId = amountProjects - 1;
     if(languageId == 1){
         document.getElementById('my_projects_caption').innerHTML = myProjectsData.en.caption;
-        document.getElementById('project_' + ongoingProjectId).innerHTML = myProjectsData.en.tabDescription;
+        if(false){document.getElementById('project_' + ongoingProjectId).innerHTML = myProjectsData.en.tabDescription;}
         document.getElementById('caption_comments').innerHTML = myProjectsData.en.captionComments;
         for (let index = 1; index <= 3; index++) {
             document.getElementById('project' + index + '_span').innerHTML = myProjectsData.en.projectSpan;
             document.getElementById('comment_' + index).innerHTML = myProjectsData.en['comment' + index];
-            document.getElementById('mobile_project_' + (index - 1)).innerHTML = `${index}. Project`;
+            if(index < 3){document.getElementById('mobile_project_' + (index - 1)).innerHTML = `${index}. Project`;}
         }
         document.getElementById('comments_mobile_caption').innerHTML = myProjectsData.en.mobileCaption;
         document.getElementById('comments_mobile_span').innerHTML = myProjectsData.en.mobileSpan;

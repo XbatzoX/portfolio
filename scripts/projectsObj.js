@@ -174,7 +174,8 @@ const navData = [
             'Warum ich',
             'Fähigkeiten',
             'Projekte',
-            'Kontakt'
+            'Kontakt',
+            'FRONTEND ENTWICKLER'
         ]
     },
     {
@@ -182,7 +183,8 @@ const navData = [
             'Why me',
             'Skills',
             'Projects',
-            'Contact'
+            'Contact',
+            'FRONTEND DEVELOPER'
         ]
     }
 ];

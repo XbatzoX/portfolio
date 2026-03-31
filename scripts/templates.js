@@ -104,7 +104,7 @@ function getProjectTemplateEnglish(projectId){
                             <div class="li-content">
                                 <div class="caption-box">
                                     <span class="caption">${projectsEnglish[projectId].list[0].description}</span>
-                                    <span class="project-duration">Dauer: ${projectsEnglish[projectId].duration}</span>
+                                    <span class="project-duration">Duration: ${projectsEnglish[projectId].duration}</span>
                                 </div>
                                 <span class="li-text">${projectsEnglish[projectId].list[0].content}</span>
                             </div>

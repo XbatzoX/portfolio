@@ -32,6 +32,7 @@ function loadGermanNavData(languageId){
         document.getElementById('link_skills').innerHTML = navData[0].de[1];
         document.getElementById('link_projects').innerHTML = navData[0].de[2];
         document.getElementById('link_contact').innerHTML = navData[0].de[3];
+        document.getElementById('job_text').innerHTML = navData[0].de[4];
     }
 }
 
@@ -45,6 +46,7 @@ function loadGermanNavDataMobile(languageId){
         document.getElementById('link_my_skills_mobile').innerHTML = navData[0].de[1];
         document.getElementById('link_my_projects_mobile').innerHTML = navData[0].de[2];
         document.getElementById('link_contact_me_mobile').innerHTML = navData[0].de[3];
+        document.getElementById('job_text').innerHTML = navData[0].de[4];
     }
 }
 
@@ -58,6 +60,7 @@ function loadEnglishNavData(languageId){
         document.getElementById('link_skills').innerHTML = navData[1].en[1];
         document.getElementById('link_projects').innerHTML = navData[1].en[2];
         document.getElementById('link_contact').innerHTML = navData[1].en[3];
+        document.getElementById('job_text').innerHTML = navData[1].en[4];
     }
 }
 
@@ -71,6 +74,7 @@ function loadEnglishNavDataMobile(languageId){
         document.getElementById('link_my_skills_mobile').innerHTML = navData[1].en[1];
         document.getElementById('link_my_projects_mobile').innerHTML = navData[1].en[2];
         document.getElementById('link_contact_me_mobile').innerHTML = navData[1].en[3];
+        document.getElementById('job_text').innerHTML = navData[1].en[4];
     }
 }
 

@@ -51,10 +51,10 @@
                             <div id="nav_mobile" class="nav-mobile-container invisible">
                                 <div class="nav-mobile" onclick="stopEventBubbling(event)">
                                     <div class="mobile-link-container">
-                                        <a id="link_why_me_mobile" class="mobile-link" href="#why_me_section">Warum ich</a>
-                                        <a id="link_my_skills_mobile" class="mobile-link" href="#my_skills_section">Fähigkeiten</a>
-                                        <a id="link_my_projects_mobile" class="mobile-link" href="#my_projects_section">Projekte</a>
-                                        <a id="link_contact_me_mobile" class="mobile-link" href="#my_contact_section">Kontakt</a>
+                                        <a id="link_why_me_mobile" class="mobile-link" href="#why_me_section" onclick="closeNavOverlay()">Warum ich</a>
+                                        <a id="link_my_skills_mobile" class="mobile-link" href="#my_skills_section" onclick="closeNavOverlay()">Fähigkeiten</a>
+                                        <a id="link_my_projects_mobile" class="mobile-link" href="#my_projects_section" onclick="closeNavOverlay()">Projekte</a>
+                                        <a id="link_contact_me_mobile" class="mobile-link" href="#my_contact_section" onclick="closeNavOverlay()">Kontakt</a>
                                         <div class="mobile-language-container">
                                             <div id="german_mobile" class="mobile-language-box">
                                                 <span id="german_span_mobile" class="mobile-language-span" onclick="loadLanguage('german', 'german_span')"

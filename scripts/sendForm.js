@@ -29,6 +29,14 @@ function toggleButtonPrivacyPolicy(){
     }
 }
 
+function resetPrivatePolicyButton(){
+    let policyButton = document.getElementById('privacy_btn');
+    if(policyAccepted){
+        policyButton.src = 'assets/icons/privacy_checkbox.svg';
+        policyAccepted = false;
+    }
+}
+
 /**
  * This function activate/deactivate the submit button after checking all values of input fields
  */
@@ -120,6 +128,10 @@ function clearInputs(){
     document.getElementById('input_name').value = '';
     document.getElementById('input_mail').value = '';
     document.getElementById('input_message').value = '';
+    setContentNameOnFocus();
+    setContentMailOnFocus();
+    setContentMessageOnFocus();
+    resetPrivatePolicyButton();
 }
 
 /**

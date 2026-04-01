@@ -358,3 +358,18 @@ function githubFooterAction(){
     }, 800);
     openWebsite('https://github.com/XbatzoX');
 }
+
+/** This function is used to animate the section during first scroll */
+document.addEventListener('DOMContentLoaded', () => {
+    const animationObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+        }
+    });
+    } , {threshold: 0.4});
+    document.querySelectorAll('.animate-section').forEach(section => {
+        animationObserver.observe(section);
+    });
+});

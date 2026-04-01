@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./styles/projects.css">
     <link rel="stylesheet" href="./styles/colleagues.css">
     <link rel="stylesheet" href="./styles/contact.css">
+    <link rel="stylesheet" href="./styles/dialog.css">
+    <script src="./scripts/dialog.js"></script>
     <script src="./scripts/projectsObj.js"></script>
     <script src="./scripts/templates.js"></script>
     <script src="./scripts/mobileTemplates.js"></script>
@@ -25,6 +27,11 @@
 </head>
 <body onload="init()" onclick="closeNavOverlay()">
     <main>
+        <dialog id="form_dialog" class="form-dialog">
+            <div class="dialog-container">
+                <span id="dialog_message" class="dialog-message"></span>
+            </div>
+        </dialog>
         <header id="header_mobile" class="header-mobile">
             <div class="header-frame">
                 <div class="logo-main-box">
@@ -402,18 +409,18 @@
                         <div class="person-data-container">
                             <div id="name_input_box" class="input-container input-height">
                                 <span id="input_name_title" class="input-info-text"></span>
-                                <input id="input_name" type="text" required class="bg-input" onfocus="setContentNameOnFocus()" 
+                                <input id="input_name" type="text" required class="bg-input" onfocus="setContentNameOnFocus(false)" 
                                 onblur="checkContentOfName()" maxlength="20">
                             </div>
                             <div id="mail_input_box" class="input-container input-height">
                                 <span id="input_mail_title" class="input-info-text"></span>
-                                <input id="input_mail" type="text" required class="bg-input" onfocus="setContentMailOnFocus()" onblur="checkMailInput()"
+                                <input id="input_mail" type="text" required class="bg-input" onfocus="setContentMailOnFocus(false)" onblur="checkMailInput()"
                                  autocomplete="new-password" maxlength="20">
                             </div>
                         </div>
                         <div id="message_input_box" class="input-container">
                             <span id="input_message_title" class="input-info-text"></span>
-                            <textarea id="input_message" class="bg-input-message" onfocus="setContentMessageOnFocus()" 
+                            <textarea id="input_message" class="bg-input-message" onfocus="setContentMessageOnFocus(false)" 
                             onblur="checkContentOfMessage()" maxlength="400"></textarea>
                         </div>
                         <div id="privacy_container" class="privacy-container privacy-height">

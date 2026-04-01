@@ -1,0 +1,25 @@
+.form-dialog{
+    background-color: #2A3647;
+    border: 1px solid #89BCD9;
+    border-radius: 20px;
+    box-shadow: 0px 0.1px 3px rgba(0, 0, 0, 0.5);
+    font-family: 'MyJosefin';
+    font-size: 19px;
+    color: #89BCD9;
+    transform: translateX(0%) translateY(700%);
+}
+
+.opened {
+    transform: translateX(0%) translateY(0%);
+    transition: all 0.25s ease-in;
+}
+
+.form-dialog::backdrop {
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.opened::backdrop {
+    opacity: 1;
+    transition: all 0.25s ease-in;
+}

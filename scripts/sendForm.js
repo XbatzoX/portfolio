@@ -119,16 +119,16 @@ async function sendForm(dataObj){
 function checkResponseOfPost(resp){
     if(resp.success){
         if(contactLanguageId == 0){
-            alert('mail erfolgreich gesendet');
+            openFormDialog('Email erfolgreich gesendet');
         }else{
-            alert('message sent successfully');
+            openFormDialog('message sent successfully');
         }
         clearInputs();
     }else{
         if(contactLanguageId == 0){
-            alert('Fehler: ' + resp.error);
+            openFormDialog('Fehler: ' + resp.error);
         }else{
-            alert('Error: ' + resp.error);
+            openFormDialog('Error: ' + resp.error);
         } 
     }
 }
@@ -140,9 +140,9 @@ function clearInputs(){
     document.getElementById('input_name').value = '';
     document.getElementById('input_mail').value = '';
     document.getElementById('input_message').value = '';
-    setContentNameOnFocus();
-    setContentMailOnFocus();
-    setContentMessageOnFocus();
+    setContentNameOnFocus(true);
+    setContentMailOnFocus(true);
+    setContentMessageOnFocus(true);
     resetPrivatePolicyButton();
     checkSubmitButton(document.getElementById('submit_btn'));
 }

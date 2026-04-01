@@ -6,7 +6,6 @@ let contactLanguageId = 0;
 
 /**
  * This function is used to check if mobile view is active
- * 
  * @param {string} id - includes the id of any tag if the attribute display none is active
  * @returns - a boolean feedback
  */
@@ -20,9 +19,7 @@ function isMobileActive(id){
     return mobileActive;
 }
 
-/**
- * This function is used to check the value of input field name an gives a feedback
- */
+/*** This function is used to check the value of input field name an gives a feedback*/
 function checkContentOfName(){
     let contentInputRef = document.getElementById('input_name');
     let contentSpanRef = document.getElementById('input_name_title');
@@ -33,7 +30,6 @@ function checkContentOfName(){
 
 /**
  * This function gives a designed feedback if the input name value is valid
- * 
  * @param {HTMLElement} contentSpanRef - includes the HTML element of info span
  * @param {HTMLElement} contentInputRef - includes the HTML element of input field 
  */
@@ -50,7 +46,6 @@ function inputNameValidInfo(contentSpanRef, contentInputRef){
 
 /**
  * This function gives a designed feedback if the input name value is valid
- * 
  * @param {HTMLElement} contentSpanRef - includes the HTML element of info span
  * @param {HTMLElement} contentInputRef - includes the HTML element of input field 
  */
@@ -68,7 +63,6 @@ function inputNameErrorInfo(contentSpanRef, contentInputRef){
 
 /**
  * This function gives the error message in desktop view of name input field in the correct language
- * 
  * @param {HTMLElement} contentSpanRef - includes the HTML element of info span
  */
 function inputNameInfoDesktop(contentSpanRef){
@@ -83,8 +77,7 @@ function inputNameInfoDesktop(contentSpanRef){
 }
 
 /**
- * This function gives the error message in mobile view of name input field in the correct language
- * 
+ * This function gives the error message in mobile view of name input field in the correct language 
  * @param {HTMLElement} contentInputRef - includes the HTML element of info span
  */
 function inputNameInfoMobile(contentInputRef){
@@ -103,11 +96,15 @@ function inputNameInfoMobile(contentInputRef){
 /**
  * This function is used to set the design of input field name if the field is on focus
  */
-function setContentNameOnFocus(){
+function setContentNameOnFocus(afterSubmit){
     let contentInputRef = document.getElementById('input_name');
     let contentSpanRef = document.getElementById('input_name_title');
     contentInputRef.classList.remove('bg-img-done');
-    contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
+    if(afterSubmit){
+        contentInputRef.style.backgroundColor = "transparent";
+    }else{
+        contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
+    }
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
     inputNameFocusDesktop(contentSpanRef);
@@ -115,8 +112,7 @@ function setContentNameOnFocus(){
 }
 
 /**
- * This function set the correct language info in desktop view of name span (onFocus)
- * 
+ * This function set the correct language info in desktop view of name span (onFocus) 
  * @param {HTMLElement} contentSpanRef - includes the HTML element of info span 
  */
 function inputNameFocusDesktop(contentSpanRef){
@@ -130,8 +126,7 @@ function inputNameFocusDesktop(contentSpanRef){
 }
 
 /**
- * This function set the correct language info in mobile view of input name placeholder
- * 
+ * This function set the correct language info in mobile view of input name placeholder 
  * @param {HTMLElement} contentInputRef - includes element of input field 
  */
 function inputNameFocusMobile(contentInputRef){
@@ -148,9 +143,7 @@ function inputNameFocusMobile(contentInputRef){
     }
 }
 
-/**
- * This function checks the input value of mail if the input is valid
- */
+/*** This function checks the input value of mail if the input is valid*/
 function checkMailInput(){
     let contentInputRef = document.getElementById('input_mail');
     let contentSpanRef = document.getElementById('input_mail_title');
@@ -169,7 +162,6 @@ function checkMailInput(){
 
 /**
  * This function gives an error designed info in correct language of mail input field in desktop view
- * 
  * @param {HTMLElement} contentSpanRef - includes the html element of info span 
  */
 function inputMailErrorInfoDesktop(contentSpanRef){
@@ -185,7 +177,6 @@ function inputMailErrorInfoDesktop(contentSpanRef){
 
 /**
  * This function gives an error designed info in correct language of mail input field in mobile view
- * 
  * @param {HTMLElement} contentInputRef - - includes the html element of input field 
  */
 function inputMailErrorInfoMobile(contentInputRef){
@@ -202,7 +193,6 @@ function inputMailErrorInfoMobile(contentInputRef){
 
 /**
  * This function checks if the input value is a valid mail address
- * 
  * @param {string} email - includes the value of input field 
  * @returns - a boolean feedback
  */
@@ -211,14 +201,16 @@ function checkValidEmail(email) {
     return emailRegex.test(email);
 }
 
-/**
- * This function designed the mail input box if the input field is on focus
- */
-function setContentMailOnFocus(){
+/*** This function designed the mail input box if the input field is on focus*/
+function setContentMailOnFocus(afterSubmit){
     let contentInputRef = document.getElementById('input_mail');
     let contentSpanRef = document.getElementById('input_mail_title');
     contentInputRef.classList.remove('bg-img-done');
-    contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
+    if(afterSubmit){
+        contentInputRef.style.backgroundColor = "transparent";
+    }else{
+        contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
+    }
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
     inputMailFocusDesktop(contentSpanRef);
@@ -227,7 +219,6 @@ function setContentMailOnFocus(){
 
 /**
  * This function set the correct language info into span in desktop view
- * 
  * @param {HTMLElement} contentSpanRef - includes html element of info span 
  */
 function inputMailFocusDesktop(contentSpanRef){
@@ -242,7 +233,6 @@ function inputMailFocusDesktop(contentSpanRef){
 
 /**
  * This function set the correct language info into placeholder in mobile view of mail input field
- * 
  * @param {HTMLElement} contentInputRef - includes html element of input field 
  */
 function inputMailFocusMobile(contentInputRef){
@@ -256,9 +246,7 @@ function inputMailFocusMobile(contentInputRef){
     }
 }
 
-/**
- * This function is used to check the input value of message box
- */
+/*** This function is used to check the input value of message box*/
 function checkContentOfMessage(){
     let contentInputRef = document.getElementById('input_message');
     let contentSpanRef = document.getElementById('input_message_title');
@@ -276,7 +264,6 @@ function checkContentOfMessage(){
 
 /**
  * This function is used to set the error message of message input value
- * 
  * @param {HTMLElement} contentSpanRef - includes the html element of span info 
  * @param {HTMLElement} contentInputRef - includes the html element of placeholder from textarea 
  */
@@ -290,7 +277,6 @@ function inputMessageErrorData(contentSpanRef, contentInputRef, contentDivRef){
 
 /**
  * This function creates a design info of valid input data of message text area
- * 
  * @param {HTMLElement} contentSpanRef - includes html element of info span
  * @param {HTMLElement} contentInputRef - includes html element of textarea (placeholder)
  * @param {HTMLElement} contentDivRef - includes html element of message container
@@ -305,7 +291,6 @@ function inputMessageValidData(contentSpanRef, contentInputRef, contentDivRef){
 
 /**
  * This function set the correct language error info of input message in desktop view
- * 
  * @param {HTMLElement} contentSpanRef - includes the html element of info span
  * @param {HTMLElement} contentDivRef  - includes the html element of message container
  */
@@ -323,7 +308,6 @@ function inputMessageErrorDesktop(contentSpanRef, contentDivRef){
 
 /**
  * This function set the correct language error info of input message in mobile view
- * 
  * @param {HTMLElement} contentInputRef - includes html element of textarea tag 
  */
 function inputMessageErrorMobile(contentInputRef){
@@ -338,15 +322,17 @@ function inputMessageErrorMobile(contentInputRef){
     }
 }
 
-/**
- * This function is used to gives designed feedback if the input field is on focus
- */
-function setContentMessageOnFocus(){
+/*** This function is used to gives designed feedback if the input field is on focus*/
+function setContentMessageOnFocus(afterSubmit){
     let contentInputRef = document.getElementById('input_message');
     let contentSpanRef = document.getElementById('input_message_title');
     let contentDivRef = document.getElementById('message_input_box');
     contentInputRef.classList.remove('bg-img-done');
-    contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
+    if(afterSubmit){
+       contentInputRef.style.backgroundColor = "transparent"; 
+    }else{
+        contentInputRef.style.backgroundColor = "rgba(250, 250, 250, 0.1)";
+    }
     contentInputRef.style.border = "1px solid #89BCD9";
     contentSpanRef.style.color = "#89BCD9";
     inputMessageFocusDesktop(contentSpanRef, contentDivRef);
@@ -355,7 +341,6 @@ function setContentMessageOnFocus(){
 
 /**
  * This function gives on Focus feedback in desktop view
- * 
  * @param {HTMLElement} contentSpanRef - includes html element of info span 
  * @param {HTMLElement} contentDivRef - includes html element of message container 
  */
@@ -372,7 +357,6 @@ function inputMessageFocusDesktop(contentSpanRef, contentDivRef){
 
 /**
  * This function gives on focus feedback in mobile view
- * 
  * @param {HTMLElement} contentInputRef - includes html element of textarea field 
  */
 function inputMessageFocusMobile(contentInputRef){

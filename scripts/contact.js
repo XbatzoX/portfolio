@@ -38,7 +38,9 @@ function checkContentOfName(){
  * @param {HTMLElement} contentInputRef - includes the HTML element of input field 
  */
 function inputNameValidInfo(contentSpanRef, contentInputRef){
-    if(contentInputRef.value.length >= 3){
+    let input = contentInputRef.value;
+    input = input.replace(/\s/g, "");
+    if(input.length >= 3){
         contentSpanRef.innerHTML = '';
         contentInputRef.style.backgroundColor = 'transparent';
         contentInputRef.classList.add('bg-img-done');
@@ -53,7 +55,9 @@ function inputNameValidInfo(contentSpanRef, contentInputRef){
  * @param {HTMLElement} contentInputRef - includes the HTML element of input field 
  */
 function inputNameErrorInfo(contentSpanRef, contentInputRef){
-    if(contentInputRef.value == '' || contentInputRef.value.length < 3){
+    let input = contentInputRef.value;
+    input = input.replace(/\s/g, "");
+    if(input == '' || input.length < 3){
         inputNameInfoDesktop(contentSpanRef);
         inputNameInfoMobile(contentInputRef);
         contentInputRef.style.border = "1px solid #E44C36";
@@ -259,10 +263,12 @@ function checkContentOfMessage(){
     let contentInputRef = document.getElementById('input_message');
     let contentSpanRef = document.getElementById('input_message_title');
     let contentDivRef = document.getElementById('message_input_box');
-    if(contentInputRef.value == '' || contentInputRef.value.length < 3){
+    let input = contentInputRef.value;
+    input = input.replace(/\s/g, "");
+    if(input.value == '' || input.length < 3){
         inputMessageErrorData(contentSpanRef, contentInputRef, contentDivRef);
     }
-    if(contentInputRef.value.length >= 3){
+    if(input.length >= 3){
         inputMessageValidData(contentSpanRef, contentInputRef, contentDivRef);
     }
     checkInputFields();

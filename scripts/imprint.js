@@ -309,11 +309,8 @@ function loadImprintFooterData(languageId){
  */
 function loadImprintFooterDataGerman(languageId){
     if(languageId == 0){
-        if(!isMobileActive('footer_container')){
-            document.getElementById('impressum_link').innerHTML = imprintData.de.footer;
-        }else{
-            document.getElementById('impressum_link_mobile').innerHTML = imprintData.de.footer;
-        }
+        document.getElementById('impressum_link').innerHTML = imprintData.de.footer;
+        document.getElementById('impressum_link_mobile').innerHTML = imprintData.de.footer;
     }
 }
 
@@ -323,11 +320,8 @@ function loadImprintFooterDataGerman(languageId){
  */
 function loadImprintFooterDataEnglish(languageId){
     if(languageId == 1){
-        if(!isMobileActive('footer_container')){
-            document.getElementById('impressum_link').innerHTML = imprintData.en.footer;
-        }else{
-            document.getElementById('impressum_link_mobile').innerHTML = imprintData.en.footer;
-        }
+        document.getElementById('impressum_link').innerHTML = imprintData.en.footer;
+        document.getElementById('impressum_link_mobile').innerHTML = imprintData.en.footer;
     }
 }
 

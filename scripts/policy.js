@@ -178,11 +178,8 @@ function loadPolicyFooterData(languageId){
  */
 function loadPolicyFooterDataGerman(languageId){
     if(languageId == 0){
-        if(!isMobileActive('footer_container')){
-            document.getElementById('impressum_link').innerHTML = policyData.de.footer;
-        }else{
-            document.getElementById('impressum_link_mobile').innerHTML = policyData.de.footer;
-        }
+        document.getElementById('impressum_link').innerHTML = policyData.de.footer;
+        document.getElementById('impressum_link_mobile').innerHTML = policyData.de.footer;
     }
 }
 
@@ -192,10 +189,7 @@ function loadPolicyFooterDataGerman(languageId){
  */
 function loadPolicyFooterDataEnglish(languageId){
     if(languageId == 1){
-        if(!isMobileActive('footer_container')){
-            document.getElementById('impressum_link').innerHTML = policyData.en.footer;
-        }else{
-            document.getElementById('impressum_link_mobile').innerHTML = policyData.en.footer;
-        }
+        document.getElementById('impressum_link').innerHTML = policyData.en.footer;
+        document.getElementById('impressum_link_mobile').innerHTML = policyData.en.footer;
     }
 }

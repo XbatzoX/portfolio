@@ -26,6 +26,7 @@ function loadPolicyLanguageData(languageId){
     loadCollectionData(languageId);
     loadHostingData(languageId);
     loadPolicyRightsData(languageId);
+    loadPolicyFooterData(languageId);
 }
 
 /**
@@ -159,5 +160,42 @@ function loadPolicyRightsDataEnglish(languageId){
     if(languageId ==  1){
         document.getElementById('policyRights_span').innerHTML = policyData.en.policyRights.head;
         document.getElementById('policyRights_content').innerHTML = policyData.en.policyRights.content;
+    }
+}
+
+/**
+ * This function loads footer data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
+function loadPolicyFooterData(languageId){
+    loadPolicyFooterDataGerman(languageId);
+    loadPolicyFooterDataEnglish(languageId);
+}
+
+/**
+ * This function loads footer data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
+function loadPolicyFooterDataGerman(languageId){
+    if(languageId == 0){
+        if(!isMobileActive('footer_container')){
+            document.getElementById('impressum_link').innerHTML = policyData.de.footer;
+        }else{
+            document.getElementById('impressum_link_mobile').innerHTML = policyData.de.footer;
+        }
+    }
+}
+
+/**
+ * This function loads footer data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
+function loadPolicyFooterDataEnglish(languageId){
+    if(languageId == 1){
+        if(!isMobileActive('footer_container')){
+            document.getElementById('impressum_link').innerHTML = policyData.en.footer;
+        }else{
+            document.getElementById('impressum_link_mobile').innerHTML = policyData.en.footer;
+        }
     }
 }

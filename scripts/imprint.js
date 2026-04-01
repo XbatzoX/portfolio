@@ -72,6 +72,7 @@ function loadImprintLanguageData(languageId){
     loadUseData(languageId);
     loadDisclaimData(languageId);
     loadIndemnityData(languageId);
+    loadImprintFooterData(languageId);
 }
 
 /**
@@ -290,6 +291,43 @@ function loadIndemnityDataEnglish(languageId){
     if(languageId == 1){
         document.getElementById('indemnity_span').innerHTML = imprintData.en.indemnity.head;
         document.getElementById('indemnity_content').innerHTML = imprintData.en.indemnity.content;
+    }
+}
+
+/**
+ * This function loads footer data in correct language
+ * @param {number} languageId - includes the number of language ID  
+ */
+function loadImprintFooterData(languageId){
+    loadImprintFooterDataGerman(languageId);
+    loadImprintFooterDataEnglish(languageId);
+}
+
+/**
+ * This function loads footer data in german
+ * @param {number} languageId - includes the number of language ID  
+ */
+function loadImprintFooterDataGerman(languageId){
+    if(languageId == 0){
+        if(!isMobileActive('footer_container')){
+            document.getElementById('impressum_link').innerHTML = imprintData.de.footer;
+        }else{
+            document.getElementById('impressum_link_mobile').innerHTML = imprintData.de.footer;
+        }
+    }
+}
+
+/**
+ * This function loads footer data in english
+ * @param {number} languageId - includes the number of language ID  
+ */
+function loadImprintFooterDataEnglish(languageId){
+    if(languageId == 1){
+        if(!isMobileActive('footer_container')){
+            document.getElementById('impressum_link').innerHTML = imprintData.en.footer;
+        }else{
+            document.getElementById('impressum_link_mobile').innerHTML = imprintData.en.footer;
+        }
     }
 }
 

@@ -13,6 +13,7 @@
     <script src="../scripts/policyObj.js"></script>
     <script src="../scripts/projectsObj.js"></script>
     <script src="../scripts/language.js"></script>
+    <script src="../scripts/contact.js"></script>
     <script src="../scripts/imprint.js"></script>
     <script src="../scripts/policy.js"></script>
     <script src="../script.js"></script> 
@@ -126,9 +127,11 @@
     </main>
     <footer>
         <div class="footer-frame">
-            <div class="footer-container">
+            <div id="footer_container" class="footer-container">
                 <div class="footer-left-side">
-                    <div class="footer-link-container"></div>
+                    <div class="footer-link-container">
+                        <a id="impressum_link" class="impressum-link" href="./imprint.html"></a>
+                    </div>
                     <span>&copy; Benjamin Mahalbasic 2026</span>
                 </div>
                 <div class="footer-logo" onclick="scrollToTop()">
@@ -163,6 +166,7 @@
                     onclick="openWebsite('https://www.linkedin.com/in/benjamin-mahalbasic/')">
                 </div>
                 <div class="footer-description-mobile">
+                    <a id="impressum_link_mobile" class="impressum-link" href="./imprint.html"></a>
                     <span class="copyright-span">&copy; Benjamin Mahalbasic 2026</span>
                 </div>
             </div>

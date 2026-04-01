@@ -38,7 +38,8 @@ const policyData = {
             "content" : `Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit das Recht auf unentgeltliche Auskunft 
                         über Ihre gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung 
                         und ggf. ein Recht auf Berichtigung, Sperrung oder Löschung dieser Daten.`
-        }
+        },
+        "footer" : "Impressum"
     },
     "en" : {
         "captionAndGlance" : {
@@ -76,6 +77,7 @@ const policyData = {
             "content" : `Within the framework of the applicable legal provisions, 
                         you have the right at any time to free information about your stored personal data, its origin and recipient 
                         and the purpose of the data processing and, if applicable, a right to correction, blocking or deletion of this data.`
-        }
+        },
+        "footer" : "Legal notice"
     }
 }

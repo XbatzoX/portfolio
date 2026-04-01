@@ -53,7 +53,8 @@ const imprintData = {
                         Haftungen (einschließlich angemessener Anwaltskosten) freizustellen, 
                         die aus Ihrer Nutzung von <span class="highlight">Portfolio</span> und/oder Ihrem Verstoß gegen diesen Rechtshinweis entstehen.
                         Datum: 26. März 2026`
-        }
+        },
+        "footer" : "Impressum"
     },
     "en" : {
         "caption" : {
@@ -111,6 +112,7 @@ const imprintData = {
                         loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your 
                         use of <span class="highlight">Portfolio</span> and/or your breach of this Legal Notice.
                         <br> March 26, 2026`
-        }
+        },
+        "footer" : "Legal notice"
     }
 }

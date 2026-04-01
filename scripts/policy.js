@@ -184,7 +184,7 @@ function loadPolicyFooterDataGerman(languageId){
 }
 
 /**
- * This function loads footer data in english
+ * This function loads footer data in english language
  * @param {number} languageId - includes the number of language ID  
  */
 function loadPolicyFooterDataEnglish(languageId){
